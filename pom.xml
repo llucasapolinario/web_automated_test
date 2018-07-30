@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>base2.javawebdriver</groupId>
-    <artifactId>projetoautomacao</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>web_automated_test</artifactId>
+    <version>1.0</version>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
