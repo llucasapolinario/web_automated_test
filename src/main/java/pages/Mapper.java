@@ -1,4 +1,4 @@
-package pageObject;
+package pages;
 
 public abstract class Mapper {
 

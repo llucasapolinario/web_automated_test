@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="projetoautomacao" />
         <module name="testes" />
+        <module name="web_automated_test" />
       </profile>
     </annotationProcessing>
   </component>

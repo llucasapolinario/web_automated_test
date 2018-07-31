@@ -1,4 +1,4 @@
-package login;
+package utils;
 
 
 import org.junit.jupiter.api.Test;
@@ -10,12 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 class test1 {
 
     @Test
-    void testLogin(){
-
+    void _testLogin(){
         WebDriver driver = new ChromeDriver();
-
         driver.get("http://google.com.br");
-
         WebElement campoDeTexto = driver.findElement(By.name("q"));
         campoDeTexto.sendKeys("Rafael Costa Cavalcante");
         campoDeTexto.submit();
