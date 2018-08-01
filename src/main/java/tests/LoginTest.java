@@ -18,30 +18,27 @@ public class LoginTest extends BaseTest {
         HomePage homePage = new HomePage(driver,wait);
         LoginPage loginPage = new LoginPage(driver,wait);
 
-        driver.get("http://mantis.fernando.base2.com.br/");
-//        homePage.goToLoginPage();
+        homePage.goToLoginPage();
+        loginPage.login("administrator", "qwe");
 
-        loginPage.login(loginPage.getUsenameId(), loginPage.getPasswordId());
-
-        Thread.sleep(500);
-//        loginPage.verifyLoginPassword(("E-posta adresiniz veya şifreniz hatalı"));
+        waitTime();
+        loginPage.verifyLoginPassword("");
+//        Assert.assertTrue();
     }
 
     @Test (priority = 1)
     public void invalidLoginTest_EmptyUserEmptyPassword () throws InterruptedException {
-        //*************PAGE INSTANTIATIONS*************
+
         HomePage homePage = new HomePage(driver,wait);
         LoginPage loginPage = new LoginPage(driver,wait);
 
-        //*************PAGE METHODS********************
-        homePage.goToHomePage();
         homePage.goToLoginPage();
         loginPage.login("","");
 
-        //*************ASSERTIONS***********************
         Thread.sleep(500);
         loginPage.verifyLoginUserName("Lütfen e-posta adresinizi girin.");
         loginPage.verifyLoginPassword("Bu alanın doldurulması zorunludur.");
+
     }
 
 }

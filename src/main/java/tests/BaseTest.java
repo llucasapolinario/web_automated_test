@@ -6,10 +6,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
 
-public class BaseTest {
+class BaseTest {
 
-    public WebDriver driver;
-    public WebDriverWait wait;
+    WebDriver driver;
+    WebDriverWait wait;
 
     @BeforeClass
     public void setup () {
@@ -21,7 +21,25 @@ public class BaseTest {
 
     @AfterClass
     public void teardown () {
+        driver.close();
         driver.quit();
+    }
+
+
+    void waitTime(){
+        waitTime(500);
+    }
+
+    void waitTime(long time){
+
+        try {
+            Thread.sleep(time);
+
+        } catch (InterruptedException e) {
+
+            e.printStackTrace();
+        }
+
     }
 
 }

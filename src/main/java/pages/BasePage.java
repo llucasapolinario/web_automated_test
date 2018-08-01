@@ -4,25 +4,38 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static utils.Constants.BASEURL;
+
 public class BasePage {
 
-    public WebDriver driver;
-    public WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
 
-    public BasePage (WebDriver driver, WebDriverWait wait){
+    BasePage(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;
     }
 
-    public void click (By elementLocation) {
+    public void goToLoginPage (){
+        driver.get(BASEURL);
+        driver.navigate().to(BASEURL);
+    }
+
+    public void click(By elementLocation) {
         driver.findElement(elementLocation).click();
     }
 
-    public void writeText (By elementLocation, String text) {
+    public void writeText(By elementLocation, String text) {
+        driver.findElements(elementLocation).clear();
         driver.findElement(elementLocation).sendKeys(text);
     }
 
-    public String readText (By elementLocation) {
+    public void wait(Object object){
+        wait.equals(object);
+    }
+
+
+    String readText(By elementLocation) {
         return driver.findElement(elementLocation).getText();
     }
 
