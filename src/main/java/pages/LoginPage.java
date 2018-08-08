@@ -7,25 +7,34 @@ import org.testng.Assert;
 
 import static utils.Constants.*;
 
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
 
     public LoginPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
-    public void login (String username, String password){
-        writeText(By.id(USERNAME_ID),username);
+    public void setLoginUsername(String username) {
+        writeText(By.id(USERNAME_ID), username);
+        clickLogin();
+    }
+
+    public void setLoginPassword(String password) {
         writeText(By.id(PASSWORD_ID), password);
-        click(By.id(LOGINBUTTON_ID));
+        clickLogin();
     }
 
-    public void verifyLoginUserName (String expectedText) {
-        Assert.assertEquals(readText(By.xpath(errorMessageUsernameXpath)), expectedText);
+    public void clickLogin() {
+        click(By.xpath(LOGIN_XPATH));
     }
 
-    public void verifyLoginPassword (String expectedText) {
+
+    public void assertVerifyFailureLogin(String expectedText) {
         Assert.assertEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
+    }
+
+    public void assertFalseVerifyFailureLogin(String expectedText) {
+        Assert.assertNotEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
     }
 
 }

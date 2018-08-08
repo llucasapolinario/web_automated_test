@@ -11,7 +11,7 @@ public class BasePage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    BasePage(WebDriver driver, WebDriverWait wait){
+    public BasePage(WebDriver driver, WebDriverWait wait){
         this.driver = driver;
         this.wait = wait;
     }
@@ -26,7 +26,7 @@ public class BasePage {
     }
 
     public void writeText(By elementLocation, String text) {
-        driver.findElements(elementLocation).clear();
+        driver.findElement(elementLocation).clear();
         driver.findElement(elementLocation).sendKeys(text);
     }
 

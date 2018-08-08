@@ -4,7 +4,12 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
+import static utils.Constants.MESSAGE_FAILURE_LOGIN;
+
 public class LoginTest extends BaseTest {
+
+    private HomePage homePage;
+    private LoginPage loginPage;
 
     // Extra information:
     // 1) @BeforeClass we declared driver and wait variables
@@ -13,32 +18,42 @@ public class LoginTest extends BaseTest {
     // 3) super () method in page class transfer the driver and wait variables values to the BasePage class.
 
     @Test()
-    public void invalidLoginTest_InvalidUserNameInvalidPassword () throws InterruptedException {
+    public void validLoginTes() throws InterruptedException {
 
-        HomePage homePage = new HomePage(driver,wait);
-        LoginPage loginPage = new LoginPage(driver,wait);
+        homePage = new HomePage(driver, wait);
+        loginPage = new LoginPage(driver, wait);
 
-        homePage.goToLoginPage();
-        loginPage.login("administrator", "qwe");
+        loginPage.setLoginUsername("administrator");
+        loginPage.setLoginPassword("qwe");
 
         waitTime();
-        loginPage.verifyLoginPassword("");
-//        Assert.assertTrue();
+        loginPage.assertFalseVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
+//        homePage.
     }
 
-    @Test (priority = 1)
-    public void invalidLoginTest_EmptyUserEmptyPassword () throws InterruptedException {
+    @Test()
+    public void invalidLoginTest() throws InterruptedException {
 
-        HomePage homePage = new HomePage(driver,wait);
-        LoginPage loginPage = new LoginPage(driver,wait);
+        homePage = new HomePage(driver, wait);
+        loginPage = new LoginPage(driver, wait);
 
-        homePage.goToLoginPage();
-        loginPage.login("","");
+        loginPage.setLoginUsername("lucas");
+        loginPage.setLoginPassword("lucas");
 
-        Thread.sleep(500);
-        loginPage.verifyLoginUserName("Lütfen e-posta adresinizi girin.");
-        loginPage.verifyLoginPassword("Bu alanın doldurulması zorunludur.");
+        waitTime();
+        loginPage.assertVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
+    }
 
+    @Test(priority = 1)
+    public void invalidLoginTest_EmptyUsername() throws InterruptedException {
+
+        homePage = new HomePage(driver, wait);
+        loginPage = new LoginPage(driver, wait);
+
+        loginPage.clickLogin();
+
+        waitTime();
+        loginPage.assertVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
     }
 
 }
