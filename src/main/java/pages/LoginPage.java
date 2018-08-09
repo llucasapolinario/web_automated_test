@@ -14,6 +14,18 @@ public class LoginPage extends BasePage {
         super(driver, wait);
     }
 
+    public void login(String username, String password) {
+
+        try{
+            setLoginUsername(username);
+            setLoginPassword(password);
+
+        }catch (Exception e){
+            System.out.println();
+        }
+
+    }
+
     public void setLoginUsername(String username) {
         writeText(By.id(USERNAME_ID), username);
         clickLogin();
