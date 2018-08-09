@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,11 +22,11 @@ public class BasePage {
         driver.navigate().to(BASEURL);
     }
 
-    public void click(By elementLocation) {
+    void click(By elementLocation) throws ElementClickInterceptedException {
         driver.findElement(elementLocation).click();
     }
 
-    public void writeText(By elementLocation, String text) {
+    void writeText(By elementLocation, String text) {
         driver.findElement(elementLocation).clear();
         driver.findElement(elementLocation).sendKeys(text);
     }
