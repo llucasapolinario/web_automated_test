@@ -16,22 +16,22 @@ public class LoginPage extends BasePage {
 
     public void login(String username, String password) {
 
-        try{
+        try {
             setLoginUsername(username);
             setLoginPassword(password);
 
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.println();
         }
 
     }
 
-    public void setLoginUsername(String username) {
+    private void setLoginUsername(String username) {
         writeText(By.id(USERNAME_ID), username);
         clickLogin();
     }
 
-    public void setLoginPassword(String password) {
+    private void setLoginPassword(String password) {
         writeText(By.id(PASSWORD_ID), password);
         clickLogin();
     }
@@ -40,13 +40,12 @@ public class LoginPage extends BasePage {
         click(By.xpath(LOGIN_XPATH));
     }
 
-
     public void assertVerifyFailureLogin(String expectedText) {
-        Assert.assertEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
+        Assert.assertEquals(readText(By.xpath(ERROR_MESSAGE_PASSWORD_XPATH)), expectedText);
     }
 
     public void assertFalseVerifyFailureLogin(String expectedText) {
-        Assert.assertNotEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
+        Assert.assertNotEquals(readText(By.xpath(ERROR_MESSAGE_PASSWORD_XPATH)), expectedText);
     }
 
 }
