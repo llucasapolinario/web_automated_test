@@ -16,7 +16,15 @@ public abstract class Constants {
             "o nome de usuário e a senha que você digitou não estão corretos.";
 
     // FOLDER
-    static final String SCREENSHOT_FOLDER = System.getProperty("user.dir") + File.separator +
+    private static final String USER_DIR = "user.dir";
+    static final String SCREENSHOT_FOLDER = System.getProperty(USER_DIR) + File.separator +
             "ScreenShots" + File.separator;
 
+    // REPORT
+    public static String reportFileName = "ExtentReports-Version3-Test-Automaton-Report.html";
+    public static String windowsPath = System.getProperty(USER_DIR)+ "\\TestReport";
+    public static String winReportFileLoc = windowsPath + "\\" + reportFileName;
+
+    public static String macPath = System.getProperty(USER_DIR)+ "/TestReport";
+    public static String macReportFileLoc = macPath + "/" + reportFileName;
 }

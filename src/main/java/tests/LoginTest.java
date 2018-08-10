@@ -18,13 +18,12 @@ public class LoginTest extends BaseTest {
     // 3) super () method in page class transfer the driver and wait variables values to the BasePage class.
 
     @Test()
-    public void validLoginTes() throws InterruptedException {
+    public void validLoginTes() {
 
         homePage = new HomePage(driver, wait);
         loginPage = new LoginPage(driver, wait);
 
-        loginPage.setLoginUsername("administrator");
-        loginPage.setLoginPassword("qwe");
+        loginPage.login("administrator", "qwe");
 
         waitTime();
         loginPage.assertFalseVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
@@ -32,20 +31,19 @@ public class LoginTest extends BaseTest {
     }
 
     @Test()
-    public void invalidLoginTest() throws InterruptedException {
+    public void invalidLoginTest() {
 
         homePage = new HomePage(driver, wait);
         loginPage = new LoginPage(driver, wait);
 
-        loginPage.setLoginUsername("lucas");
-        loginPage.setLoginPassword("lucas");
+        loginPage.login("lucas", "lucas");
 
         waitTime();
         loginPage.assertVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
     }
 
     @Test(priority = 1)
-    public void invalidLoginTest_EmptyUsername() throws InterruptedException {
+    public void invalidLoginTest_EmptyUsername() {
 
         homePage = new HomePage(driver, wait);
         loginPage = new LoginPage(driver, wait);
