@@ -12,36 +12,38 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
+import static utils.Constants.SCREENSHOT_FOLDER;
+
+
 public abstract class Utils {
 
+
     public static void screenshotPage(WebDriver driver, String label) {
+
         try {
-            File pageImageFile = new File(System.getProperty("user.dir") + File.separator +
-                    "ScreenShots" + File.separator + label + ".png");
+            File pageImageFile = new File(SCREENSHOT_FOLDER + label + ".png");
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, pageImageFile);
 
-//        return pageImageFile;
-
         } catch (IOException ignored) {
         }
+
     }
 
     public static void screenshotEntirePage(WebDriver driver, String label) {
+
         try {
-            File entirePageImageFile = new File(System.getProperty("user.dir") + File.separator +
-                    "ScreenShots" + File.separator + label);
+            File entirePageImageFile = new File(SCREENSHOT_FOLDER + label + ".png");
 
             Screenshot entirePageScreenShot = new AShot().
                     shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
 
             ImageIO.write(entirePageScreenShot.getImage(), "PNG", entirePageImageFile);
 
-//        return entirePageImageFile;
         } catch (IOException ignored) {
         }
-    }
 
+    }
 
 }
