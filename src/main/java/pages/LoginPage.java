@@ -3,35 +3,30 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import static utils.Constants.*;
 
 public class LoginPage extends BasePage {
 
+    private static final String LOGIN_XPATH = "//input[@value='Entrar']";
+    private static final String USERNAME_ID = "username";
+    private static final String PASSWORD_ID = "password";
+    private static final String ERROR_MESSAGE_PASSWORD_XPATH = "//div[@id='main-container']/div/div/div/div/div[4]/p";
 
     public LoginPage(WebDriver driver, WebDriverWait wait) {
         super(driver, wait);
     }
 
     public void login(String username, String password) {
-
-        try{
-            setLoginUsername(username);
-            setLoginPassword(password);
-
-        }catch (Exception e){
-            System.out.println();
-        }
-
+        setLoginUsername(username);
+        setLoginPassword(password);
     }
 
-    public void setLoginUsername(String username) {
+    private void setLoginUsername(String username) {
         writeText(By.id(USERNAME_ID), username);
         clickLogin();
     }
 
-    public void setLoginPassword(String password) {
+    private void setLoginPassword(String password) {
         writeText(By.id(PASSWORD_ID), password);
         clickLogin();
     }
@@ -40,13 +35,8 @@ public class LoginPage extends BasePage {
         click(By.xpath(LOGIN_XPATH));
     }
 
-
-    public void assertVerifyFailureLogin(String expectedText) {
-        Assert.assertEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
-    }
-
-    public void assertFalseVerifyFailureLogin(String expectedText) {
-        Assert.assertNotEquals(readText(By.xpath(errorMessagePasswordXpath)), expectedText);
+    public boolean isLoginFail(String expectedText) {
+        return readText(By.xpath(ERROR_MESSAGE_PASSWORD_XPATH)).equals(expectedText);
     }
 
 }
