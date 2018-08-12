@@ -7,6 +7,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage {
 
+//    @FindBy(how = How.ID, using = "username")
+//    private WebElement USERNAME_ID;
+
     private static final String LOGIN_XPATH = "//input[@value='Entrar']";
     private static final String USERNAME_ID = "username";
     private static final String PASSWORD_ID = "password";
