@@ -39,7 +39,6 @@ public class BasePage {
         driver.findElement(elementLocation).clear();
         driver.findElement(elementLocation).sendKeys(text);
 //            test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
-
     }
 
     String readText(By elementLocation) {
