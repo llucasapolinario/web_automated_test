@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
@@ -11,23 +12,16 @@ public class LoginTest extends BaseTest {
     private HomePage homePage;
     private LoginPage loginPage;
 
-    // Extra information:
-    // 1) @BeforeClass we declared driver and wait variables
-    // 2) We send these driver and wait variables to the page class with below declaration
-    //    Homepage homepage = new HomePage(driver,wait);
-    // 3) super () method in page class transfer the driver and wait variables values to the BasePage class.
-
     @Test()
     public void validLoginTes() {
 
         homePage = new HomePage(driver, wait);
         loginPage = new LoginPage(driver, wait);
 
-        loginPage.login("administrator", "qwe");
+        loginPage.login("administrator", "lucas");
 
         waitTime();
-        loginPage.assertFalseVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
-//        homePage.
+        Assert.assertTrue(homePage.isHomeScreenVisible());
     }
 
     @Test()
@@ -39,7 +33,7 @@ public class LoginTest extends BaseTest {
         loginPage.login("lucas", "lucas");
 
         waitTime();
-        loginPage.assertVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
+        Assert.assertTrue(loginPage.isLoginFail(MESSAGE_FAILURE_LOGIN));
     }
 
     @Test(priority = 1)
@@ -51,7 +45,7 @@ public class LoginTest extends BaseTest {
         loginPage.clickLogin();
 
         waitTime();
-        loginPage.assertVerifyFailureLogin(MESSAGE_FAILURE_LOGIN);
+        Assert.assertTrue(loginPage.isLoginFail(MESSAGE_FAILURE_LOGIN));
     }
 
 }

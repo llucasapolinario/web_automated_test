@@ -44,14 +44,14 @@
 //        String reportFileLocation = null;
 //        switch (platform) {
 //            case MAC:
-//                reportFileLocation = macReportFileLoc;
-//                createReportPath(macPath);
-//                System.out.println("ExtentReport Path for MAC: " + macPath + "\n");
+//                reportFileLocation = MAC_REPORT_FILE_LOC;
+//                createReportPath(MAC_PATH);
+//                System.out.println("ExtentReport Path for MAC: " + MAC_PATH + "\n");
 //                break;
 //            case WINDOWS:
-//                reportFileLocation = winReportFileLoc;
-//                createReportPath(windowsPath);
-//                System.out.println("ExtentReport Path for WINDOWS: " + windowsPath + "\n");
+//                reportFileLocation = WIN_REPORT_FILE_LOC;
+//                createReportPath(WINDOWS_PATH);
+//                System.out.println("ExtentReport Path for WINDOWS: " + WINDOWS_PATH + "\n");
 //                break;
 //            default:
 //                System.out.println("ExtentReport path has not been set! There is a problem!\n");
