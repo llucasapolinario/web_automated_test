@@ -2,6 +2,7 @@ package utils;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import ru.yandex.qatools.ashot.AShot;
@@ -16,7 +17,6 @@ import static utils.Constants.SCREENSHOT_FOLDER;
 
 
 public abstract class Utils {
-
 
     public static void screenshotPage(WebDriver driver, String label) {
 
@@ -44,6 +44,26 @@ public abstract class Utils {
         } catch (IOException ignored) {
         }
 
+    }
+
+    static Platform getCurrentPlatform() {
+        Platform platform = null;
+        String openSys = System.getProperty("os.name").toLowerCase();
+        if (openSys.contains("win")) {
+
+            platform = Platform.WINDOWS;
+
+        } else if (openSys.contains("nix") || openSys.contains("nux") || openSys.contains("aix")) {
+
+            platform = Platform.LINUX;
+
+        } else if (openSys.contains("mac")) {
+
+            platform = Platform.MAC;
+
+        }
+
+        return platform;
     }
 
 }
