@@ -3,6 +3,7 @@ package tests;
 import org.testng.annotations.Test;
 import pages.CreateUser;
 import pages.LoginPage;
+import utils.Driver;
 
 public class CreateUserTest extends BaseTest {
 
@@ -12,8 +13,8 @@ public class CreateUserTest extends BaseTest {
     @Test()
     public void createUser() {
 
-        createUser = new CreateUser(driver, wait);
-        loginPage = new LoginPage(driver, wait);
+        createUser = new CreateUser(Driver.getDriverInstance(), Driver.getWaitInstance());
+        loginPage = new LoginPage(Driver.getDriverInstance(), Driver.getWaitInstance());
 
         loginPage.clickCreateUser();
         createUser.setUserName("jose");
@@ -26,8 +27,8 @@ public class CreateUserTest extends BaseTest {
     @Test()
     public void createUserWithInvalid() {
 
-        createUser = new CreateUser(driver, wait);
-        loginPage = new LoginPage(driver, wait);
+        createUser = new CreateUser(Driver.getDriverInstance(), Driver.getWaitInstance());
+        loginPage = new LoginPage(Driver.getDriverInstance(), Driver.getWaitInstance());
 
         loginPage.clickCreateUser();
         createUser.setUserName("jose");
