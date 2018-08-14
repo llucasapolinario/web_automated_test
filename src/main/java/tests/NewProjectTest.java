@@ -3,7 +3,6 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
-import utils.Driver;
 
 public class NewProjectTest extends BaseTest{
 
@@ -12,12 +11,12 @@ public class NewProjectTest extends BaseTest{
 
     @Test
     public void test1(){
-        homePage = new HomePage(Driver.getDriverInstance(), Driver.getWaitInstance());
+        homePage = new HomePage();
         login = new LoginTest();
 
         login.validLoginTes();
-        homePage.clickRegistroDeMudanca();
-        Assert.assertTrue(homePage.isNoneRegistro());
+        homePage.clickChangelogPage();
+        Assert.assertTrue(homePage.isNoneChangelog());
         homePage.clickRoadMap();
     }
 }
