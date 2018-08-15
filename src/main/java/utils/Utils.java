@@ -18,7 +18,7 @@ import static utils.Constants.SCREENSHOT_FOLDER;
 
 public abstract class Utils {
 
-    public static void screenshotPage(WebDriver driver, String label) {
+    public static void screenShotPage(WebDriver driver, String label) {
 
         try {
             File pageImageFile = new File(SCREENSHOT_FOLDER + label + ".png");
@@ -31,7 +31,7 @@ public abstract class Utils {
 
     }
 
-    public static void screenshotEntirePage(WebDriver driver, String label) {
+    public static void screenShotEntirePage(WebDriver driver, String label) {
 
         try {
             File entirePageImageFile = new File(SCREENSHOT_FOLDER + label + ".png");
@@ -47,8 +47,10 @@ public abstract class Utils {
     }
 
     static Platform getCurrentPlatform() {
+
         Platform platform = null;
         String openSys = System.getProperty("os.name").toLowerCase();
+
         if (openSys.contains("win")) {
 
             platform = Platform.WINDOWS;
@@ -60,7 +62,6 @@ public abstract class Utils {
         } else if (openSys.contains("mac")) {
 
             platform = Platform.MAC;
-
         }
 
         return platform;
