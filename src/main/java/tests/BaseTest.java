@@ -1,7 +1,5 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.BasePage;
@@ -9,11 +7,8 @@ import utils.Driver;
 import utils.PropertyManager;
 
 
-class BaseTest {
+public class BaseTest {
 
-
-    WebDriver driver;
-    WebDriverWait wait;
 
     @BeforeMethod
     public void setup() {
