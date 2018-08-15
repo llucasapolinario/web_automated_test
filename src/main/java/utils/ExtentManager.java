@@ -16,13 +16,17 @@ public class ExtentManager {
 
 
     public static ExtentReports getInstance() {
-        if (extent == null)
-            createInstance();
+        if (extent == null) {
+            synchronized (LOCK) {
+                createInstance();
+            }
+        }
         return extent;
     }
 
     //Create an extent report instance
-    public static ExtentReports createInstance() {
+    private static ExtentReports createInstance() {
+
         Platform platform = getCurrentPlatform();
         String fileName = getReportFileLocation(platform);
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(fileName);

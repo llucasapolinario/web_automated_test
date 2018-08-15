@@ -4,16 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static utils.Constants.LOCK;
+
 
 public class Driver {
 
     private static WebDriver driver;
     private static WebDriverWait wait;
 
-    private static final Object lock = new Object();
-
     public static void newInstance() {
-        synchronized (lock) {
+        synchronized (LOCK) {
             driver = new ChromeDriver();
             wait = new WebDriverWait(Driver.getDriverInstance(),
                     PropertyManager.getInstance().getTimeOut());
@@ -22,7 +22,7 @@ public class Driver {
 
     public static WebDriver getDriverInstance() {
         if (driver == null) {
-            synchronized (lock) {
+            synchronized (LOCK) {
                 driver = new ChromeDriver();
             }
         }
@@ -32,7 +32,7 @@ public class Driver {
 
     public static WebDriverWait getWaitInstance() {
         if (wait == null) {
-            synchronized (lock) {
+            synchronized (LOCK) {
                 wait = new WebDriverWait(Driver.getDriverInstance(),
                         PropertyManager.getInstance().getTimeOut());
             }

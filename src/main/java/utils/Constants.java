@@ -4,11 +4,7 @@ import java.io.File;
 
 public abstract class Constants {
 
-    public static final String BASE_URL = "http://mantis.lucas.base2.com.br/";
-
-    public static final String MESSAGE_FAILURE_LOGIN = "Sua conta pode estar desativada ou bloqueada ou " +
-            "o nome de usuário e a senha que você digitou não estão corretos.";
-
+    public static final Object LOCK = new Object();
     // FOLDER
     static final String USER_DIR = "user.dir";
     static final String SCREENSHOT_FOLDER = System.getProperty(USER_DIR) + File.separator +

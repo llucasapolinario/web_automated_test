@@ -5,11 +5,10 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import static utils.Constants.LOCK;
 import static utils.Constants.USER_DIR;
 
 public class PropertyManager {
-
-    private static final Object lock = new Object();
 
     private static PropertyManager instance;
 
@@ -25,7 +24,7 @@ public class PropertyManager {
 
     public static PropertyManager getInstance() {
         if (instance == null) {
-            synchronized (lock) {
+            synchronized (LOCK) {
                 instance = new PropertyManager();
                 instance.loadData();
             }

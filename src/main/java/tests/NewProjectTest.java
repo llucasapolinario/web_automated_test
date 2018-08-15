@@ -14,7 +14,7 @@ public class NewProjectTest extends BaseTest{
         homePage = new HomePage();
         login = new LoginTest();
 
-        login.validLoginTes();
+        login.validLoginTest();
         homePage.clickChangelogPage();
         Assert.assertTrue(homePage.isNoneChangelog());
         homePage.clickRoadMap();

@@ -21,7 +21,7 @@ public class BasePage {
     void click(By elementLocation) throws ElementClickInterceptedException {
         waitForElement(elementLocation);
 
-        Utils.screenshotPage(Driver.getDriverInstance(), "ante de cliclar em logar");
+        Utils.screenShotPage(Driver.getDriverInstance(), "ante de cliclar em logar");
         Driver.getDriverInstance().findElement(elementLocation).click();
     }
 

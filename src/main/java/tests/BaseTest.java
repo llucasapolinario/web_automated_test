@@ -8,7 +8,6 @@ import pages.BasePage;
 import utils.Driver;
 import utils.PropertyManager;
 
-import static utils.Constants.BASE_URL;
 
 class BaseTest {
 
@@ -22,7 +21,7 @@ class BaseTest {
         Driver.newInstance();
         Driver.getDriverInstance().manage().window().maximize();
 
-        new BasePage().goToPage(BASE_URL);
+        new BasePage().goToPage(PropertyManager.getInstance().getURL());
     }
 
     @AfterMethod
