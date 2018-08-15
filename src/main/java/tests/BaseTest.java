@@ -1,31 +1,28 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.BasePage;
 import utils.Driver;
+import utils.PropertyManager;
 
 import static utils.Constants.BASE_URL;
 
 class BaseTest {
 
-    private static final int TIME_OUT = 1500;
 
-//    private static final String HUB = "http://172.17.0.2:4444/wd/hub";
-
-
+    WebDriver driver;
+    WebDriverWait wait;
 
     @BeforeMethod
     public void setup() {
-        Driver.getDriverInstance().manage().window().maximize();
-        Driver.getWaitInstance();
 
-        ChromeOptions chromeOptions = new ChromeOptions();
-        new BasePage(Driver.getDriverInstance(), Driver.getWaitInstance()).goToPage(BASE_URL);
+        Driver.newInstance();
+        Driver.getDriverInstance().manage().window().maximize();
+
+        new BasePage().goToPage(BASE_URL);
     }
 
     @AfterMethod
@@ -35,7 +32,7 @@ class BaseTest {
     }
 
     void waitTime() {
-        waitTime(TIME_OUT);
+        waitTime(PropertyManager.getInstance().getTimeOut());
     }
 
     public void waitTime(long time) {
