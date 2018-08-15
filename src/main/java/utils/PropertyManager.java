@@ -1,5 +1,6 @@
 package utils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -9,11 +10,18 @@ import static utils.Constants.USER_DIR;
 public class PropertyManager {
 
     private static final Object lock = new Object();
+
     private static PropertyManager instance;
-    private static String propertyFilePath = System.getProperty(USER_DIR);
+
+    private static String propertyFilePath = System.getProperty(USER_DIR)
+            + File.separator
+            + "environment.properties";
+
     private static String url;
-    private static String wrongUsername;
-    private static String wrongPassword;
+    private static String username;
+    private static String password;
+
+    private static int TIME_OUT;
 
     public static PropertyManager getInstance() {
         if (instance == null) {
@@ -35,20 +43,25 @@ public class PropertyManager {
         }
 
         url = prop.getProperty("url");
-        wrongUsername = prop.getProperty("wrongUsername");
-        wrongPassword = prop.getProperty("wrongPassword");
+        username = prop.getProperty("username");
+        password = prop.getProperty("password");
+        TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
     }
 
     public String getURL() {
         return url;
     }
 
-    public String getWrongUsername() {
-        return wrongUsername;
+    public String getUsername() {
+        return username;
     }
 
-    public String getWrongPassword() {
-        return wrongPassword;
+    public String getPassword() {
+        return password;
+    }
+
+    public int getTimeOut() {
+        return TIME_OUT;
     }
 
 }
