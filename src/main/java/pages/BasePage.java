@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import utils.Driver;
 import utils.Utils;
 
@@ -18,26 +19,48 @@ public class BasePage {
         Driver.getDriverInstance().navigate().to(page);
     }
 
-    void click(By elementLocation) throws ElementClickInterceptedException {
+    protected void click(By elementLocation) throws ElementClickInterceptedException {
         waitForElement(elementLocation);
-
         Utils.screenShotPage(Driver.getDriverInstance(), "ante de cliclar em logar");
         Driver.getDriverInstance().findElement(elementLocation).click();
     }
 
-    void writeText(By elementLocation, String text) {
+    protected void writeText(By elementLocation, String text) {
         waitForElement(elementLocation);
         Driver.getDriverInstance().findElement(elementLocation).clear();
         Driver.getDriverInstance().findElement(elementLocation).sendKeys(text);
 //            test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
     }
 
-    String readText(By elementLocation) {
+    protected String readText(By elementLocation) {
+        waitForElement(elementLocation);
         return Driver.getDriverInstance().findElement(elementLocation).getText();
     }
 
-    WebElement waitForElement(By elementLocation) {
+    protected WebElement waitForElement(By elementLocation) {
         return Driver.getWaitInstance().until(ExpectedConditions.elementToBeClickable(elementLocation));
+    }
+
+    protected void selectCheckBox(By elementLocation) throws ElementClickInterceptedException {
+        WebElement checkBox = Driver.getDriverInstance().findElement(elementLocation);
+
+        if (checkBox.isSelected()) {
+            checkBox.click();
+        }
+    }
+
+    protected void unSelectCheckBox(By elementLocation) throws ElementClickInterceptedException {
+        WebElement checkBox = Driver.getDriverInstance().findElement(elementLocation);
+
+        if (!checkBox.isSelected()) {
+            checkBox.click();
+        }
+    }
+
+    protected void selectSpinnerElement(By elementLocation, String value) {
+        waitForElement(elementLocation);
+        Driver.getDriverInstance().findElement(elementLocation).click();
+        new Select(Driver.getDriverInstance().findElement(elementLocation)).selectByVisibleText(value);
     }
 
 }
