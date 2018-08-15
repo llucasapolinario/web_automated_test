@@ -4,9 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import utils.Driver;
+import utils.PropertyManager;
 
-import static utils.Constants.MESSAGE_FAILURE_LOGIN;
 
 public class LoginTest extends BaseTest {
 
@@ -14,39 +13,54 @@ public class LoginTest extends BaseTest {
     private LoginPage loginPage;
 
     @Test()
-    public void validLoginTes() {
+    public void validLoginTest() {
 
-        homePage = new HomePage(Driver.getDriverInstance(), Driver.getWaitInstance());
-        loginPage = new LoginPage(Driver.getDriverInstance(), Driver.getWaitInstance());
+        homePage = new HomePage();
+        loginPage = new LoginPage();
 
-        loginPage.login("administrator", "lucas");
+        loginPage.login(PropertyManager.getInstance().getUsername(),
+                PropertyManager.getInstance().getPassword());
 
         waitTime();
         Assert.assertTrue(homePage.isHomeScreenVisible());
     }
 
     @Test()
-    public void invalidLoginTest() {
+    public void invalidLoginTest_WrongPassword() {
 
-        homePage = new HomePage(Driver.getDriverInstance(), Driver.getWaitInstance());
-        loginPage = new LoginPage(Driver.getDriverInstance(), Driver.getWaitInstance());
+        homePage = new HomePage();
+        loginPage = new LoginPage();
 
-        loginPage.login("lucas", "lucas");
+        loginPage.login(PropertyManager.getInstance().getUsername(),
+                PropertyManager.getInstance().getUsername());
 
         waitTime();
-        Assert.assertTrue(loginPage.isLoginFail(MESSAGE_FAILURE_LOGIN));
+        Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test(priority = 1)
+    @Test()
+    public void invalidLoginTest_WrongUsername() {
+
+        homePage = new HomePage();
+        loginPage = new LoginPage();
+
+        loginPage.login("Jose das cove",
+                PropertyManager.getInstance().getUsername());
+
+        waitTime();
+        Assert.assertTrue(loginPage.isLoginFail());
+    }
+
+    @Test()
     public void invalidLoginTest_EmptyUsername() {
 
-        homePage = new HomePage(Driver.getDriverInstance(), Driver.getWaitInstance());
-        loginPage = new LoginPage(Driver.getDriverInstance(), Driver.getWaitInstance());
+        homePage = new HomePage();
+        loginPage = new LoginPage();
 
         loginPage.clickLogin();
 
         waitTime();
-        Assert.assertTrue(loginPage.isLoginFail(MESSAGE_FAILURE_LOGIN));
+        Assert.assertTrue(loginPage.isLoginFail());
     }
 
 }
