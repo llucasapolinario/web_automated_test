@@ -13,7 +13,7 @@ public class BaseTest {
 
 
     @BeforeMethod
-    public void setup() throws MalformedURLException {
+    public void setup()  {
 
         Driver.newChromeInstance();
         Driver.getDriverInstance().manage().window().maximize();
