@@ -17,6 +17,7 @@ public class PropertyManager {
             + "environment.properties";
 
     private static String url;
+    private static String hubLink;
     private static String username;
     private static String password;
 
@@ -42,6 +43,7 @@ public class PropertyManager {
         }
 
         url = prop.getProperty("url");
+        hubLink =prop.getProperty("hubLink");
         username = prop.getProperty("username");
         password = prop.getProperty("password");
         TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
@@ -57,6 +59,10 @@ public class PropertyManager {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getHubLink(){
+        return hubLink;
     }
 
     public int getTimeOut() {

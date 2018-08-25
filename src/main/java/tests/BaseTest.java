@@ -6,14 +6,16 @@ import pages.BasePage;
 import utils.Driver;
 import utils.PropertyManager;
 
+import java.net.MalformedURLException;
+
 
 public class BaseTest {
 
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws MalformedURLException {
 
-        Driver.newInstance();
+        Driver.newChromeInstance();
         Driver.getDriverInstance().manage().window().maximize();
 
         new BasePage().goToPage(PropertyManager.getInstance().getURL());
