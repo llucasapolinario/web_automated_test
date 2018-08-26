@@ -1,5 +1,6 @@
 package pages;
 
+import extentReport.RegressionFunc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
@@ -14,9 +15,7 @@ public class BasePage {
 
         Driver.getDriverInstance().get(page);
         Driver.getDriverInstance().navigate().to(page);
-//        test.createNode("")
-//        test.addScreenCaptureFromPath(
-//                test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build()));
+
     }
 
     protected void click(By elementLocation) throws ElementClickInterceptedException {

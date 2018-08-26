@@ -6,38 +6,51 @@ import org.testng.annotations.BeforeClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import java.lang.reflect.Method;
 
 
 public class RegressionFunc extends ExtentManager {
 
-    public ExtentReports extentInstance;
-    public ExtentTest testInstance;
+    private ExtentReports extentInstance;
+    protected ExtentTest testInstance;
+    public static ExtentTest senario;
     private final String getCurrentlyLoggedInUser = System.getProperty("user.name");
-
+    private String testName;
 
     @BeforeClass
     public void createExtentInstance() {
         extentInstance = ExtentManager.getInstance();
+//        initializeExtentReport();
     }
 
-    public void initializeExtentReport() {
+    @BeforeMethod
+    public void beforeMethod(Method method) {
+        Test test = method.getAnnotation(Test.class);
+        testName = test.testName();
+        initTestCase();
+    }
+
+    private void initializeExtentReport() {
         String executingTestCaseName = super.getClass().getSimpleName();
 
         testInstance = extentInstance.createTest(
-                executingTestCaseName, "'" + executingTestCaseName + "' is used to check details in Application.");
+                executingTestCaseName,
+                "'" + executingTestCaseName + "' is used to check details in Application.");
         testInstance.assignAuthor(getCurrentlyLoggedInUser);
         testInstance.assignCategory("RegressionTestCases_Test");
     }
 
-    @BeforeMethod
-    public void initReport(){
-        initializeExtentReport();
+    private void initTestCase() {
+        String executingTestCaseName = super.getClass().getSimpleName();
+
+        testInstance = extentInstance.createTest(
+                testName,
+                "'" + executingTestCaseName + "' is used to check details in Application.");
+        testInstance.assignAuthor(getCurrentlyLoggedInUser);
+        testInstance.assignCategory(executingTestCaseName);
     }
-
-//    private void initializeTest() {
-//        String executingTestCaseCenario = super.getClass().getMethod();
-//    }
-
 
     @AfterClass
     public void tearDownFunction() {
