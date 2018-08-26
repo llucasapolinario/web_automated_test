@@ -1,28 +1,28 @@
 package tests;
 
+import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.BasePage;
 import utils.Driver;
 import utils.PropertyManager;
 
-import java.net.MalformedURLException;
-
 
 public class BaseTest {
 
+    protected ExtentTest test;
 
-    @BeforeMethod
-    public void setup() throws MalformedURLException {
+    @BeforeMethod  (description = "Class Level Setup!")
+    public void setup() {
 
-        Driver.newChromeInstance();
+        Driver.newInstance();
         Driver.getDriverInstance().manage().window().maximize();
 
         new BasePage().goToPage(PropertyManager.getInstance().getURL());
     }
 
-    @AfterMethod
-    public void teardown() {
+    @AfterMethod (description = "Class Level Teardown!")
+    public void tearDown() {
         Driver.getDriverInstance().close();
         Driver.getDriverInstance().quit();
     }

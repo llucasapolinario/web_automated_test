@@ -46,7 +46,7 @@ public abstract class Utils {
 
     }
 
-    static Platform getCurrentPlatform() {
+    public static Platform getCurrentPlatform() {
 
         Platform platform = null;
         String openSys = System.getProperty("os.name").toLowerCase();

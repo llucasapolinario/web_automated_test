@@ -11,19 +11,8 @@ public abstract class Constants {
             "ScreenShots" + File.separator;
 
     // REPORT
-    static String REPORT_FILE_NAME = "ExtentReports-Version3-Test-Automaton-Report.html";
-    static String WINDOWS_PATH = System.getProperty(USER_DIR) + "\\TestReport";
-    static String WIN_REPORT_FILE_LOC = WINDOWS_PATH + "\\" + REPORT_FILE_NAME;
-
-    static String MAC_PATH = System.getProperty(USER_DIR) + "/TestReport";
-    static String MAC_REPORT_FILE_LOC = MAC_PATH + "/" + REPORT_FILE_NAME;
-
-    // PAGINA INICIAL
-    public String MANTS =  "/span[@innertext=' MantisBT ']";
-    public static String MANTS_BD =  "/div[@id='navbar-container']//a[@href='/my_view_page.php']/span[@class='smaller-75']";
-
-    // jonsmart spredshitdata
-    // org.apache.poi.ss.
-    //
+    public static String REPORT_FILE_NAME = "Report.html";
+    public static String WINDOWS_PATH = System.getProperty(USER_DIR) + File.separator + "TestReport";
+    public static String WIN_REPORT_FILE_LOC = WINDOWS_PATH + File.separator + REPORT_FILE_NAME;
 
 }
