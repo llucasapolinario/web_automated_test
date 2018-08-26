@@ -20,6 +20,9 @@ public class PropertyManager {
     private static String hubLink;
     private static String username;
     private static String password;
+    private static Integer maxRetryCount;
+
+
 
     private static int TIME_OUT;
 
@@ -47,6 +50,7 @@ public class PropertyManager {
         username = prop.getProperty("username");
         password = prop.getProperty("password");
         TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
+        maxRetryCount = Integer.parseInt(prop.getProperty("maxRetryCount"));
     }
 
     public String getURL() {
@@ -69,4 +73,7 @@ public class PropertyManager {
         return TIME_OUT;
     }
 
+    public static Integer getMaxRetryCount() {
+        return maxRetryCount;
+    }
 }

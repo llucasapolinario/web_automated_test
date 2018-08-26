@@ -1,17 +1,16 @@
 package extentReport;
 
-import org.testng.Assert;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.Test;
+import utils.PropertyManager;
 
 public class Retry implements IRetryAnalyzer {
-    private int retryCount = 0;
-    private int maxRetryCount = 1;
 
     public boolean retry(ITestResult result) {
-        //Re-run the test case if it is less than maximum retry count
+        int retryCount = 0;
+        int maxRetryCount = PropertyManager.getMaxRetryCount();
+
         if (retryCount < maxRetryCount) {
             retryCount++;
             Reporter.log("Retrying test "
@@ -37,9 +36,4 @@ public class Retry implements IRetryAnalyzer {
         return resultName;
     }
 
-    //HOW TO USE THE Retry Analyzer class file
-    @Test(retryAnalyzer = Retry.class)
-    public void testGenX() {
-        Assert.assertEquals("james", "JamesFail"); // ListenerTest fails
-    }
 }

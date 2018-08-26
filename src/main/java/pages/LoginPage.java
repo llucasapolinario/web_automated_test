@@ -38,6 +38,7 @@ public class LoginPage extends BasePage {
     }
 
     public boolean isLoginFail() {
+
         return readText(By.xpath(ERROR_MESSAGE_PASSWORD_XPATH)).equals(FAILURE_LOGIN_MESSAGE);
     }
 

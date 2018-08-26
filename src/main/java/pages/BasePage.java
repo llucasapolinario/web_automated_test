@@ -1,18 +1,12 @@
 package pages;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import utils.Driver;
-import utils.ExtentReport.ExtentManager;
 import utils.Utils;
-
-import java.io.IOException;
 
 public class BasePage {
 
