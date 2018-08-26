@@ -1,4 +1,4 @@
-package utils.ExtentReport;
+package extentReport;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -25,26 +25,26 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public synchronized void onTestStart(ITestResult result) {
-        System.out.println((result.getMethod().getMethodName() + " started!"));
+        System.out.println((result.getMethod().getMethodName() + " aqui é 13 porra bora la!"));
         ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),result.getMethod().getDescription());
         test.set(extentTest);
     }
 
     @Override
     public synchronized void onTestSuccess(ITestResult result) {
-        System.out.println((result.getMethod().getMethodName() + " passed!"));
+        System.out.println((result.getMethod().getMethodName() + " birll!"));
         test.get().pass("Test passed");
     }
 
     @Override
     public synchronized void onTestFailure(ITestResult result) {
-        System.out.println((result.getMethod().getMethodName() + " failed!"));
+        System.out.println((result.getMethod().getMethodName() + " shit!"));
         test.get().fail(result.getThrowable());
     }
 
     @Override
     public synchronized void onTestSkipped(ITestResult result) {
-        System.out.println((result.getMethod().getMethodName() + " skipped!"));
+        System.out.println((result.getMethod().getMethodName() + " to see!"));
         test.get().skip(result.getThrowable());
     }
 
