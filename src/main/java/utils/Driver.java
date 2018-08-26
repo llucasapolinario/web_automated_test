@@ -16,7 +16,7 @@ public class Driver {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
-    public static void newChromeInstance(){
+    public static void newChromeInstance() {
         synchronized (LOCK) {
             ChromeOptions chromeOptions = new ChromeOptions();
             URL url = null;
@@ -57,5 +57,28 @@ public class Driver {
 
         return wait;
     }
+
+//    public IWebDriver Initialize(string browser) {
+//        double timeout = Convert.ToDouble(ConfigurationManager.AppSettings["DefaultTimeout"]);
+//
+//        if (_driver == null) {
+//            if (browser.Equals("Chrome")) {
+//                if (Convert.ToBoolean(ConfigurationManager.AppSettings["Remote"])) {
+//                    _driver = Chrome.Build();
+//                } else {
+//                    _driver = Chrome.BuildLocal();
+//                }
+//            } else if (browser.Equals("Firefox")) {
+//                _driver = Firefox.Build();
+//            } else {
+//                throw new Exception("Driver não suportado!");
+//            }
+//        }
+//
+//        _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(timeout);
+//        _driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(timeout);
+//
+//        return _driver;
+//    }
 
 }
