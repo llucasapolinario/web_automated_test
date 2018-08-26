@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
-import static utils.Constants.SCREENSHOT_FOLDER;
+import static utils.Constants.SCREEN_SHOT_FOLDER;
 
 
 public abstract class Utils {
@@ -21,7 +21,7 @@ public abstract class Utils {
     public static void screenShotPage(WebDriver driver, String label) {
 
         try {
-            File pageImageFile = new File(SCREENSHOT_FOLDER + label + ".png");
+            File pageImageFile = new File(SCREEN_SHOT_FOLDER + label + ".png");
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, pageImageFile);
@@ -34,7 +34,7 @@ public abstract class Utils {
     public static void screenShotEntirePage(WebDriver driver, String label) {
 
         try {
-            File entirePageImageFile = new File(SCREENSHOT_FOLDER + label + ".png");
+            File entirePageImageFile = new File(SCREEN_SHOT_FOLDER + label + ".png");
 
             Screenshot entirePageScreenShot = new AShot().
                     shootingStrategy(ShootingStrategies.viewportPasting(100)).takeScreenshot(driver);
@@ -46,7 +46,28 @@ public abstract class Utils {
 
     }
 
-    public static Platform getCurrentPlatform() {
+    public static void createPath(String path) {
+        File testDirectory = new File(path);
+
+        if (!testDirectory.exists()) {
+
+            if (testDirectory.mkdir()) {
+
+                System.out.println("Directory: " + path + " is created!");
+
+            } else {
+
+                System.out.println("Failed to create directory: " + path);
+            }
+
+        } else {
+
+            System.out.println("Directory already exists: " + path);
+        }
+
+    }
+
+    static Platform getCurrentPlatform() {
 
         Platform platform = null;
         String openSys = System.getProperty("os.name").toLowerCase();
@@ -66,5 +87,4 @@ public abstract class Utils {
 
         return platform;
     }
-
 }
