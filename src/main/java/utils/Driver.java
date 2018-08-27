@@ -1,7 +1,10 @@
 package utils;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,7 +28,11 @@ public class Driver {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-            driver = new RemoteWebDriver(url, chromeOptions);
+            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+            capabilities.setPlatform(Platform.LINUX);
+            capabilities.setBrowserName("chrome");
+            capabilities.setVersion("68.0.3440.84");
+            driver = new RemoteWebDriver(url, capabilities);
             wait = new WebDriverWait(Driver.getDriverInstance(), PropertyManager.getInstance().getTimeOut());
         }
     }

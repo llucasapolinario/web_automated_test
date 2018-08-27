@@ -16,7 +16,7 @@ public class BaseTest {
     public void setup()  {
 
         Driver.newChromeInstance();
-        Driver.getDriverInstance().manage().window().maximize();
+//        Driver.getDriverInstance().manage().window().maximize();
 
         new BasePage().goToPage(PropertyManager.getInstance().getURL());
     }

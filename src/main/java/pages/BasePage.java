@@ -20,15 +20,21 @@ public class BasePage {
     }
 
     protected void click(By elementLocation) throws ElementClickInterceptedException {
-        waitForElement(elementLocation);
+        System.out.println("click -> ");
+//        waitForElement(elementLocation);
+        System.out.println("click -> ");
         Utils.screenShotPage(Driver.getDriverInstance(), "ante de cliclar em logar");
         Driver.getDriverInstance().findElement(elementLocation).click();
+        Utils.screenShotPage(Driver.getDriverInstance(), "depois de cliclar em logar");
+        System.out.println("click -> ");
     }
 
     protected void writeText(By elementLocation, String text) {
         waitForElement(elementLocation);
         Driver.getDriverInstance().findElement(elementLocation).clear();
         Driver.getDriverInstance().findElement(elementLocation).sendKeys(text);
+        Utils.screenShotPage(Driver.getDriverInstance(), "write  " + text);
+        System.out.println("write -> "+ text);
 //            test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
     }
 

@@ -21,7 +21,7 @@ public class LoginTest extends BaseTest {
         loginPage.login(PropertyManager.getInstance().getUsername(),
                 PropertyManager.getInstance().getPassword());
 
-        waitTime();
+//        waitTime();
         Assert.assertTrue(homePage.isHomeScreenVisible());
     }
 
