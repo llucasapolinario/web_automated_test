@@ -1,27 +1,36 @@
 package extentReport;
 
+import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.annotations.ITestAnnotation;
 import utils.PropertyManager;
 
-public class Retry implements IRetryAnalyzer {
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
+public class Retry implements IRetryAnalyzer, IAnnotationTransformer {
+
+    private int retryCount = 0;
+
+    @Override
     public boolean retry(ITestResult result) {
-        int retryCount = 0;
         int maxRetryCount = PropertyManager.getMaxRetryCount();
-
-        if (retryCount < maxRetryCount) {
-            retryCount++;
-            Reporter.log("Retrying test "
-                    + result.getName()
-                    + " with status "
-                    + getResultStatusName(result.getStatus())
-                    + " for the "
-                    + (retryCount + 1)
-                    + " time(s).", true);
-            return true;
+        if (!result.isSuccess()) {
+            if (retryCount < maxRetryCount) {
+                retryCount++;
+                Reporter.log("Retrying test "
+                        + result.getName()
+                        + " with status "
+                        + getResultStatusName(result.getStatus())
+                        + " for the "
+                        + (retryCount + 1)
+                        + " time(s).", true);
+                return true;
+            }
         }
+
         return false;
     }
 
@@ -34,6 +43,11 @@ public class Retry implements IRetryAnalyzer {
         if (status == 3)
             resultName = "SKIP";
         return resultName;
+    }
+
+    @Override
+    public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
+        iTestAnnotation.setRetryAnalyzer(Retry.class);
     }
 
 }
