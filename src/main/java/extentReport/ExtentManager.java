@@ -1,7 +1,6 @@
 package extentReport;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import tests.BaseTest;
 import utils.Constants;
@@ -25,7 +24,6 @@ public class ExtentManager extends BaseTest {
         return extent;
     }
 
-    //Create an extent report instance
     private static ExtentReports createInstance() {
 
         System.out.println("file report = " + fileName);
@@ -36,10 +34,6 @@ public class ExtentManager extends BaseTest {
         extentLocal.attachReporter(htmlReporter);
 
         return extentLocal;
-    }
-
-    public static ExtentTest createTest(String name, String description) {
-        return extent.createTest(name, description);
     }
 
     private static ExtentHtmlReporter getHtmlReporter() {

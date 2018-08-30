@@ -44,6 +44,7 @@
             <version>RELEASE</version>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium.grid/selenium-grid-hub -->
         <dependency>
             <groupId>org.seleniumhq.selenium.grid</groupId>
@@ -56,7 +57,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>RELEASE</version>
-            <scope>compile</scope>
+            <scope>Compile</scope>
         </dependency>
 
         <!--ExtentReports-->
