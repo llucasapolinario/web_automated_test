@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Regression Mantis">
     <listeners>
         <listener class-name="extentReport.TestListener" />
@@ -8,6 +8,8 @@
     <test name="Regression" preserve-order="false">
         <classes>
             <class name="tests.LoginTest">
+                <methods>
+                    <include name="validLoginTest"/></methods>
             </class>
         </classes>
     </test>

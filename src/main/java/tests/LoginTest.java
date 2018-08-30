@@ -11,13 +11,16 @@ import extentReport.Retry;
 import utils.PropertyManager;
 
 
-
 public class LoginTest extends RegressionFunc {
 
     private HomePage homePage;
     private LoginPage loginPage;
 
-    @Test(priority = 2, testName = "Valid Login", description = "erro ao realizar o login" , retryAnalyzer = Retry.class)
+    @Test(priority = 2,
+            testName = "Valid Login",
+            description = "erro ao realizar o login",
+            successPercentage = 80,
+            retryAnalyzer = Retry.class)
     public void validLoginTest() {
         homePage = new HomePage();
         loginPage = new LoginPage();
@@ -29,7 +32,11 @@ public class LoginTest extends RegressionFunc {
         testInstance.log(Status.PASS, "deu bom");
     }
 
-    @Test(priority = 1, testName = "Invalid Login - without password", description = "erro ao realizar o login" , retryAnalyzer = Retry.class)
+    @Test(priority = 1,
+            testName = "Invalid Login - without password",
+            description = "erro ao realizar o login",
+            successPercentage = 80,
+            retryAnalyzer = Retry.class)
     public void invalidLoginTest_WrongPassword() {
 
         homePage = new HomePage();
@@ -41,18 +48,25 @@ public class LoginTest extends RegressionFunc {
         Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test(priority = 1, testName = "Invalid Login - wrong username", description = "erro ao realizar o login" , retryAnalyzer = Retry.class)
+    @Test(priority = 1,
+            testName = "Invalid Login - wrong username",
+            description = "erro ao realizar o login",
+            successPercentage = 80,
+            retryAnalyzer = Retry.class)
     public void invalidLoginTest_WrongUsername() {
         homePage = new HomePage();
         loginPage = new LoginPage();
 
-        loginPage.login("Jose das cove",
-                PropertyManager.getInstance().getUsername());
+        loginPage.login("Jose das cove", PropertyManager.getInstance().getUsername());
 
         Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test(priority = 1, testName = "Invalid Login - without username", description = "erro ao realizar o login" , retryAnalyzer = Retry.class)
+    @Test(priority = 1,
+            testName = "Invalid Login - without username",
+            description = "erro ao realizar o login",
+            successPercentage = 80,
+            retryAnalyzer = Retry.class)
     public void invalidLoginTest_EmptyUsername() {
 
         homePage = new HomePage();

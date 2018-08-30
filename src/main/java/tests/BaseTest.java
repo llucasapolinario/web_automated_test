@@ -14,7 +14,7 @@ public class BaseTest {
 
     @BeforeMethod  (description = "Class Level Setup!")
     public void setup() {
-
+        System.out.println("I am in Before Method! Test is starting!");
         Driver.newInstance();
         Driver.getDriverInstance().manage().window().maximize();
 
