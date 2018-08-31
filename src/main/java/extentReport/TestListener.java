@@ -1,11 +1,16 @@
 package extentReport;
 
 import com.aventstack.extentreports.ExtentTest;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import tests.BaseTest;
 import utils.Driver;
+import utils.Utils;
+
+import java.io.IOException;
 
 
 public class TestListener extends BaseTest implements ITestListener {
@@ -16,7 +21,7 @@ public class TestListener extends BaseTest implements ITestListener {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
     }
 
-    @Override
+     @Override
     public synchronized void onStart(ITestContext iTestContext) {
         System.out.println("I am in onStart method " + iTestContext.getName());
         iTestContext.setAttribute("WebDriver", Driver.getDriverInstance());
@@ -35,7 +40,7 @@ public class TestListener extends BaseTest implements ITestListener {
 
         test.set(
                 ExtentManager.getInstance().createTest(
-                        iTestResult.getMethod().getMethodName(),iTestResult.getMethod().getDescription())
+                        iTestResult.getMethod().getMethodName(), iTestResult.getMethod().getDescription())
         );
     }
 
@@ -50,17 +55,18 @@ public class TestListener extends BaseTest implements ITestListener {
     public synchronized void onTestFailure(ITestResult iTestResult) {
         System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
         test.get().fail(iTestResult.getThrowable());
-//        //Get driver from BaseTest and assign to local webdriver variable.
-//        Object testClass = iTestResult.getInstance();
-//        WebDriver webDriver = ((BaseTest) testClass).getDriver();
-//
-//        //Take base64Screenshot screenshot.
-//        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) webDriver).
-//                getScreenshotAs(OutputType.BASE64);
-//
-//        //Extentreports log and screenshot operations for failed tests.
-//        ExtentTestManager.getTest().log(LogStatus.FAIL, "Test Failed",
+
+        //Take base64Screenshot screenshot.
+        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) Driver.getDriverInstance()).
+                getScreenshotAs(OutputType.BASE64);
+        //Extentreports log and screenshot operations for failed tests.
+//        test.get().log(iTestResult.getStatus(), "Test Failed",
 //                ExtentTestManager.getTest().addBase64ScreenShot(base64Screenshot));
+        try {
+            test.get().addScreenCaptureFromPath(Utils.screenShotPage(Driver.getDriverInstance(), iTestResult.getName()).toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

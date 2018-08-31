@@ -18,10 +18,11 @@ import static utils.Constants.SCREEN_SHOT_FOLDER;
 
 public abstract class Utils {
 
-    public static void screenShotPage(WebDriver driver, String label) {
+    public static File screenShotPage(WebDriver driver, String label) {
 
+        File pageImageFile = null;
         try {
-            File pageImageFile = new File(SCREEN_SHOT_FOLDER + label + ".png");
+            pageImageFile = new File(SCREEN_SHOT_FOLDER + label + ".png");
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, pageImageFile);
@@ -29,6 +30,7 @@ public abstract class Utils {
         } catch (IOException ignored) {
         }
 
+        return pageImageFile;
     }
 
     public static void screenShotEntirePage(WebDriver driver, String label) {

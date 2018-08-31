@@ -1,7 +1,6 @@
 package tests;
 
 import com.aventstack.extentreports.Status;
-import extentReport.ExtentTestManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -17,10 +16,11 @@ public class LoginTest extends RegressionFunc {
     private LoginPage loginPage;
 
     @Test(priority = 2,
-            testName = "Valid Login",
-            description = "erro ao realizar o login",
-            successPercentage = 80,
-            retryAnalyzer = Retry.class)
+            testName = "Valid Login"
+//            description = "erro ao realizar o login",
+//            successPercentage = 80,
+//            retryAnalyzer = Retry.class
+    )
     public void validLoginTest() {
         homePage = new HomePage();
         loginPage = new LoginPage();

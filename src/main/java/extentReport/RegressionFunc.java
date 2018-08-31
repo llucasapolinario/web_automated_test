@@ -25,12 +25,12 @@ public class RegressionFunc extends ExtentManager {
 //        initializeExtentReport();
     }
 
-    @BeforeMethod
-    public void beforeMethod(Method method) {
-        Test test = method.getAnnotation(Test.class);
-        testName = test.testName();
-        initTestCase();
-    }
+//    @BeforeMethod
+//    public void beforeMethod(Method method) {
+//        Test test = method.getAnnotation(Test.class);
+//        testName = test.testName();
+//        initTestCase();
+//    }
 
     private void initializeExtentReport() {
         String executingTestCaseName = super.getClass().getSimpleName();
@@ -52,9 +52,9 @@ public class RegressionFunc extends ExtentManager {
         testInstance.assignCategory(executingTestCaseName);
     }
 
-    @AfterClass
-    public void tearDownFunction() {
-        extentInstance.flush();
-    }
+//    @AfterClass
+//    public void tearDownFunction() {
+//        extentInstance.flush();
+//    }
 
 }

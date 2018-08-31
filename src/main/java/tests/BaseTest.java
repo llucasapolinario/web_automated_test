@@ -3,10 +3,12 @@ package tests;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.BasePage;
 import utils.Driver;
 import utils.PropertyManager;
 
+@Listeners(extentReport.TestListener.class)
 
 public class BaseTest {
 

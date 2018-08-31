@@ -25,7 +25,6 @@ public class ExtentManager extends BaseTest {
     }
 
     private static ExtentReports createInstance() {
-
         System.out.println("file report = " + fileName);
         createPath(PATH_REPORT);
 
@@ -38,8 +37,10 @@ public class ExtentManager extends BaseTest {
 
     private static ExtentHtmlReporter getHtmlReporter() {
         ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(new File(fileName));
+
         htmlReporter.loadXMLConfig(Constants.ExtentConfigPath);
         htmlReporter.setAppendExisting(false);
+
         return htmlReporter;
     }
 
