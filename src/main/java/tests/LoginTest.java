@@ -1,25 +1,20 @@
 package tests;
 
-import com.aventstack.extentreports.Status;
+import extentReport.ExtentManager;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import extentReport.RegressionFunc;
 import extentReport.Retry;
 import utils.PropertyManager;
 
 
-public class LoginTest extends RegressionFunc {
+public class LoginTest extends ExtentManager {
 
     private HomePage homePage;
     private LoginPage loginPage;
 
-    @Test(priority = 2,
-            testName = "Valid Login"
-//            description = "erro ao realizar o login",
-//            successPercentage = 80,
-//            retryAnalyzer = Retry.class
+    @Test(priority = 2
     )
     public void validLoginTest() {
         homePage = new HomePage();
@@ -29,12 +24,9 @@ public class LoginTest extends RegressionFunc {
                 PropertyManager.getInstance().getPassword());
 
         Assert.assertTrue(!homePage.isHomeScreenVisible());
-        testInstance.log(Status.PASS, "deu bom");
     }
 
     @Test(priority = 1,
-            testName = "Invalid Login - without password",
-            description = "erro ao realizar o login",
             successPercentage = 80,
             retryAnalyzer = Retry.class)
     public void invalidLoginTest_WrongPassword() {
@@ -49,8 +41,6 @@ public class LoginTest extends RegressionFunc {
     }
 
     @Test(priority = 1,
-            testName = "Invalid Login - wrong username",
-            description = "erro ao realizar o login",
             successPercentage = 80,
             retryAnalyzer = Retry.class)
     public void invalidLoginTest_WrongUsername() {
@@ -63,8 +53,6 @@ public class LoginTest extends RegressionFunc {
     }
 
     @Test(priority = 1,
-            testName = "Invalid Login - without username",
-            description = "erro ao realizar o login",
             successPercentage = 80,
             retryAnalyzer = Retry.class)
     public void invalidLoginTest_EmptyUsername() {

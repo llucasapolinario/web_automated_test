@@ -38,7 +38,8 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+							<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
@@ -52,7 +53,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Aug 31, 2018 08:22:31 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 17, 2018 01:09:31 PM</span>
 				</a>
 			</li>
 			<li>
@@ -144,10 +145,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='94.118%'><span class='strong'>16</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='5.882%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -165,16 +166,20 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>invalidLoginTest_EmptyUsername</span>
-						<span class='test-time'>Aug 31, 2018 08:22:39 AM</span>
+						<span class='test-time'>Sep 17, 2018 01:09:31 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 31, 2018 08:22:39 AM</span>
-	<span class='label end-time'>Aug 31, 2018 08:22:41 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 2s+163ms</span>
+	<span class='label start-time'>Sep 17, 2018 01:09:31 PM</span>
+	<span class='label end-time'>Sep 17, 2018 01:09:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+920ms</span>
 </div>
-	<div class='test-desc'>erro ao realizar o login </div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
 			<thead>
@@ -187,7 +192,12 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>8:22:41 AM</td>
+					<td class='timestamp'>1:09:33 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:09:33 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -200,16 +210,20 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>invalidLoginTest_WrongPassword</span>
-						<span class='test-time'>Aug 31, 2018 08:22:55 AM</span>
+						<span class='test-time'>Sep 17, 2018 01:09:45 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 31, 2018 08:22:55 AM</span>
-	<span class='label end-time'>Aug 31, 2018 08:23:11 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+573ms</span>
+	<span class='label start-time'>Sep 17, 2018 01:09:45 PM</span>
+	<span class='label end-time'>Sep 17, 2018 01:09:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+126ms</span>
 </div>
-	<div class='test-desc'>erro ao realizar o login </div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
 			<thead>
@@ -222,7 +236,27 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>8:23:11 AM</td>
+					<td class='timestamp'>1:09:47 PM</td>
+					<td class='step-details'>writeText 'administrator' on By.id: username</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:09:52 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:09:54 PM</td>
+					<td class='step-details'>writeText 'administrator' on By.id: password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:09:58 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:09:59 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -235,16 +269,20 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>invalidLoginTest_WrongUsername</span>
-						<span class='test-time'>Aug 31, 2018 08:23:26 AM</span>
+						<span class='test-time'>Sep 17, 2018 01:10:13 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 31, 2018 08:23:26 AM</span>
-	<span class='label end-time'>Aug 31, 2018 08:23:31 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+416ms</span>
+	<span class='label start-time'>Sep 17, 2018 01:10:13 PM</span>
+	<span class='label end-time'>Sep 17, 2018 01:10:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+909ms</span>
 </div>
-	<div class='test-desc'>erro ao realizar o login </div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
 			<thead>
@@ -257,7 +295,27 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>8:23:31 AM</td>
+					<td class='timestamp'>1:10:14 PM</td>
+					<td class='step-details'>writeText 'Jose das cove' on By.id: username</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:15 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:15 PM</td>
+					<td class='step-details'>writeText 'administrator' on By.id: password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:17 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:17 PM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -270,15 +328,20 @@
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>validLoginTest</span>
-						<span class='test-time'>Aug 31, 2018 08:23:42 AM</span>
+						<span class='test-time'>Sep 17, 2018 01:10:25 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Aug 31, 2018 08:23:42 AM</span>
-	<span class='label end-time'>Aug 31, 2018 08:23:47 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+682ms</span>
+	<span class='label start-time'>Sep 17, 2018 01:10:25 PM</span>
+	<span class='label end-time'>Sep 17, 2018 01:10:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+357ms</span>
 </div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
 			<thead>
@@ -289,15 +352,35 @@
 				</tr>
 			</thead>
 			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:26 PM</td>
+					<td class='step-details'>writeText 'administrator' on By.id: username</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:27 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:28 PM</td>
+					<td class='step-details'>writeText 'lucas' on By.id: password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:10:30 PM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>8:23:47 AM</td>
+					<td class='timestamp'>1:10:30 PM</td>
 					<td class='step-details'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertTrue(Assert.java:44)
 	at org.testng.Assert.assertTrue(Assert.java:54)
-	at tests.LoginTest.validLoginTest(LoginTest.java:31)
+	at tests.LoginTest.validLoginTest(LoginTest.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -358,6 +441,91 @@
 </div>
 <!-- test view -->
 <!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>lucas.figueiredo</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>3</span>
+                                        <span class='label fail'>1</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 3</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Sep 17, 2018 01:09:31 PM</td>
+                                                <td class='linked' test-id='1'>invalidLoginTest_EmptyUsername</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 17, 2018 01:09:45 PM</td>
+                                                <td class='linked' test-id='2'>invalidLoginTest_WrongPassword</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 17, 2018 01:10:13 PM</td>
+                                                <td class='linked' test-id='3'>invalidLoginTest_WrongUsername</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 17, 2018 01:10:25 PM</td>
+                                                <td class='linked' test-id='4'>validLoginTest</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
 <div id='exception-view' class='view hide'>
 
     <section id='controls'>
@@ -400,14 +568,14 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Aug 31, 2018 08:23:42 AM</td>
+                                                        <td>Sep 17, 2018 01:10:25 PM</td>
                                                         <td class='linked' test-id='4'>validLoginTest</td>
                                                         <td><pre><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:96)
 	at org.testng.Assert.failNotEquals(Assert.java:776)
 	at org.testng.Assert.assertTrue(Assert.java:44)
 	at org.testng.Assert.assertTrue(Assert.java:54)
-	at tests.LoginTest.validLoginTest(LoginTest.java:31)
+	at tests.LoginTest.validLoginTest(LoginTest.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -464,25 +632,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>17</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 31, 2018 08:22:31 AM</div>
+					<div class='panel-lead'>Sep 17, 2018 01:09:31 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 31, 2018 08:23:48 AM</div>
+			 		<div class='panel-lead'>Sep 17, 2018 01:10:31 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 17s+806ms</div>
+					<div class='panel-lead'>0h 0m 59s+885ms</div>
 				</div>
 			</div>
 		</div>
@@ -503,7 +671,7 @@
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 3,
+				passChild: 16,
 				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,

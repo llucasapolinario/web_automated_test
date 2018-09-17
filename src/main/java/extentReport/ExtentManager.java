@@ -15,7 +15,7 @@ public class ExtentManager extends BaseTest {
     private static ExtentReports extent = null;
     private static String fileName = REPORT_FILE_LOC;
 
-    public static ExtentReports getInstance() {
+    static ExtentReports getInstance() {
         if (extent == null) {
             synchronized (LOCK) {
                 extent = createInstance();
