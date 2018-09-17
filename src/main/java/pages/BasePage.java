@@ -10,9 +10,6 @@ import utils.Utils;
 
 public class BasePage {
 
-//    initialize ExtentReports and attach the HtmlReporter
-//    private ExtentReports extent = new ExtentReports();
-//    private ExtentTest test = extent.createTest("Test");
 
     public void goToPage(String page) {
         Driver.getDriverInstance().get(page);
