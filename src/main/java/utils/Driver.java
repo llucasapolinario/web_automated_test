@@ -20,10 +20,9 @@ public class Driver {
     }
 
     public static WebDriver getDriverInstance() {
+        System.out.println("getDriverInstance");
         if (driver == null) {
-            synchronized (LOCK) {
-                driver = new ChromeDriver();
-            }
+            newInstance() ;
         }
 
         return driver;

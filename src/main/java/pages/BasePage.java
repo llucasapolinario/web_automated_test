@@ -1,7 +1,6 @@
 package pages;
 
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.gherkin.model.When;
 import extentReport.TestListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
@@ -24,6 +23,7 @@ public class BasePage {
         Utils.screenShotPage(Driver.getDriverInstance(), "ante de cliclar em logar");
         Driver.getDriverInstance().findElement(elementLocation).click();
         TestListener.getTestCenario().log(Status.PASS, "click on " + elementLocation.toString());
+
     }
 
     protected void writeText(By elementLocation, String text) {
@@ -31,6 +31,7 @@ public class BasePage {
         Driver.getDriverInstance().findElement(elementLocation).clear();
         Driver.getDriverInstance().findElement(elementLocation).sendKeys(text);
         TestListener.getTestCenario().log(Status.PASS, "writeText '"+ text +"' on " + elementLocation.toString());
+
     }
 
     protected String readText(By elementLocation) {
@@ -48,6 +49,7 @@ public class BasePage {
             checkBox.click();
         }
         TestListener.getTestCenario().log(Status.PASS, "selectCheckBox on " + elementLocation.toString());
+
     }
 
     protected void unSelectCheckBox(By elementLocation) throws ElementClickInterceptedException {
