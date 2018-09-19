@@ -1,11 +1,11 @@
 package tests;
 
 import extentReport.ExtentManager;
+import extentReport.Retry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import extentReport.Retry;
 import utils.PropertyManager;
 
 
@@ -14,7 +14,9 @@ public class LoginTest extends ExtentManager {
     private HomePage homePage;
     private LoginPage loginPage;
 
-    @Test(priority = 2
+    @Test(priority = 2,
+            successPercentage = 80,
+            retryAnalyzer = Retry.class
     )
     public void validLoginTest() {
         homePage = new HomePage();
