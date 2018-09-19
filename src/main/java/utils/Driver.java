@@ -11,18 +11,20 @@ public class Driver {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
-    public static void newInstance() {
+    public static WebDriver newInstance() {
+        System.out.println("newInstance");
         synchronized (LOCK) {
             driver = new ChromeDriver();
             wait = new WebDriverWait(Driver.getDriverInstance(),
                     PropertyManager.getInstance().getTimeOut());
         }
+        return driver;
     }
 
     public static WebDriver getDriverInstance() {
         System.out.println("getDriverInstance");
         if (driver == null) {
-            newInstance() ;
+            driver = newInstance();
         }
 
         return driver;
