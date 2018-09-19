@@ -14,9 +14,8 @@ public class BaseTest {
     @BeforeMethod(description = "Class Level Setup!")
     public void setup() {
         System.out.println("Setup!");
-        Driver.newInstance();
-        Driver.getDriverInstance().manage().window().maximize();
 
+        Driver.newInstance().manage().window().maximize();
         new BasePage().goToPage(PropertyManager.getInstance().getURL());
     }
 
