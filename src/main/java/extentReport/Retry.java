@@ -1,9 +1,9 @@
 package extentReport;
 
+import com.aventstack.extentreports.Status;
 import org.testng.IAnnotationTransformer;
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
-import org.testng.Reporter;
 import org.testng.annotations.ITestAnnotation;
 import utils.PropertyManager;
 
@@ -20,13 +20,13 @@ public class Retry implements IRetryAnalyzer, IAnnotationTransformer {
         if (!result.isSuccess()) {
             if (retryCount < maxRetryCount) {
                 retryCount++;
-                Reporter.log("Retrying test "
+                TestListener.getTestCenario().log(Status.FAIL, "Retrying test "
                         + result.getName()
                         + " with status "
                         + getResultStatusName(result.getStatus())
                         + " for the "
                         + (retryCount + 1)
-                        + " time(s).", true);
+                        + " time(s).");
                 return true;
             }
         }
