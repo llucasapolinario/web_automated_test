@@ -1,7 +1,6 @@
 package tests;
 
 import extentReport.ExtentManager;
-import extentReport.Retry;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HomePage;
@@ -28,9 +27,7 @@ public class LoginTest extends ExtentManager {
         Assert.assertTrue(homePage.isHomeScreenVisible());
     }
 
-    @Test(priority = 1,
-            successPercentage = 80,
-            retryAnalyzer = Retry.class)
+    @Test(priority = 1)
     public void invalidLoginTest_WrongPassword() {
 
         homePage = new HomePage();
@@ -42,9 +39,7 @@ public class LoginTest extends ExtentManager {
         Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test(priority = 1,
-            successPercentage = 80,
-            retryAnalyzer = Retry.class)
+    @Test(priority = 1)
     public void invalidLoginTest_WrongUsername() {
         homePage = new HomePage();
         loginPage = new LoginPage();
@@ -54,9 +49,7 @@ public class LoginTest extends ExtentManager {
         Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test(priority = 1,
-            successPercentage = 80,
-            retryAnalyzer = Retry.class)
+    @Test(priority = 1)
     public void invalidLoginTest_EmptyUsername() {
 
         homePage = new HomePage();
