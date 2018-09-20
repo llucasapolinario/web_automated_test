@@ -14,9 +14,9 @@ public class LoginTest extends ExtentManager {
     private HomePage homePage;
     private LoginPage loginPage;
 
-    @Test(priority = 2,
-            successPercentage = 80,
-            retryAnalyzer = Retry.class
+    @Test(priority = 2
+//            , successPercentage = 80,
+//            retryAnalyzer = Retry.class
     )
     public void validLoginTest() {
         homePage = new HomePage();
@@ -25,7 +25,7 @@ public class LoginTest extends ExtentManager {
         loginPage.login(PropertyManager.getInstance().getUsername(),
                 PropertyManager.getInstance().getPassword());
 
-        Assert.assertTrue(!homePage.isHomeScreenVisible());
+        Assert.assertTrue(homePage.isHomeScreenVisible());
     }
 
     @Test(priority = 1,

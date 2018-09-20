@@ -6,20 +6,13 @@ import pages.Manager.NewProjectPage;
 import tests.BaseTest;
 import tests.LoginTest;
 
+import javax.swing.*;
+
 public class NewProjectTest extends BaseTest {
 
     private NewProjectPage newProjectPage;
     private LoginTest login;
 
-//    @BeforeMethod
-//    public void setup(){
-//
-//    }
-//
-//    @AfterMethod
-//    public void tearDown(){
-//
-//    }
 
     @Test
     public void createNewProject_privateProject() {
@@ -27,15 +20,19 @@ public class NewProjectTest extends BaseTest {
         login = new LoginTest();
 
         login.validLoginTest();
-        newProjectPage.setProjectName("Automação parte1");
+        newProjectPage.gotoManagerProjects();
+        newProjectPage.clickNewProject();
+        String projectName = "Automação parte1";
+        newProjectPage.setProjectName(projectName);
         newProjectPage.setStateRelease();
-//        newProjectPage.setExtendsGlobalCategory();
+        newProjectPage.setExtendsGlobalCategory();
         newProjectPage.doNotSetExtendsGlobalCategory();
         newProjectPage.setProjectPrivate();
         newProjectPage.setProjectDescription("testind description");
 
         newProjectPage.clickAddProject();
         Assert.assertFalse(newProjectPage.isNoneProjectName());
+        Assert.assertTrue(newProjectPage.isProjectCreate(projectName));
     }
 
     @Test
@@ -44,15 +41,17 @@ public class NewProjectTest extends BaseTest {
         login = new LoginTest();
 
         login.validLoginTest();
-        newProjectPage.setProjectName("Automação parte1");
+        String projectName = "Automação parte1";
+        newProjectPage.setProjectName(projectName);
         newProjectPage.setStateRelease();
-//        newProjectPage.setExtendsGlobalCategory();
+        newProjectPage.setExtendsGlobalCategory();
         newProjectPage.doNotSetExtendsGlobalCategory();
         newProjectPage.setProjectPublic();
         newProjectPage.setProjectDescription("testind description");
 
         newProjectPage.clickAddProject();
         Assert.assertFalse(newProjectPage.isNoneProjectName());
+        Assert.assertTrue(newProjectPage.isProjectCreate(projectName));
     }
 
     @Test
@@ -68,6 +67,7 @@ public class NewProjectTest extends BaseTest {
 
         newProjectPage.clickAddProject();
         Assert.assertTrue(newProjectPage.isNoneProjectName());
+        Assert.assertFalse(newProjectPage.isProjectCreate(""));
     }
 
 }
