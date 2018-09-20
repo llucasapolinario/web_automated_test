@@ -6,7 +6,6 @@ import pages.Manager.NewProjectPage;
 import tests.BaseTest;
 import tests.LoginTest;
 
-import javax.swing.*;
 
 public class NewProjectTest extends BaseTest {
 
@@ -31,8 +30,9 @@ public class NewProjectTest extends BaseTest {
         newProjectPage.setProjectDescription("testind description");
 
         newProjectPage.clickAddProject();
-        Assert.assertFalse(newProjectPage.isNoneProjectName());
-        Assert.assertTrue(newProjectPage.isProjectCreate(projectName));
+
+        //TODO emprouve this search
+        Assert.assertTrue(newProjectPage.isNewProjectShowing(projectName));
     }
 
     @Test
@@ -41,7 +41,9 @@ public class NewProjectTest extends BaseTest {
         login = new LoginTest();
 
         login.validLoginTest();
-        String projectName = "Automação parte1";
+        newProjectPage.gotoManagerProjects();
+        newProjectPage.clickNewProject();
+        String projectName = "Automação parte2";
         newProjectPage.setProjectName(projectName);
         newProjectPage.setStateRelease();
         newProjectPage.setExtendsGlobalCategory();
@@ -50,8 +52,7 @@ public class NewProjectTest extends BaseTest {
         newProjectPage.setProjectDescription("testind description");
 
         newProjectPage.clickAddProject();
-        Assert.assertFalse(newProjectPage.isNoneProjectName());
-        Assert.assertTrue(newProjectPage.isProjectCreate(projectName));
+        Assert.assertTrue(newProjectPage.isNewProjectShowing(projectName));
     }
 
     @Test
@@ -66,8 +67,28 @@ public class NewProjectTest extends BaseTest {
         newProjectPage.setProjectDescription("testind description");
 
         newProjectPage.clickAddProject();
-        Assert.assertTrue(newProjectPage.isNoneProjectName());
-        Assert.assertFalse(newProjectPage.isProjectCreate(""));
+    }
+
+    @Test
+    public void createNewProject_withProjectNameUsing() {
+        newProjectPage = new NewProjectPage();
+        login = new LoginTest();
+
+        login.validLoginTest();
+        newProjectPage.gotoManagerProjects();
+        newProjectPage.clickNewProject();
+        String projectName = "Automação parte1";
+        newProjectPage.setProjectName(projectName);
+        newProjectPage.setStateRelease();
+        newProjectPage.setExtendsGlobalCategory();
+        newProjectPage.doNotSetExtendsGlobalCategory();
+        newProjectPage.setProjectPrivate();
+        newProjectPage.setProjectDescription("testind description");
+
+        newProjectPage.clickAddProject();
+
+        //TODO emprouve this search
+        Assert.assertTrue(newProjectPage.isNameProjectUsing());
     }
 
 }

@@ -66,4 +66,10 @@ public class BasePage {
         new Select(Driver.getDriverInstance().findElement(elementLocation)).selectByVisibleText(value);
     }
 
+    protected boolean isShowing(String value){
+//        Driver.getDriverInstance().
+        return true;
+    }
+
 }
+

@@ -22,7 +22,6 @@ public class Driver {
     }
 
     public static WebDriver getDriverInstance() {
-        System.out.println("getDriverInstance");
         if (driver == null) {
             driver = newInstance();
         }
