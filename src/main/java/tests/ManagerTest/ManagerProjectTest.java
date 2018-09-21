@@ -73,7 +73,22 @@ public class ManagerProjectTest extends BaseTest {
     }
 
     @Test
-    public void _createNewProject_withoutProjectName() {
+    public void editProject() {
+        managerProjectPage = new ManagerProjectPage();
+        login = new LoginTest();
+
+        login.validLoginTest();
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickEditProject(projectName1);
+
+        managerProjectPage.setProjectName(projectName);
+        managerProjectPage.clickUpdateProject();
+
+        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName));
+    }
+
+//    @Test
+    public void _test_createNewProject_withoutProjectName() {
         managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 
@@ -91,23 +106,8 @@ public class ManagerProjectTest extends BaseTest {
         Assert.assertTrue(managerProjectPage.isNameProjectEmpty());
     }
 
-    @Test
-    public void editProject() {
-        managerProjectPage = new ManagerProjectPage();
-        login = new LoginTest();
-
-        login.validLoginTest();
-        managerProjectPage.gotoManagerProjects();
-        managerProjectPage.clickEditProject(projectName1);
-
-        managerProjectPage.setProjectName(projectName);
-        managerProjectPage.clickUpdateProject();
-
-        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName));
-    }
-
-    @Test
-    public void _deleteProject() {
+//    @Test
+    public void _test_deleteProject() {
         managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 

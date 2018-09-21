@@ -17,9 +17,9 @@ public class ManagerProjectPage extends ManagerPage {
     private static final String PROJECT_DESCRIPTION_ID = "project-description";
 //    private static final String FILL_THIS_FIELD_ID = "(.//*[normalize-space(text()) and normalize-space(.)='Estado'])[1]/following::td[1]";
 //    private static final String SUCCESS_OPERATION_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
+
     private static final String CLICK_TO_MANAGE_PROJECT_ID = "manage-project-create-form";
     private static final String NEW_PROJECT_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Gerenciar Configuração'])[1]/following::button[1]";
-    private static final String ERROR_701_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
     private static final String NONENAME_CSS = "div.alert.alert-danger ";
 
 
@@ -117,7 +117,7 @@ public class ManagerProjectPage extends ManagerPage {
     }
 
     public boolean isNameProjectUsing(){
-        return ERROR_701.equals(readText(By.xpath(ERROR_701_XPATH)));
+        return ERROR_701.equals(readText(By.xpath(ERROR_CODE_XPATH)));
     }
 
     public boolean isNameProjectEmpty(){

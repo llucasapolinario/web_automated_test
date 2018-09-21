@@ -36,6 +36,7 @@ public class BasePage {
 
     protected String readText(By elementLocation) {
         waitForElement(elementLocation);
+        System.out.println(Driver.getDriverInstance().findElement(elementLocation).getText());
         return Driver.getDriverInstance().findElement(elementLocation).getText();
     }
 
