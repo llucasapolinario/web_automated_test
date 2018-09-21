@@ -5,10 +5,13 @@ import org.testng.Assert;
 import pages.HomePage;
 import utils.Driver;
 
-public class NewProjectPage extends ManegerPage {
+public class ManagerProjectPage extends ManegerPage {
 
     private static final String PROJECT_NAME_ID = "project-name";
     private static final String ADD_PROJECT_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='* requerido'])[1]/following::input[1]";
+    private static final String UPDATE_PROJECT_ID = "manage-proj-update-form";
+    private static final String DELETE_PROJECT_ID = "project-delete-form";
+    private static final String CONFIRM_DELETE_PROJECT_ID = "main-container";
     private static final String STATE_ID = "project-status";
     private static final String VISIBILITY_ID = "project-view-state";
     private static final String EXTENDS_GLOBAL_CATEGORY_CSS = ".lbl";
@@ -30,7 +33,7 @@ public class NewProjectPage extends ManegerPage {
     private static final String RELEASE = "release";
     private static final String STABLE = "estável";
     private static final String OBSOLETE = "obsoleto";
-    private static final String SUCCESS_OPERATION = "Operação realizada com sucesso.";
+    private static final String SET_PROJECTNAME = "Preencha este campo.";
 
     public void setProjectName(String projectName) {
         writeText(By.id(PROJECT_NAME_ID), projectName);
@@ -85,7 +88,7 @@ public class NewProjectPage extends ManegerPage {
 //    }
 
     public boolean isNewProjectShowing(String projectName){
-        return projectName.equals(readText(By.xpath(FIRST_PROJECT_TABLE)));
+        return projectName.equals(readText(By.linkText(projectName)));
     }
 
     public void gotoManagerProjects() {
@@ -97,8 +100,31 @@ public class NewProjectPage extends ManegerPage {
         click(By.xpath(NEW_PROJECT_XPATH));
     }
 
+    public void clickEditProject(String projectNam) {
+        click(By.linkText(projectNam));
+    }
+
+    public void clickUpdateProject() {
+        click(By.id(UPDATE_PROJECT_ID));
+    }
+
+    public void clickDeleteProject() {
+        click(By.id(DELETE_PROJECT_ID));
+    }
+
+    public void clickConfirmDeleteProject() {
+        click(By.id(CONFIRM_DELETE_PROJECT_ID));
+    }
+
     public boolean isNameProjectUsing(){
         return ERROR_701.equals(readText(By.xpath(ERROR_701_XPATH)));
+    }
+
+    public boolean isNameProjectEmpty(){
+        System.out.println("alert text");
+        String a = getAlertText();
+        System.out.println(a);
+        return SET_PROJECTNAME.equals(a);
     }
 
 }

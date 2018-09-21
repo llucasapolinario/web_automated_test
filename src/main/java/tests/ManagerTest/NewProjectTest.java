@@ -2,93 +2,133 @@ package tests.ManagerTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.Manager.NewProjectPage;
+import pages.Manager.ManagerProjectPage;
 import tests.BaseTest;
 import tests.LoginTest;
 
 
 public class NewProjectTest extends BaseTest {
 
-    private NewProjectPage newProjectPage;
+    private ManagerProjectPage managerProjectPage;
     private LoginTest login;
-
+    private String projectName1 = "Automação parte1";
 
     @Test
     public void createNewProject_privateProject() {
-        newProjectPage = new NewProjectPage();
+        managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 
         login.validLoginTest();
-        newProjectPage.gotoManagerProjects();
-        newProjectPage.clickNewProject();
-        String projectName = "Automação parte1";
-        newProjectPage.setProjectName(projectName);
-        newProjectPage.setStateRelease();
-        newProjectPage.setExtendsGlobalCategory();
-        newProjectPage.doNotSetExtendsGlobalCategory();
-        newProjectPage.setProjectPrivate();
-        newProjectPage.setProjectDescription("testind description");
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickNewProject();
+        managerProjectPage.setProjectName(projectName1);
+        managerProjectPage.setStateRelease();
+        managerProjectPage.setExtendsGlobalCategory();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("testind description");
 
-        newProjectPage.clickAddProject();
-
-        //TODO emprouve this search
-        Assert.assertTrue(newProjectPage.isNewProjectShowing(projectName));
+        managerProjectPage.clickAddProject();
+        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
     }
 
     @Test
     public void createNewProject_publicProject() {
-        newProjectPage = new NewProjectPage();
+        managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 
         login.validLoginTest();
-        newProjectPage.gotoManagerProjects();
-        newProjectPage.clickNewProject();
-        String projectName = "Automação parte2";
-        newProjectPage.setProjectName(projectName);
-        newProjectPage.setStateRelease();
-        newProjectPage.setExtendsGlobalCategory();
-        newProjectPage.doNotSetExtendsGlobalCategory();
-        newProjectPage.setProjectPublic();
-        newProjectPage.setProjectDescription("testind description");
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickNewProject();
+        String projectName2 = "Automação parte2";
+        managerProjectPage.setProjectName(projectName2);
+        managerProjectPage.setStateRelease();
+        managerProjectPage.setExtendsGlobalCategory();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPublic();
+        managerProjectPage.setProjectDescription("testind description");
 
-        newProjectPage.clickAddProject();
-        Assert.assertTrue(newProjectPage.isNewProjectShowing(projectName));
-    }
-
-    @Test
-    public void createNewProject_withoutProjectName() {
-        newProjectPage = new NewProjectPage();
-        login = new LoginTest();
-
-        login.validLoginTest();
-        newProjectPage.setStateRelease();
-        newProjectPage.doNotSetExtendsGlobalCategory();
-        newProjectPage.setProjectPrivate();
-        newProjectPage.setProjectDescription("testind description");
-
-        newProjectPage.clickAddProject();
+        managerProjectPage.clickAddProject();
+        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName2));
     }
 
     @Test
     public void createNewProject_withProjectNameUsing() {
-        newProjectPage = new NewProjectPage();
+        managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 
         login.validLoginTest();
-        newProjectPage.gotoManagerProjects();
-        newProjectPage.clickNewProject();
-        String projectName = "Automação parte1";
-        newProjectPage.setProjectName(projectName);
-        newProjectPage.setStateRelease();
-        newProjectPage.setExtendsGlobalCategory();
-        newProjectPage.doNotSetExtendsGlobalCategory();
-        newProjectPage.setProjectPrivate();
-        newProjectPage.setProjectDescription("testind description");
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickNewProject();
+        managerProjectPage.setProjectName(projectName1);
+        managerProjectPage.setStateRelease();
+        managerProjectPage.setExtendsGlobalCategory();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("testind description");
 
-        newProjectPage.clickAddProject();
+        managerProjectPage.clickAddProject();
+        Assert.assertTrue(managerProjectPage.isNameProjectUsing());
+    }
 
-        //TODO emprouve this search
-        Assert.assertTrue(newProjectPage.isNameProjectUsing());
+    @Test
+    public void createNewProject_withoutProjectName() {
+        managerProjectPage = new ManagerProjectPage();
+        login = new LoginTest();
+
+        login.validLoginTest();
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickNewProject();
+        managerProjectPage.setStateRelease();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("testind description");
+
+        managerProjectPage.clickAddProject();
+
+        //FIXME
+        Assert.assertTrue(managerProjectPage.isNameProjectEmpty());
+    }
+
+    @Test
+    public void editProject() {
+        managerProjectPage = new ManagerProjectPage();
+        login = new LoginTest();
+
+        login.validLoginTest();
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickEditProject(projectName1);
+
+        managerProjectPage.setStateRelease();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("project edit");
+
+        managerProjectPage.clickUpdateProject();
+
+        //todo validar os campos do projeto e validar a auteração na tabela de porjetos
+        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
+    }
+
+    @Test
+    public void deleteProject() {
+        managerProjectPage = new ManagerProjectPage();
+        login = new LoginTest();
+
+        login.validLoginTest();
+        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickEditProject(projectName1);
+
+        managerProjectPage.setStateRelease();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("project edit");
+
+        managerProjectPage.clickDeleteProject();
+        managerProjectPage.clickConfirmDeleteProject();
+
+        //todo validar os campos do projeto e validar a auteração na tabela de porjetos
+        Assert.assertFalse(managerProjectPage.isNewProjectShowing(projectName1));
     }
 
 }

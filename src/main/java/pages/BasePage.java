@@ -39,6 +39,10 @@ public class BasePage {
         return Driver.getDriverInstance().findElement(elementLocation).getText();
     }
 
+    protected String getAlertText(){
+        return Driver.getDriverInstance().switchTo().activeElement().getText();
+    }
+
     protected WebElement waitForElement(By elementLocation) {
         return Driver.getWaitInstance().until(ExpectedConditions.elementToBeClickable(elementLocation));
     }
