@@ -2,7 +2,7 @@ package pages.Manager;
 
 import pages.HomePage;
 
-public class ManegerPage extends HomePage {
+public class ManagerPage extends HomePage {
 
     protected static final String MANEGER_USER_HREF = "Gerenciar Usuários";
     protected static final String MANEGER_PROJECTS_HREF = "Gerenciar Projetos";

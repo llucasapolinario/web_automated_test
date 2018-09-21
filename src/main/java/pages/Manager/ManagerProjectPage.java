@@ -1,15 +1,14 @@
 package pages.Manager;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
-import pages.HomePage;
+import org.openqa.selenium.WebElement;
 import utils.Driver;
 
-public class ManagerProjectPage extends ManegerPage {
+public class ManagerProjectPage extends ManagerPage {
 
     private static final String PROJECT_NAME_ID = "project-name";
     private static final String ADD_PROJECT_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='* requerido'])[1]/following::input[1]";
-    private static final String UPDATE_PROJECT_ID = "manage-proj-update-form";
+    private static final String UPDATE_PROJECT_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='* requerido'])[1]/following::input[1]";
     private static final String DELETE_PROJECT_ID = "project-delete-form";
     private static final String CONFIRM_DELETE_PROJECT_ID = "main-container";
     private static final String STATE_ID = "project-status";
@@ -21,6 +20,7 @@ public class ManagerProjectPage extends ManegerPage {
     private static final String CLICK_TO_MANAGE_PROJECT_ID = "manage-project-create-form";
     private static final String NEW_PROJECT_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Gerenciar Configuração'])[1]/following::button[1]";
     private static final String ERROR_701_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
+    private static final String NONENAME_CSS = "div.alert.alert-danger ";
 
 
     private static final String FIRST_PROJECT_TABLE = "(.//*[normalize-space(text()) and normalize-space(.)='Descrição'])[1]/following::a[1]";
@@ -105,7 +105,7 @@ public class ManagerProjectPage extends ManegerPage {
     }
 
     public void clickUpdateProject() {
-        click(By.id(UPDATE_PROJECT_ID));
+        click(By.xpath(UPDATE_PROJECT_XPATH));
     }
 
     public void clickDeleteProject() {
@@ -122,7 +122,8 @@ public class ManagerProjectPage extends ManegerPage {
 
     public boolean isNameProjectEmpty(){
         System.out.println("alert text");
-        String a = getAlertText();
+        WebElement alert = Driver.getDriverInstance().findElement(By.cssSelector(PROJECT_NAME_ID));
+        String a = alert.getAttribute("required");
         System.out.println(a);
         return SET_PROJECTNAME.equals(a);
     }

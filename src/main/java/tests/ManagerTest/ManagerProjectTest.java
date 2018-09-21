@@ -7,11 +7,12 @@ import tests.BaseTest;
 import tests.LoginTest;
 
 
-public class NewProjectTest extends BaseTest {
+public class ManagerProjectTest extends BaseTest {
 
     private ManagerProjectPage managerProjectPage;
     private LoginTest login;
     private String projectName1 = "Automação parte1";
+    private String projectName = "Automação parte";
 
     @Test
     public void createNewProject_privateProject() {
@@ -72,7 +73,7 @@ public class NewProjectTest extends BaseTest {
     }
 
     @Test
-    public void createNewProject_withoutProjectName() {
+    public void _createNewProject_withoutProjectName() {
         managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 
@@ -99,25 +100,20 @@ public class NewProjectTest extends BaseTest {
         managerProjectPage.gotoManagerProjects();
         managerProjectPage.clickEditProject(projectName1);
 
-        managerProjectPage.setStateRelease();
-        managerProjectPage.doNotSetExtendsGlobalCategory();
-        managerProjectPage.setProjectPrivate();
-        managerProjectPage.setProjectDescription("project edit");
-
+        managerProjectPage.setProjectName(projectName);
         managerProjectPage.clickUpdateProject();
 
-        //todo validar os campos do projeto e validar a auteração na tabela de porjetos
-        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
+        Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName));
     }
 
     @Test
-    public void deleteProject() {
+    public void _deleteProject() {
         managerProjectPage = new ManagerProjectPage();
         login = new LoginTest();
 
         login.validLoginTest();
         managerProjectPage.gotoManagerProjects();
-        managerProjectPage.clickEditProject(projectName1);
+        managerProjectPage.clickEditProject(projectName);
 
         managerProjectPage.setStateRelease();
         managerProjectPage.doNotSetExtendsGlobalCategory();
@@ -127,8 +123,9 @@ public class NewProjectTest extends BaseTest {
         managerProjectPage.clickDeleteProject();
         managerProjectPage.clickConfirmDeleteProject();
 
+        //fixme
         //todo validar os campos do projeto e validar a auteração na tabela de porjetos
-        Assert.assertFalse(managerProjectPage.isNewProjectShowing(projectName1));
+        Assert.assertFalse(managerProjectPage.isNewProjectShowing(projectName));
     }
 
 }
