@@ -22,9 +22,8 @@ public class PropertyManager {
     private static String password;
     private static Integer maxRetryCount;
 
-
-
     private static int TIME_OUT;
+    private static int TIME_OUT_BEFORE_ELEMENT;
 
     public static PropertyManager getInstance() {
         if (instance == null) {
@@ -50,6 +49,7 @@ public class PropertyManager {
         username = prop.getProperty("username");
         password = prop.getProperty("password");
         TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
+        TIME_OUT_BEFORE_ELEMENT = Integer.parseInt(prop.getProperty("timeout_before_event"));
         maxRetryCount = Integer.parseInt(prop.getProperty("maxRetryCount"));
     }
 
@@ -69,8 +69,12 @@ public class PropertyManager {
         return hubLink;
     }
 
-    public int getTimeOut() {
+    int getTimeOut() {
         return TIME_OUT;
+    }
+
+    int getTimeOutBeforeElement() {
+        return TIME_OUT_BEFORE_ELEMENT;
     }
 
     public static Integer getMaxRetryCount() {
