@@ -1,9 +1,7 @@
 package tests;
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Listeners;
-import pages.BasePage;
+import org.testng.annotations.*;
+import pages.BaseElement;
 import utils.Driver;
 import utils.PropertyManager;
 
@@ -11,15 +9,13 @@ import utils.PropertyManager;
 
 public class BaseTest {
 
-    @BeforeMethod(description = "Class Level Setup!")
+    @BeforeMethod
     public void setup() {
-        System.out.println("Setup!");
-
         Driver.newInstance().manage().window().maximize();
-        new BasePage().goToPage(PropertyManager.getInstance().getURL());
+        new BaseElement().goToPage(PropertyManager.getInstance().getURL());
     }
 
-    @AfterMethod(description = "Class Level Teardown!")
+    @AfterMethod
     public void tearDown() {
         Driver.getDriverInstance().close();
         Driver.getDriverInstance().quit();

@@ -88,7 +88,7 @@ public class ManagerProjectPage extends ManagerPage {
 //    }
 
     public boolean isNewProjectShowing(String projectName){
-        return projectName.equals(readText(By.linkText(projectName)));
+        return elementExists(By.linkText(projectName));
     }
 
     public void gotoManagerProjects() {
@@ -100,7 +100,7 @@ public class ManagerProjectPage extends ManagerPage {
         click(By.xpath(NEW_PROJECT_XPATH));
     }
 
-    public void clickEditProject(String projectNam) {
+    public void clickInProject(String projectNam) {
         click(By.linkText(projectNam));
     }
 
@@ -128,4 +128,7 @@ public class ManagerProjectPage extends ManagerPage {
         return SET_PROJECTNAME.equals(a);
     }
 
+//    public boolean isPorjectDelet() {
+//        return
+//    }
 }

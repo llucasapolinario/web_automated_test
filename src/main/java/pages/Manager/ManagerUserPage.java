@@ -6,12 +6,12 @@ public class ManagerUserPage extends ManagerPage {
 
     private static final String NEW_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='NOVO'])[1]/following::button[1]";
     private static final String USERNAME_ID = "user-username";
-    private static final String REALNAME_ID = "user-realname";
+    private static final String REAL_NAME_ID = "user-realname";
     private static final String EMAIL_ID = "email-field";
     private static final String ACCESS_LEVEL_ID = "user-access-level";
     private static final String ABLE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Habilitado'])[1]/following::span[1]";
     private static final String PROTECTED_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::span[1]";
-    private static final String CREAT_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
+    private static final String CREATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
     private static final String CONFIRM_DELETE_USER = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/foll";
 
     private static final String ERROR_805 = "APPLICATION ERROR #805";
@@ -30,7 +30,7 @@ public class ManagerUserPage extends ManagerPage {
     }
 
     public void setRealName(String realName) {
-        writeText(By.id(REALNAME_ID), realName);
+        writeText(By.id(REAL_NAME_ID), realName);
     }
 
     public void setUserEmail(String email) {
@@ -58,7 +58,7 @@ public class ManagerUserPage extends ManagerPage {
     }
 
     public void clickCreateUser() {
-        click(By.xpath(CREAT_USER_XPATH));
+        click(By.xpath(CREATE_USER_XPATH));
     }
 
     public boolean isNameProjectUsing(){
@@ -74,13 +74,12 @@ public class ManagerUserPage extends ManagerPage {
         click(By.linkText(MANEGER_USER_HREF));
     }
 
-    public boolean isNewUserShowing(String userName){
+    public boolean isUserShowing(String userName){
         return userName.equals(readText(By.linkText(userName)));
     }
 
     public boolean isEmailWrong(){
-        return ERROR_1200.equals(readText(By.linkText(ERROR_CODE_XPATH)))
-                && ERROR_1200_MESSAGE.equals(readText(By.linkText(ERROR_MESSAGE_XPATH)));
+        return ERROR_1200.equals(elementExists(By.linkText(ERROR_CODE_XPATH)));
     }
 
 }

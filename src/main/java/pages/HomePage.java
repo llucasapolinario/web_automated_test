@@ -2,7 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 
-public class HomePage extends BasePage {
+public class HomePage extends BaseElement {
 
     protected static final String MANTIS_BD_XPATH = "//div[@id='navbar-container']//a[@href='/my_view_page.php']/span[@class='smaller-75']";
     protected static final String OVERVIEW_XPATH = "//a[@href='/my_view_page.php']/i";
