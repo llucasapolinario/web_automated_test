@@ -2,20 +2,19 @@ package tests.ManagerTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.Login.LoginPage;
 import pages.Manager.ManagerProjectPage;
 import tests.Base.BaseTest;
-import utils.PropertyManager;
+import tests.Login.LoginTest;
 
 
 public class ManagerProjectTest extends BaseTest {
 
     private ManagerProjectPage managerProjectPage;
-    private String projectName1 = "Automação parte1";
-    private String projectName2 = "Automação parte2";
-    private String projectName = "Automação parte0";
+    private String projectName1 = "Automação parte 1";
+    private String projectName2 = "Automação parte 2";
+    private String projectName  = "Automação parte 0";
 
-    @Test()
+    @Test
     public void createNewProject_privateProject() {
         setupManagerProjects();
 
@@ -23,7 +22,6 @@ public class ManagerProjectTest extends BaseTest {
         managerProjectPage.setProjectName(projectName1);
         managerProjectPage.setStateRelease();
         managerProjectPage.setExtendsGlobalCategory();
-        managerProjectPage.doNotSetExtendsGlobalCategory();
         managerProjectPage.setProjectPrivate();
         managerProjectPage.setProjectDescription("testind description");
 
@@ -33,7 +31,7 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
-    @Test()
+    @Test
     public void createNewProject_publicProject() {
         setupManagerProjects();
 
@@ -41,7 +39,6 @@ public class ManagerProjectTest extends BaseTest {
         managerProjectPage.setProjectName(projectName2);
         managerProjectPage.setStateRelease();
         managerProjectPage.setExtendsGlobalCategory();
-        managerProjectPage.doNotSetExtendsGlobalCategory();
         managerProjectPage.setProjectPublic();
         managerProjectPage.setProjectDescription("testind description");
 
@@ -51,7 +48,7 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
-    @Test()
+    @Test
     public void createNewProject_withProjectNameUsing() {
         setup_createProject();
 
@@ -69,7 +66,7 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
-    @Test()
+    @Test
     public void editProject() {
         setup_createProject();
         managerProjectPage.clickInProject(projectName1);
@@ -80,7 +77,26 @@ public class ManagerProjectTest extends BaseTest {
         Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName));
     }
 
-    @Test()
+    @Test
+    public void editProject_withProjectNameUsing() {
+        setup_createProject();
+
+        managerProjectPage.clickNewProject();
+        managerProjectPage.setProjectName(projectName);
+        managerProjectPage.setStateRelease();
+        managerProjectPage.setExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("testind description");
+        managerProjectPage.clickAddProject();
+
+        managerProjectPage.clickInProject(projectName);
+        managerProjectPage.setProjectName(projectName1);
+        managerProjectPage.clickUpdateProject();
+
+        Assert.assertTrue(managerProjectPage.isNameProjectUsing());
+    }
+
+    @Test
     public void deleteProject() {
         setup_createProject();
         managerProjectPage.clickInProject(projectName1);
@@ -92,6 +108,34 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
+    @Test
+    public void createNewProject_withoutProjectName() {
+        setupManagerProjects();
+
+        managerProjectPage.clickNewProject();
+        managerProjectPage.setStateRelease();
+        managerProjectPage.doNotSetExtendsGlobalCategory();
+        managerProjectPage.setProjectPrivate();
+        managerProjectPage.setProjectDescription("testind description");
+        managerProjectPage.clickAddProject();
+
+        Assert.assertTrue(managerProjectPage.isCreateProjectPage());
+        deleteProjects();
+    }
+
+    @Test
+    public void validateAccess_CreateProjectPage(){
+        setupManagerProjects();
+        managerProjectPage.clickNewProject();
+        Assert.assertFalse(managerProjectPage.isCreateProjectPage());
+    }
+
+    @Test
+    public void validateAccess_ManagerProjectPage(){
+        setupManagerProjects();
+        Assert.assertFalse(managerProjectPage.isManagerProjectPage());
+    }
+
     private void setup_createProject() {
 
         setupManagerProjects();
@@ -100,7 +144,6 @@ public class ManagerProjectTest extends BaseTest {
         managerProjectPage.setProjectName(projectName1);
         managerProjectPage.setStateRelease();
         managerProjectPage.setExtendsGlobalCategory();
-        managerProjectPage.doNotSetExtendsGlobalCategory();
         managerProjectPage.setProjectPrivate();
         managerProjectPage.setProjectDescription("testind description");
 
@@ -111,9 +154,11 @@ public class ManagerProjectTest extends BaseTest {
     private void setupManagerProjects() {
         managerProjectPage = new ManagerProjectPage();
 
-        LoginPage login = new LoginPage();
-        login.login(PropertyManager.getInstance().getUsername(),
-                PropertyManager.getInstance().getPassword());
+        new LoginTest().validLoginTest();
+//
+//        LoginPage login = new LoginPage();
+//        login.login(PropertyManager.getInstance().getUsername(),
+//                PropertyManager.getInstance().getPassword());
 
         managerProjectPage.gotoManagerProjects();
         deleteProjects();
@@ -142,22 +187,6 @@ public class ManagerProjectTest extends BaseTest {
             Assert.assertFalse(managerProjectPage.isNewProjectShowing(projectName2));
         }
 
-    }
-
-    @Test(enabled = false)
-    public void createNewProject_withoutProjectName() {
-        setup_createProject();
-
-        managerProjectPage.clickNewProject();
-        managerProjectPage.setStateRelease();
-        managerProjectPage.doNotSetExtendsGlobalCategory();
-        managerProjectPage.setProjectPrivate();
-        managerProjectPage.setProjectDescription("testind description");
-
-        managerProjectPage.clickAddProject();
-
-        //FIXME
-        Assert.assertTrue(managerProjectPage.isNameProjectEmpty());
     }
 
 }
