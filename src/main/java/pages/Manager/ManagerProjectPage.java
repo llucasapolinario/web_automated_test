@@ -121,6 +121,6 @@ public class ManagerProjectPage extends ManagerPage {
     }
 
     public boolean isManagerProjectPage(){
-        return waitForElement(By.xpath(ADD_PROJECT_XPATH)).isDisplayed();
+        return waitForElement(By.xpath(NEW_PROJECT_XPATH)).isDisplayed();
     }
 }

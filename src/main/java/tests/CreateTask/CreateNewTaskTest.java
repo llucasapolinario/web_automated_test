@@ -2,15 +2,14 @@ package tests.CreateTask;
 
 import org.testng.annotations.Test;
 import pages.CreateTask.CreateTaskPage;
-import pages.Login.LoginPage;
 import tests.Base.BaseTest;
-import utils.PropertyManager;
+import tests.Login.LoginTest;
 
 public class CreateNewTaskTest extends BaseTest {
 
     private CreateTaskPage createTaskPage;
 
-    @Test
+    @Test(enabled = false)
     public void createNewTask_withoutCategory() {
         setupCreateNewTask();
 //        createTaskPage.selectyCategory();
@@ -21,11 +20,7 @@ public class CreateNewTaskTest extends BaseTest {
 
     private void setupCreateNewTask() {
         createTaskPage = new CreateTaskPage();
-
-        LoginPage login = new LoginPage();
-        login.login(PropertyManager.getInstance().getUsername(),
-                PropertyManager.getInstance().getPassword());
-
+        new LoginTest().validLoginTest();
         createTaskPage.clickCreateTask();
     }
 

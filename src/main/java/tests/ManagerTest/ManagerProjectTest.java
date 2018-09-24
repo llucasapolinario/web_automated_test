@@ -125,15 +125,19 @@ public class ManagerProjectTest extends BaseTest {
 
     @Test
     public void validateAccess_CreateProjectPage(){
-        setupManagerProjects();
+        managerProjectPage = new ManagerProjectPage();
+        new LoginTest().validLoginTest();
+        managerProjectPage.gotoManagerProjects();
         managerProjectPage.clickNewProject();
-        Assert.assertFalse(managerProjectPage.isCreateProjectPage());
+        Assert.assertTrue(managerProjectPage.isCreateProjectPage());
     }
 
     @Test
     public void validateAccess_ManagerProjectPage(){
-        setupManagerProjects();
-        Assert.assertFalse(managerProjectPage.isManagerProjectPage());
+        managerProjectPage = new ManagerProjectPage();
+        new LoginTest().validLoginTest();
+        managerProjectPage.gotoManagerProjects();
+        Assert.assertTrue(managerProjectPage.isManagerProjectPage());
     }
 
     private void setup_createProject() {
@@ -155,10 +159,6 @@ public class ManagerProjectTest extends BaseTest {
         managerProjectPage = new ManagerProjectPage();
 
         new LoginTest().validLoginTest();
-//
-//        LoginPage login = new LoginPage();
-//        login.login(PropertyManager.getInstance().getUsername(),
-//                PropertyManager.getInstance().getPassword());
 
         managerProjectPage.gotoManagerProjects();
         deleteProjects();
