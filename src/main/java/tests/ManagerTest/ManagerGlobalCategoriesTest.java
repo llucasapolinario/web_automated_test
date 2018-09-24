@@ -2,12 +2,12 @@ package tests.ManagerTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.Login.LoginPage;
 import pages.Manager.ManagerGlobalCategoriesPage;
+import pages.Manager.ManagerProjectPage;
 import tests.Base.BaseTest;
-import utils.PropertyManager;
+import tests.Login.LoginTest;
 
-public class ManagerGlobalCategoriesTest extends BaseTest{
+public class ManagerGlobalCategoriesTest extends BaseTest {
 
     private ManagerGlobalCategoriesPage managerGlobalCategoriesPage;
     private String Category_bug = "Bug";
@@ -15,7 +15,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
     private String Category_improvement = "Melhoria";
 
     @Test
-    public void createNewGlobalCategory(){
+    public void createNewGlobalCategory() {
         setupManagerCategory();
         managerGlobalCategoriesPage.setCategoryName(Category_bug);
         managerGlobalCategoriesPage.clickAddCategory();
@@ -25,7 +25,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
     }
 
     @Test
-    public void createNewGlobalCategory_NameUsing(){
+    public void createNewGlobalCategory_NameUsing() {
         setupCreateCategory();
         managerGlobalCategoriesPage.setCategoryName(Category_bug);
         managerGlobalCategoriesPage.clickAddCategory();
@@ -35,7 +35,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
     }
 
     @Test
-    public void createNewGlobalCategory_Edit(){
+    public void createNewGlobalCategory_Edit() {
         setupCreateCategory();
         managerGlobalCategoriesPage.clickEdit(Category_bug);
 
@@ -49,7 +49,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
     }
 
     @Test
-    public void createNewGlobalCategory_EditUseAUsingName(){
+    public void createNewGlobalCategory_EditUseAUsingName() {
         setupCreateCategory();
 
         managerGlobalCategoriesPage.setCategoryName(Category_improvement);
@@ -66,7 +66,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
     }
 
     @Test
-    public void createNewGlobalCategory_Delete(){
+    public void createNewGlobalCategory_Delete() {
         setupCreateCategory();
 
         managerGlobalCategoriesPage.clickDelete(Category_bug);
@@ -76,7 +76,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
         deleteCategories();
     }
 
-    private void setupCreateCategory(){
+    private void setupCreateCategory() {
         setupManagerCategory();
         managerGlobalCategoriesPage.setCategoryName(Category_bug);
         managerGlobalCategoriesPage.clickAddCategory();
@@ -87,9 +87,21 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
     private void setupManagerCategory() {
         managerGlobalCategoriesPage = new ManagerGlobalCategoriesPage();
 
-        LoginPage login = new LoginPage();
-        login.login(PropertyManager.getInstance().getUsername(),
-                PropertyManager.getInstance().getPassword());
+        new LoginTest().validLoginTest();
+        ManagerProjectPage managerProjectPage = new ManagerProjectPage();
+        managerProjectPage.gotoManagerProjects();
+        String projectName1 = "Automação parte 1";
+
+        if (!managerProjectPage.isNewProjectShowing(projectName1)) {
+            managerProjectPage.clickNewProject();
+            managerProjectPage.setProjectName(projectName1);
+            managerProjectPage.setStateRelease();
+            managerProjectPage.setExtendsGlobalCategory();
+            managerProjectPage.setProjectPrivate();
+            managerProjectPage.setProjectDescription("testind description");
+            managerProjectPage.clickAddProject();
+            Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
+        }
 
         managerGlobalCategoriesPage.gotoManagerGlobalCategoriesPage();
         deleteCategories();
@@ -97,19 +109,19 @@ public class ManagerGlobalCategoriesTest extends BaseTest{
 
     private void deleteCategories() {
 
-        if (managerGlobalCategoriesPage.existCategory(Category_bug)){
+        if (managerGlobalCategoriesPage.existCategory(Category_bug)) {
             managerGlobalCategoriesPage.clickDelete(Category_bug);
             managerGlobalCategoriesPage.clickConfirmDeleteCategory();
             Assert.assertFalse(managerGlobalCategoriesPage.existCategory(Category_bug));
         }
 
-        if (managerGlobalCategoriesPage.existCategory(Category_feature)){
+        if (managerGlobalCategoriesPage.existCategory(Category_feature)) {
             managerGlobalCategoriesPage.clickDelete(Category_feature);
             managerGlobalCategoriesPage.clickConfirmDeleteCategory();
             Assert.assertFalse(managerGlobalCategoriesPage.existCategory(Category_feature));
         }
 
-        if (managerGlobalCategoriesPage.existCategory(Category_improvement)){
+        if (managerGlobalCategoriesPage.existCategory(Category_improvement)) {
             managerGlobalCategoriesPage.clickDelete(Category_improvement);
             managerGlobalCategoriesPage.clickConfirmDeleteCategory();
             Assert.assertFalse(managerGlobalCategoriesPage.existCategory(Category_improvement));
