@@ -6,13 +6,16 @@ public class ManagerUserPage extends ManagerPage {
 
     private static final String NEW_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='NOVO'])[1]/following::button[1]";
     private static final String USERNAME_ID = "user-username";
+    private static final String EDIT_USERNAME_ID = "edit-username";
     private static final String REAL_NAME_ID = "user-realname";
     private static final String EMAIL_ID = "email-field";
     private static final String ACCESS_LEVEL_ID = "user-access-level";
     private static final String ABLE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Habilitado'])[1]/following::span[1]";
     private static final String PROTECTED_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::span[1]";
     private static final String CREATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
-    private static final String CONFIRM_DELETE_USER = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/foll";
+    private static final String UPDATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
+    private static final String CONFIRM_DELETE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::input[5]";
+    private static final String DELETE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Notificar o usuário dessa mudança'])[1]/following::input[6]";
 
     private static final String ERROR_805 = "APPLICATION ERROR #805";
     private static final String ERROR_805_MESSAGE = "";
@@ -25,8 +28,16 @@ public class ManagerUserPage extends ManagerPage {
         click(By.xpath(NEW_USER_XPATH));
     }
 
+    public void clickInUser(String username) {
+        click(By.linkText(username));
+    }
+
     public void setUserName(String userName) {
         writeText(By.id(USERNAME_ID), userName);
+    }
+
+    public void editUsername(String userName) {
+        writeText(By.id(EDIT_USERNAME_ID), userName);
     }
 
     public void setRealName(String realName) {
@@ -61,8 +72,13 @@ public class ManagerUserPage extends ManagerPage {
         click(By.xpath(CREATE_USER_XPATH));
     }
 
+    public void clickUpdateUser() {
+        click(By.xpath(CREATE_USER_XPATH));
+    }
+
     public boolean isNameProjectUsing(){
-        return ERROR_805.equals(readText(By.xpath(ERROR_CODE_XPATH)));
+        return ERROR_800.equals(readText(By.xpath(ERROR_CODE_XPATH)))
+                && ERROR_800_MESSAGE.equals(readText(By.xpath(ERROR_MESSAGE_XPATH)));
     }
 
     public void gotoManagerUser() {
@@ -75,11 +91,20 @@ public class ManagerUserPage extends ManagerPage {
     }
 
     public boolean isUserShowing(String userName){
-        return userName.equals(readText(By.linkText(userName)));
+        return elementExists(By.linkText(userName));
     }
 
     public boolean isEmailWrong(){
-        return ERROR_1200.equals(elementExists(By.linkText(ERROR_CODE_XPATH)));
+        return ERROR_1200.equals(readText(By.xpath(ERROR_CODE_XPATH)))
+                && ERROR_1200_MESSAGE.equals(readText(By.xpath(ERROR_MESSAGE_XPATH)));
+    }
+
+    public void clickDeleteUser() {
+        click(By.xpath(DELETE_USER_XPATH));
+    }
+
+    public void clickConfirmDeleteUser() {
+        click(By.xpath(CONFIRM_DELETE_USER_XPATH));
     }
 
 }

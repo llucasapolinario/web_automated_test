@@ -2,9 +2,9 @@ package tests.ManagerTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import pages.Login.LoginPage;
 import pages.Manager.ManagerProjectPage;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.PropertyManager;
 
 
@@ -15,7 +15,7 @@ public class ManagerProjectTest extends BaseTest {
     private String projectName2 = "Automação parte2";
     private String projectName = "Automação parte0";
 
-    @Test(priority = 1)
+    @Test()
     public void createNewProject_privateProject() {
         setupManagerProjects();
 
@@ -33,7 +33,7 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
-    @Test(priority = 2)
+    @Test()
     public void createNewProject_publicProject() {
         setupManagerProjects();
 
@@ -51,7 +51,7 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
-    @Test(priority = 3)
+    @Test()
     public void createNewProject_withProjectNameUsing() {
         setup_createProject();
 
@@ -69,7 +69,7 @@ public class ManagerProjectTest extends BaseTest {
         deleteProjects();
     }
 
-    @Test(priority = 4)
+    @Test()
     public void editProject() {
         setup_createProject();
         managerProjectPage.clickInProject(projectName1);
@@ -80,7 +80,7 @@ public class ManagerProjectTest extends BaseTest {
         Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName));
     }
 
-    @Test(priority = 5)
+    @Test()
     public void deleteProject() {
         setup_createProject();
         managerProjectPage.clickInProject(projectName1);

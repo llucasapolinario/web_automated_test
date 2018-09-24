@@ -1,12 +1,13 @@
-package pages;
+package pages.Base;
 
 import org.openqa.selenium.By;
 
-public class HomePage extends BaseElement {
+public class BaseHomePage extends BaseElement {
 
     protected static final String MANTIS_BD_XPATH = "//div[@id='navbar-container']//a[@href='/my_view_page.php']/span[@class='smaller-75']";
     protected static final String OVERVIEW_XPATH = "//a[@href='/my_view_page.php']/i";
     protected static final String TASK_XPATH = "//a[@href='/view_all_bug_page.php']/i";
+    protected static final String CREATETASK_XPATH = "//a[@href='/bug_report_page.php']/i";
     protected static final String CHANGELOG_XPATH = "//a[@href='/changelog_page.php']";
     protected static final String PLANNING_XPATH = "//a[@href='/roadmap_page.php']";
     protected static final String SUMMARY_XPATH = "//a[@href='/summary_page.php']";
@@ -31,6 +32,10 @@ public class HomePage extends BaseElement {
 
     public void clickTask(){
         click(By.xpath(TASK_XPATH));
+    }
+
+    public void clickCreateTask(){
+        click(By.xpath(CREATETASK_XPATH));
     }
 
     public void clickChangelogPage() {

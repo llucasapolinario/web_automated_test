@@ -1,6 +1,7 @@
-package pages;
+package pages.Login;
 
 import org.openqa.selenium.By;
+import pages.Base.BaseElement;
 
 
 public class LoginPage extends BaseElement {

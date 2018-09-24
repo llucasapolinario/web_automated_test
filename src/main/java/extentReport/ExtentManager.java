@@ -2,7 +2,7 @@ package extentReport;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.Constants;
 
 import java.io.File;

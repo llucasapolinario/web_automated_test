@@ -4,7 +4,7 @@ import com.aventstack.extentreports.ExtentTest;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import tests.BaseTest;
+import tests.Base.BaseTest;
 import utils.Driver;
 import utils.Utils;
 

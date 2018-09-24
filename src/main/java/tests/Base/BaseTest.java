@@ -1,7 +1,7 @@
-package tests;
+package tests.Base;
 
 import org.testng.annotations.*;
-import pages.BaseElement;
+import pages.Base.BaseElement;
 import utils.Driver;
 import utils.PropertyManager;
 

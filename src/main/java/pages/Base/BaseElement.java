@@ -1,4 +1,4 @@
-package pages;
+package pages.Base;
 
 import com.aventstack.extentreports.Status;
 import extentReport.TestListener;
@@ -33,7 +33,7 @@ public class BaseElement {
         element.clear();
         element.sendKeys(text);
 
-        String screenshotName = "writeText "+ text +" on " + element.toString();
+        String screenshotName = "writeText "+ text +" on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
     }
@@ -41,7 +41,7 @@ public class BaseElement {
     protected String readText(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
-        String screenshotName = "readText"+ element.getText() +" on " + element.toString();
+        String screenshotName = "readText"+ element.getText() +" on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
 
@@ -55,7 +55,7 @@ public class BaseElement {
             element.click();
         }
 
-        String screenshotName = "select checkbox " + element.toString();
+        String screenshotName = "select checkbox " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
     }
@@ -67,7 +67,7 @@ public class BaseElement {
             element.click();
         }
 
-        String screenshotName = "unselect checkbox " + element.toString();
+        String screenshotName = "unselect checkbox " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
     }
@@ -79,7 +79,7 @@ public class BaseElement {
         new Select(element).selectByVisibleText(value);
 
 
-        String screenshotName = "select spinner '"+ value +"' on element " + element.toString();
+        String screenshotName = "select spinner '"+ value +"' on element " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
     }
@@ -87,7 +87,7 @@ public class BaseElement {
     protected WebElement waitForElement(By elementLocation){
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
-        String screenshotName = "wait for element "+ element.getText();
+        String screenshotName = "wait for element "+ elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
 
@@ -97,5 +97,6 @@ public class BaseElement {
     protected boolean elementExists(By elementLocation){
         return WaitUntil.elementExists(elementLocation);
     }
+
 }
 
