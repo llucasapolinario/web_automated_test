@@ -12,7 +12,4 @@ public class ManagerPage extends BaseHomePage {
     protected static final String MANEGER_PLUGIN_HREF = "Gerenciar Plugins";
     protected static final String MANEGER_PERMITIONS_HREF = "Gerenciar Configuração";
 
-    protected static final String ERROR_CODE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
-    protected static final String ERROR_MESSAGE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[2]";
-
 }

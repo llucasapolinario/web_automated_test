@@ -74,14 +74,6 @@ public class ManagerProjectPage extends ManagerPage {
         writeText(By.id(PROJECT_DESCRIPTION_ID), description);
     }
 
-//    public boolean isNoneProjectName() {
-//        return waitForElement(By.xpath(FILL_THIS_FIELD_ID)) == null;
-//    }
-//    public boolean isProjectCreate(){
-//
-//        return waitForElement(By.xpath(SUCCESS_OPERATION_XPATH)) == null;
-//    }
-
     public boolean isNewProjectShowing(String projectName) {
         return elementExists(By.linkText(projectName));
     }
@@ -123,4 +115,5 @@ public class ManagerProjectPage extends ManagerPage {
     public boolean isManagerProjectPage(){
         return waitForElement(By.xpath(NEW_PROJECT_XPATH)).isDisplayed();
     }
+
 }

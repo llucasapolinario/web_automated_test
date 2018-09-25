@@ -4,6 +4,7 @@ import com.aventstack.extentreports.Status;
 import extentReport.TestListener;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import utils.Driver;
@@ -60,6 +61,11 @@ public class BaseElement {
         TestListener.getTestCenario().log(Status.PASS, screenshotName);
     }
 
+    protected boolean isCheckBoxSelected(By elementLocation) throws ElementClickInterceptedException {
+        WebElement element = Driver.getDriverInstance().findElement(elementLocation);
+        return !element.isSelected();
+    }
+
     protected void unSelectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
@@ -98,5 +104,14 @@ public class BaseElement {
         return WaitUntil.elementExists(elementLocation);
     }
 
+    protected void scrollTolement(By elementLocation){
+        WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        ((JavascriptExecutor) Driver.getDriverInstance()).executeScript("arguments[0].scrollIntoView(true);", element);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

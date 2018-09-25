@@ -2,17 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="ManagerProjectTest is done">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/createNewGlobalCategory_Edit.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/createNewGlobalCategory_Edit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/validateAccess_CreateProjectPage.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/validateAccess_CreateProjectPage.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestReport/Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestReport/Report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CreateTask/CreateTaskPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/CreateTask/CreateTaskPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/CreateTask/CreateNewTaskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/CreateTask/CreateNewTaskTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerGlobalCategoriesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerGlobalCategoriesTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tests/CreateTask/CreateNewTaskTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,7 +121,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="24" />
-          <entry key="java" value="12287" />
+          <entry key="java" value="14230" />
           <entry key="json" value="6" />
           <entry key="properties" value="195" />
           <entry key="txt" value="726" />
@@ -122,7 +131,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12287" />
+          <entry key="JAVA" value="14230" />
           <entry key="JSON" value="6" />
           <entry key="PLAIN_TEXT" value="750" />
           <entry key="Properties" value="195" />
@@ -141,7 +150,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="15" />
-          <entry key="java" value="173" />
+          <entry key="java" value="190" />
           <entry key="json" value="1" />
           <entry key="properties" value="12" />
           <entry key="xml" value="7" />
@@ -151,7 +160,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="15" />
-          <entry key="JAVA" value="173" />
+          <entry key="JAVA" value="190" />
           <entry key="JSON" value="1" />
           <entry key="Properties" value="12" />
           <entry key="XML" value="7" />
@@ -229,11 +238,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/WaitUntil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1493#1494#0" expanded="true" />
+                <element signature="e#1563#1564#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+            <state relative-caret-position="283">
+              <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createNewProject_privateProject#0;class#ManagerProjectTest#0" />
@@ -243,7 +266,6 @@
                 <element signature="method#editProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
                 <element signature="method#deleteProject#0;class#ManagerProjectTest#0" />
                 <element signature="method#createNewProject_withoutProjectName#0;class#ManagerProjectTest#0" />
-                <element signature="method#validateAccess_CreateProjectPage#0;class#ManagerProjectTest#0" />
                 <element signature="method#validateAccess_ManagerProjectPage#0;class#ManagerProjectTest#0" />
                 <element signature="method#setup_createProject#0;class#ManagerProjectTest#0" />
                 <element signature="method#setupManagerProjects#0;class#ManagerProjectTest#0" />
@@ -254,12 +276,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/WaitUntil.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+            <state relative-caret-position="3">
+              <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#goToPage#0;class#BaseElement#0" />
+                <element signature="method#click#0;class#BaseElement#0" />
+                <element signature="method#writeText#0;class#BaseElement#0" />
+                <element signature="method#readText#0;class#BaseElement#0" />
+                <element signature="method#selectCheckBox#0;class#BaseElement#0" />
+                <element signature="method#isCheckBoxSelected#0;class#BaseElement#0" />
+                <element signature="method#unSelectCheckBox#0;class#BaseElement#0" />
+                <element signature="method#selectSpinnerElement#0;class#BaseElement#0" />
+                <element signature="method#waitForElement#0;class#BaseElement#0" />
+                <element signature="method#scrollTolement#0;class#BaseElement#0" />
               </folding>
             </state>
           </provider>
@@ -268,69 +299,76 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="125" column="1" lean-forward="true" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
+            <state relative-caret-position="175">
+              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="78" selection-end-column="5" />
               <folding>
-                <element signature="e#3306#3307#0" expanded="true" />
-                <element signature="e#3368#3369#0" expanded="true" />
-                <element signature="e#4345#4346#0" expanded="true" />
-                <element signature="e#4425#4426#0" expanded="true" />
+                <element signature="e#2047#2048#0" expanded="true" />
+                <element signature="e#2122#2123#0" expanded="true" />
+                <element signature="e#2173#2174#0" expanded="true" />
+                <element signature="e#2250#2251#0" expanded="true" />
+                <element signature="e#2291#2292#0" expanded="true" />
+                <element signature="e#2357#2358#0" expanded="true" />
+                <element signature="e#3056#3057#0" expanded="true" />
+                <element signature="e#3118#3119#0" expanded="true" />
+                <element signature="method#gotoManagerProjects#0;class#ManagerProjectPage#0" />
+                <element signature="e#3767#3768#0" expanded="true" />
+                <element signature="e#3844#3845#0" expanded="true" />
+                <element signature="e#4095#4096#0" expanded="true" />
+                <element signature="e#4175#4176#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#selectTask#0;class#TaskTest#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/CreateTask/CreateTaskPage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="48" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="48" />
+            <state relative-caret-position="470">
+              <caret line="86" column="32" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#selectBug#0;class#ViewTask#0" />
+                <element signature="method#unselectBug#0;class#ViewTask#0" />
+                <element signature="method#isCheckBoxSelected#0;class#ViewTask#0" />
+                <element signature="method#editBug#0;class#ViewTask#0" />
+                <element signature="method#getNumBug#0;class#ViewTask#0" />
+                <element signature="method#isInViewTakPage#0;class#ViewTask#0" />
+                <element signature="e#2712#2713#0" expanded="true" />
+                <element signature="e#2745#2746#0" expanded="true" />
+                <element signature="e#2785#2786#0" expanded="true" />
+                <element signature="e#2835#2836#0" expanded="true" />
+                <element signature="e#3043#3044#0" expanded="true" />
+                <element signature="e#3076#3077#0" expanded="true" />
+                <element signature="e#3266#3267#0" expanded="true" />
+                <element signature="e#3328#3329#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            <state relative-caret-position="153">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#click#0;class#BaseElement#0" />
-                <element signature="method#readText#0;class#BaseElement#0" />
-                <element signature="method#selectCheckBox#0;class#BaseElement#0" />
-                <element signature="method#unSelectCheckBox#0;class#BaseElement#0" />
-                <element signature="method#selectSpinnerElement#0;class#BaseElement#0" />
-                <element signature="method#waitForElement#0;class#BaseElement#0" />
-                <element signature="e#3819#3820#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#existCategory#0;class#ManagerGlobalCategoriesPage#0" />
+                <element signature="method#createNewTask_withoutCategory#0;class#CreateNewTaskTest#0" />
+                <element signature="method#createNewTask_withoutCategory#0;class#CreateNewTaskTest#0" />
+                <element signature="method#setupCreateNewTask#0;class#CreateNewTaskTest#0" />
               </folding>
             </state>
           </provider>
@@ -389,12 +427,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tests/NewProjectTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/CreateUserTest.java" />
-        <option value="$PROJECT_DIR$/enviroment.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/ExtentManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/DBFactory.java" />
-        <option value="$PROJECT_DIR$/DefaultNodeWebDriver.json" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExtentReport/TestListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExtentReport/ExtentTestManager.java" />
@@ -424,7 +456,6 @@
         <option value="$PROJECT_DIR$/environment.properties" />
         <option value="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/LoginTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/WaitUntil.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/BaseElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java" />
@@ -433,13 +464,20 @@
         <option value="$PROJECT_DIR$/src/main/java/pages/Login/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/HomePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/BaseHomePage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/CreateTask/CreateTaskPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/CreateTask/CreateTaskPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/Task/EditTaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" />
       </list>
     </option>
   </component>
@@ -465,8 +503,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1388" />
-    <option name="y" value="-210" />
+    <option name="x" value="69" />
+    <option name="y" value="-8" />
     <option name="width" value="780" />
     <option name="height" value="745" />
   </component>
@@ -504,6 +542,49 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="ManagerTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="Task" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -527,7 +608,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537826614560" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537839999851" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -554,33 +635,17 @@
     </option>
   </component>
   <component name="RunManager" selected="TestNG.tests">
-    <configuration name="ManagerGlobalCategoriesTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.delete_oneTask" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="web_automated_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="PATTERN" value="tests.Task.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerGlobalCategoriesTest" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagerGlobalCategoriesTest.createNewGlobalCategory_Edit" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="web_automated_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerGlobalCategoriesTest" />
-      <option name="METHOD_NAME" value="createNewGlobalCategory_Edit" />
+      <option name="PACKAGE_NAME" value="tests.Task" />
+      <option name="MAIN_CLASS_NAME" value="tests.Task.TaskTest" />
+      <option name="METHOD_NAME" value="delete_oneTask" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -588,17 +653,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.selectTask" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="web_automated_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="PATTERN" value="tests.Task.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerProjectTest" />
-      <option name="METHOD_NAME" value="validateAccess_CreateProjectPage" />
+      <option name="PACKAGE_NAME" value="tests.Task" />
+      <option name="MAIN_CLASS_NAME" value="tests.Task.TaskTest" />
+      <option name="METHOD_NAME" value="selectTask" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -606,17 +671,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerProjectTest.validateAccess_ManagerProjectPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TaskTest.selectTask_numBug" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="web_automated_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="PATTERN" value="tests.Task.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerProjectTest" />
-      <option name="METHOD_NAME" value="validateAccess_ManagerProjectPage" />
+      <option name="PACKAGE_NAME" value="tests.Task" />
+      <option name="MAIN_CLASS_NAME" value="tests.Task.TaskTest" />
+      <option name="METHOD_NAME" value="selectTask_numBug" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskTest.selectTask_selectAll" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="web_automated_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.Task.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.Task" />
+      <option name="MAIN_CLASS_NAME" value="tests.Task.TaskTest" />
+      <option name="METHOD_NAME" value="selectTask_selectAll" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -641,19 +724,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.TaskTest.selectTask" />
+      <item itemvalue="TestNG.TaskTest.selectTask_selectAll" />
+      <item itemvalue="TestNG.TaskTest.selectTask_numBug" />
+      <item itemvalue="TestNG.TaskTest.delete_oneTask" />
       <item itemvalue="TestNG.tests" />
-      <item itemvalue="TestNG.ManagerGlobalCategoriesTest" />
-      <item itemvalue="TestNG.ManagerGlobalCategoriesTest.createNewGlobalCategory_Edit" />
-      <item itemvalue="TestNG.ManagerProjectTest.validateAccess_CreateProjectPage" />
-      <item itemvalue="TestNG.ManagerProjectTest.validateAccess_ManagerProjectPage" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.ManagerProjectTest.validateAccess_CreateProjectPage" />
-        <item itemvalue="TestNG.ManagerProjectTest.validateAccess_ManagerProjectPage" />
-        <item itemvalue="TestNG.ManagerGlobalCategoriesTest" />
-        <item itemvalue="TestNG.ManagerGlobalCategoriesTest.createNewGlobalCategory_Edit" />
+        <item itemvalue="TestNG.TaskTest.delete_oneTask" />
+        <item itemvalue="TestNG.TaskTest.selectTask_numBug" />
+        <item itemvalue="TestNG.TaskTest.selectTask_selectAll" />
+        <item itemvalue="TestNG.TaskTest.selectTask" />
       </list>
     </recent_temporary>
   </component>
@@ -994,35 +1077,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManagerGlobalCategoriesTest_createNewGlobalCategory_Edit - 2018.09.24 at 18h 27m 29s.xml">
-      <configuration name="ManagerGlobalCategoriesTest.createNewGlobalCategory_Edit" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 21h 54m 22s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest_createNewGlobalCategory_Edit - 2018.09.24 at 18h 28m 53s.xml">
-      <configuration name="ManagerGlobalCategoriesTest.createNewGlobalCategory_Edit" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 21h 58m 12s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest - 2018.09.24 at 18h 32m 35s.xml">
-      <configuration name="ManagerGlobalCategoriesTest" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 22h 03m 28s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.24 at 18h 55m 51s.xml">
-      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 22h 05m 13s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.24 at 18h 57m 49s.xml">
-      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 22h 07m 26s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.24 at 18h 59m 11s.xml">
-      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 22h 10m 04s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerProjectTest_validateAccess_ManagerProjectPage - 2018.09.24 at 19h 02m 32s.xml">
-      <configuration name="ManagerProjectTest.validateAccess_ManagerProjectPage" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask - 2018.09.24 at 22h 10m 35s.xml">
+      <configuration name="TaskTest.selectTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.24 at 19h 03m 13s.xml">
-      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask_selectAll - 2018.09.24 at 22h 11m 22s.xml">
+      <configuration name="TaskTest.selectTask_selectAll" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerProjectTest_validateAccess_ManagerProjectPage - 2018.09.24 at 19h 04m 01s.xml">
-      <configuration name="ManagerProjectTest.validateAccess_ManagerProjectPage" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask_numBug - 2018.09.24 at 22h 24m 00s.xml">
+      <configuration name="TaskTest.selectTask_numBug" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2018.09.24 at 19h 17m 52s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="TaskTest_selectTask_numBug - 2018.09.24 at 22h 25m 15s.xml">
+      <configuration name="TaskTest.selectTask_numBug" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1035,9 +1118,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-206" width="1040" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31428573" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647504" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1045,8 +1129,8 @@
       <window_info id="Image Layers" order="5" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.36129034" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32741934" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.27580646" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42419356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1147,14 +1231,6 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/reflect/Method.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.14.0/selenium-remote-driver-3.14.0.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="93" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/MethodInvocationHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
@@ -1348,16 +1424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/CreateTask/CreateTaskPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="48" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1375,21 +1441,27 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="816">
+          <caret line="60" column="62" lean-forward="true" selection-start-line="60" selection-start-column="62" selection-end-line="60" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
+            <element signature="method#existCategory#0;class#ManagerGlobalCategoriesPage#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="221">
+          <caret line="13" column="48" lean-forward="true" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createNewGlobalCategory#0;class#ManagerGlobalCategoriesTest#0" />
@@ -1404,71 +1476,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#existCategory#0;class#ManagerGlobalCategoriesPage#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/WaitUntil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="115">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1563#1564#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#clickInNewTask#0;class#CreateTaskPage#0" />
+            <element signature="method#isCategoryNotSet#0;class#CreateTaskPage#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createNewTask_withoutCategory#0;class#CreateNewTaskTest#0" />
+            <element signature="method#createNewTask_withoutCategory#0;class#CreateNewTaskTest#0" />
+            <element signature="method#setupCreateNewTask#0;class#CreateNewTaskTest#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        <state relative-caret-position="3">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#goToPage#0;class#BaseElement#0" />
             <element signature="method#click#0;class#BaseElement#0" />
+            <element signature="method#writeText#0;class#BaseElement#0" />
             <element signature="method#readText#0;class#BaseElement#0" />
             <element signature="method#selectCheckBox#0;class#BaseElement#0" />
+            <element signature="method#isCheckBoxSelected#0;class#BaseElement#0" />
             <element signature="method#unSelectCheckBox#0;class#BaseElement#0" />
             <element signature="method#selectSpinnerElement#0;class#BaseElement#0" />
             <element signature="method#waitForElement#0;class#BaseElement#0" />
-            <element signature="e#3819#3820#0" expanded="true" />
+            <element signature="method#scrollTolement#0;class#BaseElement#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="125" column="1" lean-forward="true" selection-start-line="125" selection-start-column="1" selection-end-line="125" selection-end-column="1" />
+        <state relative-caret-position="175">
+          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="78" selection-end-column="5" />
           <folding>
-            <element signature="e#3306#3307#0" expanded="true" />
-            <element signature="e#3368#3369#0" expanded="true" />
-            <element signature="e#4345#4346#0" expanded="true" />
-            <element signature="e#4425#4426#0" expanded="true" />
+            <element signature="e#2047#2048#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2173#2174#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2291#2292#0" expanded="true" />
+            <element signature="e#2357#2358#0" expanded="true" />
+            <element signature="e#3056#3057#0" expanded="true" />
+            <element signature="e#3118#3119#0" expanded="true" />
+            <element signature="method#gotoManagerProjects#0;class#ManagerProjectPage#0" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3844#3845#0" expanded="true" />
+            <element signature="e#4095#4096#0" expanded="true" />
+            <element signature="e#4175#4176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="86" column="32" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#selectBug#0;class#ViewTask#0" />
+            <element signature="method#unselectBug#0;class#ViewTask#0" />
+            <element signature="method#isCheckBoxSelected#0;class#ViewTask#0" />
+            <element signature="method#editBug#0;class#ViewTask#0" />
+            <element signature="method#getNumBug#0;class#ViewTask#0" />
+            <element signature="method#isInViewTakPage#0;class#ViewTask#0" />
+            <element signature="e#2712#2713#0" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="e#2785#2786#0" expanded="true" />
+            <element signature="e#2835#2836#0" expanded="true" />
+            <element signature="e#3043#3044#0" expanded="true" />
+            <element signature="e#3076#3077#0" expanded="true" />
+            <element signature="e#3266#3267#0" expanded="true" />
+            <element signature="e#3328#3329#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+        <state relative-caret-position="283">
+          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createNewProject_privateProject#0;class#ManagerProjectTest#0" />
@@ -1478,11 +1598,21 @@
             <element signature="method#editProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
             <element signature="method#deleteProject#0;class#ManagerProjectTest#0" />
             <element signature="method#createNewProject_withoutProjectName#0;class#ManagerProjectTest#0" />
-            <element signature="method#validateAccess_CreateProjectPage#0;class#ManagerProjectTest#0" />
             <element signature="method#validateAccess_ManagerProjectPage#0;class#ManagerProjectTest#0" />
             <element signature="method#setup_createProject#0;class#ManagerProjectTest#0" />
             <element signature="method#setupManagerProjects#0;class#ManagerProjectTest#0" />
             <element signature="method#deleteProjects#0;class#ManagerProjectTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#selectTask#0;class#TaskTest#0" />
           </folding>
         </state>
       </provider>

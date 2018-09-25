@@ -130,6 +130,8 @@ public class ManagerProjectTest extends BaseTest {
         managerProjectPage.gotoManagerProjects();
         managerProjectPage.clickNewProject();
         Assert.assertTrue(managerProjectPage.isCreateProjectPage());
+
+
     }
 
     @Test
