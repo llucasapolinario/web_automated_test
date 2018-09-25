@@ -77,4 +77,36 @@ public class LoginTest extends ExtentManager {
         Assert.assertTrue(loginPage.isLoginPage());
     }
 
+    @Test (enabled = false )//falta criar um usuario com email
+    public void recoverPassword(){
+        validateRecoverPasswordPage();
+
+        loginPage.setLoginUsernameToRecover("llucas");
+        loginPage.setEmail("lucas.figueiredo@base2.com.br");
+        loginPage.clickSendRecover();
+
+        Assert.assertTrue(loginPage.isNoneInformationSet());
+    }
+
+    @Test
+    public void recoverPassword_invalidEmail(){
+        validateRecoverPasswordPage();
+
+        loginPage.setLoginUsernameToRecover("llucas");
+        loginPage.clickSendRecover();
+
+        Assert.assertTrue(loginPage.isEmailInvalid());
+    }
+
+    @Test
+    public void recoverPassword_wrongData(){
+        validateRecoverPasswordPage();
+
+        loginPage.setLoginUsernameToRecover("llucas");
+        loginPage.setEmail("lucas.figueiredo@base2.com.br");
+        loginPage.clickSendRecover();
+
+        Assert.assertTrue(loginPage.isNoneInformationSet());
+    }
+
 }

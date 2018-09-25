@@ -18,8 +18,8 @@ public class BaseHomePage extends BaseElement {
     protected static final String ALL_PROJECT_LINK = "Todos os Projetos";
     protected static final String USER_XPATH = "///span[@innertext='administrator']";
 
-    protected static final String ERROR_CODE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
-    protected static final String ERROR_MESSAGE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[2]";
+    public static final String ERROR_CODE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
+    public static final String ERROR_MESSAGE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[2]";
 
     // Registro de mudanças
     private static final String MAIN_CONTAINER = "//div[@id='main-container']/div[@class='main-content']/div[@class='page-content']//p[@class='lead']";
