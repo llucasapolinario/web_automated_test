@@ -1,6 +1,5 @@
 package pages.Manager;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import org.openqa.selenium.By;
 
 public class ManagerGlobalCategoriesPage extends ManagerPage {
@@ -49,8 +48,8 @@ public class ManagerGlobalCategoriesPage extends ManagerPage {
     }
 
     public void gotoManagerGlobalCategoriesPage() {
-        click(By.xpath(MANAGER_XPATH));
-        click(By.linkText(MANEGER_PROJECTS_HREF));
+        click(By.xpath(MENU_MANAGER_XPATH));
+        click(By.linkText(MANAGER_PROJECTS_HREF));
     }
 
     public boolean isCategoryNameUsing(){

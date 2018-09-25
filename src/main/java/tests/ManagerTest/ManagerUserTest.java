@@ -2,10 +2,9 @@ package tests.ManagerTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.Login.LoginPage;
 import pages.Manager.ManagerUserPage;
 import tests.Base.BaseTest;
-import utils.PropertyManager;
+import tests.Login.LoginTest;
 
 public class ManagerUserTest extends BaseTest {
 
@@ -28,7 +27,7 @@ public class ManagerUserTest extends BaseTest {
         managerUserPage.setProtected();
 
         managerUserPage.clickCreateUser();
-        managerUserPage.gotoManagerUserPage();
+        managerUserPage.clickManagerUserPage();
         Assert.assertTrue(managerUserPage.isUserShowing(userName1));
 
         deleteUsers();
@@ -72,13 +71,12 @@ public class ManagerUserTest extends BaseTest {
 
     @Test
     public void editNewUser() {
-        setup_createUser();
+        validateEditUserPage();
 
-        managerUserPage.clickInUser(userName1);
         managerUserPage.editUsername(userName);
 
         managerUserPage.clickCreateUser();
-        managerUserPage.gotoManagerUser();
+        managerUserPage.clickManagerUserPage();
         Assert.assertTrue(managerUserPage.isUserShowing(userName));
 
         deleteUsers();
@@ -86,9 +84,8 @@ public class ManagerUserTest extends BaseTest {
 
     @Test
     public void deleteNewUser() {
-        setup_createUser();
+        validateEditUserPage();
 
-        managerUserPage.clickInUser(userName1);
         managerUserPage.clickDeleteUser();
         managerUserPage.clickConfirmDeleteUser();
         Assert.assertFalse(managerUserPage.isUserShowing(userName1));
@@ -96,14 +93,53 @@ public class ManagerUserTest extends BaseTest {
         deleteUsers();
     }
 
-    private void setupManagerUser(){
+    @Test
+    public void validateManagerUserPage(){
+        validateManagerPage();
+
+        managerUserPage.clickManagerUserPage();
+
+        Assert.assertTrue(managerUserPage.isManagerUserPage());
+    }
+
+    @Test
+    public void validateCreateUserPage(){
+        validateManagerUserPage();
+
+        managerUserPage.clickNewUser();
+
+        Assert.assertTrue(managerUserPage.isCreateUserPage());
+    }
+
+    @Test
+    public void validateLinkCreateUser(){
+        new LoginTest().validLoginTest();
         managerUserPage = new ManagerUserPage();
-        LoginPage login = new LoginPage();
+        managerUserPage.clickInLinkCreateUser();
 
-        login.login(PropertyManager.getInstance().getUsername(),
-                PropertyManager.getInstance().getPassword());
+        Assert.assertTrue(managerUserPage.isCreateUserPage());
+    }
 
-        managerUserPage.gotoManagerUser();
+    @Test
+    public void validateEditUserPage(){
+        setup_createUser();
+
+        managerUserPage.clickInUser(userName1);
+
+        Assert.assertTrue(managerUserPage.isEditUserPage());
+    }
+
+    @Test
+    public void validateManagerPage(){
+        new LoginTest().validLoginTest();
+        managerUserPage = new ManagerUserPage();
+        managerUserPage.clickManager();
+
+        Assert.assertTrue(managerUserPage.isManagerPage());
+    }
+
+    private void setupManagerUser(){
+        validateManagerUserPage();
         deleteUsers();
     }
 
@@ -119,12 +155,11 @@ public class ManagerUserTest extends BaseTest {
         managerUserPage.setProtected();
 
         managerUserPage.clickCreateUser();
-        managerUserPage.gotoManagerUserPage();
+        managerUserPage.clickManagerUserPage();
         Assert.assertTrue(managerUserPage.isUserShowing(userName1));
     }
 
     private void deleteUsers(){
-
 
         if (managerUserPage.isUserShowing(userName1)){
             managerUserPage.clickInUser(userName1);

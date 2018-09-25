@@ -1,8 +1,6 @@
 package pages.Manager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import utils.Driver;
 
 public class ManagerProjectPage extends ManagerPage {
 
@@ -79,8 +77,8 @@ public class ManagerProjectPage extends ManagerPage {
     }
 
     public void gotoManagerProjects() {
-        click(By.xpath(MANAGER_XPATH));
-        click(By.linkText(MANEGER_PROJECTS_HREF));
+        click(By.xpath(MENU_MANAGER_XPATH));
+        click(By.linkText(MANAGER_PROJECTS_HREF));
     }
 
     public void clickNewProject() {

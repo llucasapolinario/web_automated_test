@@ -4,18 +4,22 @@ import org.openqa.selenium.By;
 
 public class ManagerUserPage extends ManagerPage {
 
-    private static final String NEW_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='NOVO'])[1]/following::button[1]";
-    private static final String USERNAME_ID = "user-username";
-    private static final String EDIT_USERNAME_ID = "edit-username";
-    private static final String REAL_NAME_ID = "user-realname";
-    private static final String EMAIL_ID = "email-field";
-    private static final String ACCESS_LEVEL_ID = "user-access-level";
-    private static final String ABLE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Habilitado'])[1]/following::span[1]";
-    private static final String PROTECTED_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::span[1]";
+    private static final String BTN_NEW_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='NOVO'])[1]/following::button[1]";
+    private static final String EDIT_TEXT_USERNAME_ID = "user-username";
+    private static final String EDIT_TEXT_REAL_NAME_ID = "user-realname";
+    private static final String EDIT_TEXT_EMAIL_ID = "email-field";
+    private static final String EDIT_TEXT_EDIT_USERNAME_ID = "edit-username";
+
+    private static final String SPINNER_ACCESS_LEVEL_ID = "user-access-level";
+    private static final String CHECKBOX_ABLE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Habilitado'])[1]/following::span[1]";
+    private static final String CHECKBOX_PROTECTED_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::span[1]";
     private static final String CREATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
     private static final String UPDATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
     private static final String CONFIRM_DELETE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::input[5]";
     private static final String DELETE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Notificar o usuário dessa mudança'])[1]/following::input[6]";
+
+    private static final String CREATE_USER_PAGE_XPATH = "//form[@id='manage-user-create-form']/div/div/h4";
+    private static final String EDIT_USER_PAGE_XPATH = "//form[@id='edit-user-form']/div/div/h4";
 
     private static final String ERROR_805 = "APPLICATION ERROR #805";
     private static final String ERROR_805_MESSAGE = "";
@@ -25,7 +29,7 @@ public class ManagerUserPage extends ManagerPage {
     private static final String ERROR_1200_MESSAGE = "E-mail inválido.";
 
     public void clickNewUser() {
-        click(By.xpath(NEW_USER_XPATH));
+        click(By.xpath(BTN_NEW_USER_XPATH));
     }
 
     public void clickInUser(String username) {
@@ -33,46 +37,42 @@ public class ManagerUserPage extends ManagerPage {
     }
 
     public void setUserName(String userName) {
-        writeText(By.id(USERNAME_ID), userName);
+        writeText(By.id(EDIT_TEXT_USERNAME_ID), userName);
     }
 
     public void editUsername(String userName) {
-        writeText(By.id(EDIT_USERNAME_ID), userName);
+        writeText(By.id(EDIT_TEXT_EDIT_USERNAME_ID), userName);
     }
 
     public void setRealName(String realName) {
-        writeText(By.id(REAL_NAME_ID), realName);
+        writeText(By.id(EDIT_TEXT_REAL_NAME_ID), realName);
     }
 
     public void setUserEmail(String email) {
-        writeText(By.id(EMAIL_ID), email);
+        writeText(By.id(EDIT_TEXT_EMAIL_ID), email);
     }
 
     public void setAccessLevel(String level) {
-        selectSpinnerElement(By.id(ACCESS_LEVEL_ID), level);
+        selectSpinnerElement(By.id(SPINNER_ACCESS_LEVEL_ID), level);
     }
 
     public void setAble() {
-        selectCheckBox(By.xpath(ABLE_XPATH));
+        selectCheckBox(By.xpath(CHECKBOX_ABLE_XPATH));
     }
 
     public void setEnable() {
-        unSelectCheckBox(By.xpath(ABLE_XPATH));
+        unSelectCheckBox(By.xpath(CHECKBOX_ABLE_XPATH));
     }
 
     public void setProtected() {
-        selectCheckBox(By.xpath(PROTECTED_XPATH));
+        selectCheckBox(By.xpath(CHECKBOX_PROTECTED_XPATH));
     }
 
     public void setUnprotected() {
-        unSelectCheckBox(By.xpath(PROTECTED_XPATH));
+        unSelectCheckBox(By.xpath(CHECKBOX_PROTECTED_XPATH));
     }
 
     public void clickCreateUser() {
-        click(By.xpath(CREATE_USER_XPATH));
-    }
-
-    public void clickUpdateUser() {
         click(By.xpath(CREATE_USER_XPATH));
     }
 
@@ -81,13 +81,8 @@ public class ManagerUserPage extends ManagerPage {
                 && ERROR_800_MESSAGE.equals(readText(By.xpath(ERROR_MESSAGE_XPATH)));
     }
 
-    public void gotoManagerUser() {
-        click(By.xpath(MANAGER_XPATH));
-        gotoManagerUserPage();
-    }
-
-    public void gotoManagerUserPage(){
-        click(By.linkText(MANEGER_USER_HREF));
+    public void clickManagerUserPage(){
+        click(By.linkText(MANAGER_USER_HREF));
     }
 
     public boolean isUserShowing(String userName){
@@ -105,6 +100,18 @@ public class ManagerUserPage extends ManagerPage {
 
     public void clickConfirmDeleteUser() {
         click(By.xpath(CONFIRM_DELETE_USER_XPATH));
+    }
+
+    public boolean isManagerUserPage() {
+        return waitForElement(By.xpath(BTN_NEW_USER_XPATH)).isDisplayed();
+    }
+
+    public boolean isCreateUserPage() {
+        return waitForElement(By.xpath(CREATE_USER_PAGE_XPATH)).isDisplayed();
+    }
+
+    public boolean isEditUserPage() {
+        return waitForElement(By.xpath(EDIT_USER_PAGE_XPATH)).isDisplayed();
     }
 
 }

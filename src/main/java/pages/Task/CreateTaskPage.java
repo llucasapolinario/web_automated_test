@@ -57,7 +57,7 @@ public class CreateTaskPage extends BaseHomePage {
     }
 
     public void clickCreateTask(){
-        click(By.xpath(CREATETASK_XPATH));
+        click(By.xpath(BaseHomePage.MENU_CREATE_TASK_XPATH));
     }
 
     public void clickInNewTask(){
