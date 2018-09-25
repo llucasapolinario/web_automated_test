@@ -4,7 +4,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.Manager.ManagerProjectPage;
 import tests.Base.BaseTest;
-import tests.Login.LoginTest;
 
 
 public class ManagerProjectTest extends BaseTest {
@@ -124,29 +123,34 @@ public class ManagerProjectTest extends BaseTest {
     }
 
     @Test
+    public void validateAccess_EditProjectPage(){
+        setup_createProject();
+        managerProjectPage.clickInProject(projectName1);
+
+        Assert.assertTrue(managerProjectPage.isEditProjectPage());
+    }
+
+    @Test
     public void validateAccess_CreateProjectPage(){
-        managerProjectPage = new ManagerProjectPage();
-        new LoginTest().validLoginTest();
-        managerProjectPage.gotoManagerProjects();
+        validateAccess_ManagerProjectPage();
         managerProjectPage.clickNewProject();
+
         Assert.assertTrue(managerProjectPage.isCreateProjectPage());
-
-
     }
 
     @Test
     public void validateAccess_ManagerProjectPage(){
+        new ManagerUserTest().validateManagerPage();
         managerProjectPage = new ManagerProjectPage();
-        new LoginTest().validLoginTest();
-        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickManagerProjectsPage();
+
         Assert.assertTrue(managerProjectPage.isManagerProjectPage());
     }
 
     private void setup_createProject() {
-
         setupManagerProjects();
-
         managerProjectPage.clickNewProject();
+
         managerProjectPage.setProjectName(projectName1);
         managerProjectPage.setStateRelease();
         managerProjectPage.setExtendsGlobalCategory();
@@ -158,11 +162,7 @@ public class ManagerProjectTest extends BaseTest {
     }
 
     private void setupManagerProjects() {
-        managerProjectPage = new ManagerProjectPage();
-
-        new LoginTest().validLoginTest();
-
-        managerProjectPage.gotoManagerProjects();
+        validateAccess_ManagerProjectPage();
         deleteProjects();
     }
 

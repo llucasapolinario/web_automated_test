@@ -89,7 +89,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
 
         new LoginTest().validLoginTest();
         ManagerProjectPage managerProjectPage = new ManagerProjectPage();
-        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickManagerProjectsPage();
         String projectName1 = "Automação parte 1";
 
         if (!managerProjectPage.isNewProjectShowing(projectName1)) {

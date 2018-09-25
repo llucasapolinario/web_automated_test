@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="ManagerProjectTest is done">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestReport/Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestReport/Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerUserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerUserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -112,7 +106,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="24" />
-          <entry key="java" value="14890" />
+          <entry key="java" value="14965" />
           <entry key="json" value="6" />
           <entry key="properties" value="195" />
           <entry key="txt" value="726" />
@@ -122,7 +116,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="14890" />
+          <entry key="JAVA" value="14965" />
           <entry key="JSON" value="6" />
           <entry key="PLAIN_TEXT" value="750" />
           <entry key="Properties" value="195" />
@@ -141,7 +135,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="15" />
-          <entry key="java" value="199" />
+          <entry key="java" value="203" />
           <entry key="json" value="1" />
           <entry key="properties" value="12" />
           <entry key="xml" value="7" />
@@ -151,7 +145,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="15" />
-          <entry key="JAVA" value="199" />
+          <entry key="JAVA" value="203" />
           <entry key="JSON" value="1" />
           <entry key="Properties" value="12" />
           <entry key="XML" value="7" />
@@ -230,10 +224,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="152" column="8" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#createNewProject_privateProject#0;class#ManagerProjectTest#0" />
+                <element signature="method#createNewProject_publicProject#0;class#ManagerProjectTest#0" />
+                <element signature="method#createNewProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
+                <element signature="method#editProject#0;class#ManagerProjectTest#0" />
+                <element signature="method#editProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
+                <element signature="method#deleteProject#0;class#ManagerProjectTest#0" />
+                <element signature="method#validateAccess_CreateProjectPage#1;class#ManagerProjectTest#0" />
+                <element signature="method#validateAccess_ManagerProjectPage#0;class#ManagerProjectTest#0" />
+                <element signature="method#deleteProjects#0;class#ManagerProjectTest#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="160" selection-start-line="160" selection-end-line="160" />
+            <state relative-caret-position="850">
+              <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#createNewUser#0;class#ManagerUserTest#0" />
@@ -242,10 +257,8 @@
                 <element signature="method#editNewUser#0;class#ManagerUserTest#0" />
                 <element signature="method#deleteNewUser#0;class#ManagerUserTest#0" />
                 <element signature="method#validateManagerUserPage#0;class#ManagerUserTest#0" />
-                <element signature="method#validateManagerUserPage#1;class#ManagerUserTest#0" />
                 <element signature="method#validateLinkCreateUser#0;class#ManagerUserTest#0" />
                 <element signature="method#validateEditUserPage#0;class#ManagerUserTest#0" />
-                <element signature="method#validateManagerUserPage#1;class#ManagerUserTest#0" />
                 <element signature="method#setupManagerUser#0;class#ManagerUserTest#0" />
                 <element signature="method#setup_createUser#0;class#ManagerUserTest#0" />
                 <element signature="method#deleteUsers#0;class#ManagerUserTest#0" />
@@ -255,12 +268,17 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="207">
+              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
               <folding>
-                <element signature="method#existCategory#0;class#ManagerGlobalCategoriesPage#0" />
+                <element signature="e#1891#1892#0" expanded="true" />
+                <element signature="e#1941#1942#0" expanded="true" />
+                <element signature="e#3099#3100#0" expanded="true" />
+                <element signature="e#3156#3157#0" expanded="true" />
+                <element signature="e#3238#3239#0" expanded="true" />
+                <element signature="e#3288#3289#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -344,16 +362,16 @@
         <option value="$PROJECT_DIR$/src/main/java/tests/CreateTask/CreateNewTaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/Task/EditTaskTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" />
       </list>
     </option>
   </component>
@@ -378,9 +396,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="370" />
-    <option name="y" value="25" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1754" />
+    <option name="y" value="-56" />
     <option name="width" value="780" />
     <option name="height" value="745" />
   </component>
@@ -451,6 +469,23 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="Manager" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="ManagerTest" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -458,7 +493,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537916719951" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537918469735" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -484,7 +519,77 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ManagerUserTest">
+  <component name="RunManager" selected="TestNG.ManagerProjectTest">
+    <configuration name="ManagerProjectTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="web_automated_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerProjectTest" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="web_automated_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerProjectTest" />
+      <option name="METHOD_NAME" value="validateAccess_CreateProjectPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerProjectTest.validateAccess_EditProjectPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="web_automated_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerProjectTest" />
+      <option name="METHOD_NAME" value="validateAccess_EditProjectPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerProjectTest.validateAccess_ManagerProjectPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="web_automated_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.ManagerTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerProjectTest" />
+      <option name="METHOD_NAME" value="validateAccess_ManagerProjectPage" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ManagerUserTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="web_automated_test" />
       <extension name="coverage">
@@ -501,92 +606,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerUserTest.validateCreateUserPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="web_automated_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerUserTest" />
-      <option name="METHOD_NAME" value="validateCreateUserPage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagerUserTest.validateEditUserPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="web_automated_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerUserTest" />
-      <option name="METHOD_NAME" value="validateEditUserPage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagerUserTest.validateLinkCreateUser" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="web_automated_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerUserTest" />
-      <option name="METHOD_NAME" value="validateLinkCreateUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ManagerUserTest.validateManagerUserPage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="web_automated_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.ManagerTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests.ManagerTest" />
-      <option name="MAIN_CLASS_NAME" value="tests.ManagerTest.ManagerUserTest" />
-      <option name="METHOD_NAME" value="validateManagerUserPage" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="TestNG.ManagerUserTest.validateManagerUserPage" />
       <item itemvalue="TestNG.ManagerUserTest" />
-      <item itemvalue="TestNG.ManagerUserTest.validateLinkCreateUser" />
-      <item itemvalue="TestNG.ManagerUserTest.validateCreateUserPage" />
-      <item itemvalue="TestNG.ManagerUserTest.validateEditUserPage" />
+      <item itemvalue="TestNG.ManagerProjectTest" />
+      <item itemvalue="TestNG.ManagerProjectTest.validateAccess_ManagerProjectPage" />
+      <item itemvalue="TestNG.ManagerProjectTest.validateAccess_CreateProjectPage" />
+      <item itemvalue="TestNG.ManagerProjectTest.validateAccess_EditProjectPage" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ManagerProjectTest" />
+        <item itemvalue="TestNG.ManagerProjectTest.validateAccess_EditProjectPage" />
+        <item itemvalue="TestNG.ManagerProjectTest.validateAccess_CreateProjectPage" />
+        <item itemvalue="TestNG.ManagerProjectTest.validateAccess_ManagerProjectPage" />
         <item itemvalue="TestNG.ManagerUserTest" />
-        <item itemvalue="TestNG.ManagerUserTest.validateEditUserPage" />
-        <item itemvalue="TestNG.ManagerUserTest.validateCreateUserPage" />
-        <item itemvalue="TestNG.ManagerUserTest.validateLinkCreateUser" />
-        <item itemvalue="TestNG.ManagerUserTest.validateManagerUserPage" />
       </list>
     </recent_temporary>
   </component>
@@ -927,24 +960,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManagerUserTest_validateManagerUserPage - 2018.09.25 at 18h 08m 56s.xml">
-      <configuration name="ManagerUserTest.validateManagerUserPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ManagerUserTest - 2018.09.25 at 18h 24m 11s.xml">
-      <configuration name="ManagerUserTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ManagerUserTest_validateLinkCreateUser - 2018.09.25 at 18h 33m 44s.xml">
-      <configuration name="ManagerUserTest.validateLinkCreateUser" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ManagerUserTest_validateCreateUserPage - 2018.09.25 at 18h 37m 42s.xml">
-      <configuration name="ManagerUserTest.validateCreateUserPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ManagerUserTest_validateCreateUserPage - 2018.09.25 at 18h 38m 45s.xml">
-      <configuration name="ManagerUserTest.validateCreateUserPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="ManagerUserTest - 2018.09.25 at 18h 57m 11s.xml">
-      <configuration name="ManagerUserTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ManagerUserTest_validateEditUserPage - 2018.09.25 at 19h 02m 04s.xml">
       <configuration name="ManagerUserTest.validateEditUserPage" configurationId="TestNG" />
     </history-entry>
@@ -957,6 +972,24 @@
     <history-entry file="ManagerUserTest - 2018.09.25 at 20h 11m 03s.xml">
       <configuration name="ManagerUserTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ManagerProjectTest - 2018.09.25 at 20h 21m 37s.xml">
+      <configuration name="ManagerProjectTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ManagerProjectTest_validateAccess_ManagerProjectPage - 2018.09.25 at 20h 26m 15s.xml">
+      <configuration name="ManagerProjectTest.validateAccess_ManagerProjectPage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.25 at 20h 28m 15s.xml">
+      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.25 at 20h 28m 25s.xml">
+      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ManagerProjectTest_validateAccess_CreateProjectPage - 2018.09.25 at 20h 29m 10s.xml">
+      <configuration name="ManagerProjectTest.validateAccess_CreateProjectPage" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ManagerProjectTest_validateAccess_EditProjectPage - 2018.09.25 at 20h 32m 15s.xml">
+      <configuration name="ManagerProjectTest.validateAccess_EditProjectPage" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -968,10 +1001,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="370" y="25" width="780" height="745" extended-state="0" />
+    <frame x="1358" y="-206" width="1040" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.42916667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31530613" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -980,13 +1013,13 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32741934" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.61538464" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.60645163" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42419356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.7967742" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.11612903" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3548387" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32580644" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31935483" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1256,27 +1289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createNewProject_privateProject#0;class#ManagerProjectTest#0" />
-            <element signature="method#createNewProject_publicProject#0;class#ManagerProjectTest#0" />
-            <element signature="method#createNewProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
-            <element signature="method#editProject#0;class#ManagerProjectTest#0" />
-            <element signature="method#editProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
-            <element signature="method#deleteProject#0;class#ManagerProjectTest#0" />
-            <element signature="method#createNewProject_withoutProjectName#0;class#ManagerProjectTest#0" />
-            <element signature="method#validateAccess_ManagerProjectPage#0;class#ManagerProjectTest#0" />
-            <element signature="method#setup_createProject#0;class#ManagerProjectTest#0" />
-            <element signature="method#setupManagerProjects#0;class#ManagerProjectTest#0" />
-            <element signature="method#deleteProjects#0;class#ManagerProjectTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1334,28 +1346,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#createNewTask_withoutCategory#0;class#CreateNewTaskTest#0" />
             <element signature="method#setupCreateNewTask#0;class#CreateNewTaskTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="e#2047#2048#0" expanded="true" />
-            <element signature="e#2122#2123#0" expanded="true" />
-            <element signature="e#2173#2174#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2291#2292#0" expanded="true" />
-            <element signature="e#2357#2358#0" expanded="true" />
-            <element signature="e#3056#3057#0" expanded="true" />
-            <element signature="e#3118#3119#0" expanded="true" />
-            <element signature="method#gotoManagerProjects#0;class#ManagerProjectPage#0" />
-            <element signature="e#3767#3768#0" expanded="true" />
-            <element signature="e#3844#3845#0" expanded="true" />
-            <element signature="e#4095#4096#0" expanded="true" />
-            <element signature="e#4175#4176#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1428,7 +1418,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
+        <state relative-caret-position="340">
           <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
             <element signature="method#existCategory#0;class#ManagerGlobalCategoriesPage#0" />
@@ -1438,8 +1428,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="160" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="850">
+          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#createNewUser#0;class#ManagerUserTest#0" />
@@ -1448,13 +1438,45 @@
             <element signature="method#editNewUser#0;class#ManagerUserTest#0" />
             <element signature="method#deleteNewUser#0;class#ManagerUserTest#0" />
             <element signature="method#validateManagerUserPage#0;class#ManagerUserTest#0" />
-            <element signature="method#validateManagerUserPage#1;class#ManagerUserTest#0" />
             <element signature="method#validateLinkCreateUser#0;class#ManagerUserTest#0" />
             <element signature="method#validateEditUserPage#0;class#ManagerUserTest#0" />
-            <element signature="method#validateManagerUserPage#1;class#ManagerUserTest#0" />
             <element signature="method#setupManagerUser#0;class#ManagerUserTest#0" />
             <element signature="method#setup_createUser#0;class#ManagerUserTest#0" />
             <element signature="method#deleteUsers#0;class#ManagerUserTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+          <folding>
+            <element signature="e#1891#1892#0" expanded="true" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#3099#3100#0" expanded="true" />
+            <element signature="e#3156#3157#0" expanded="true" />
+            <element signature="e#3238#3239#0" expanded="true" />
+            <element signature="e#3288#3289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="152" column="8" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createNewProject_privateProject#0;class#ManagerProjectTest#0" />
+            <element signature="method#createNewProject_publicProject#0;class#ManagerProjectTest#0" />
+            <element signature="method#createNewProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
+            <element signature="method#editProject#0;class#ManagerProjectTest#0" />
+            <element signature="method#editProject_withProjectNameUsing#0;class#ManagerProjectTest#0" />
+            <element signature="method#deleteProject#0;class#ManagerProjectTest#0" />
+            <element signature="method#validateAccess_CreateProjectPage#1;class#ManagerProjectTest#0" />
+            <element signature="method#validateAccess_ManagerProjectPage#0;class#ManagerProjectTest#0" />
+            <element signature="method#deleteProjects#0;class#ManagerProjectTest#0" />
           </folding>
         </state>
       </provider>
