@@ -13,13 +13,9 @@ public class LoginTest extends ExtentManager {
     private BaseHomePage baseHomePage;
     private LoginPage loginPage;
 
-    @Test(
-//            successPercentage = 80,
-//            retryAnalyzer = Retry.class
-    )
+    @Test(/*successPercentage = 80, retryAnalyzer = Retry.class*/)
     public void validLoginTest() {
-        baseHomePage = new BaseHomePage();
-        loginPage = new LoginPage();
+        validateLoginPage();
 
         loginPage.login(PropertyManager.getInstance().getUsername(),
                 PropertyManager.getInstance().getPassword());
@@ -27,11 +23,9 @@ public class LoginTest extends ExtentManager {
         Assert.assertTrue(baseHomePage.isHomeScreenVisible());
     }
 
-    @Test()
+    @Test
     public void invalidLoginTest_WrongPassword() {
-
-        baseHomePage = new BaseHomePage();
-        loginPage = new LoginPage();
+        validateLoginPage();
 
         loginPage.login(PropertyManager.getInstance().getUsername(),
                 PropertyManager.getInstance().getUsername());
@@ -39,25 +33,48 @@ public class LoginTest extends ExtentManager {
         Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test()
+    @Test
     public void invalidLoginTest_WrongUsername() {
-        baseHomePage = new BaseHomePage();
-        loginPage = new LoginPage();
+        validateLoginPage();
 
-        loginPage.login("Jose das cove", PropertyManager.getInstance().getUsername());
+        loginPage.login("Jose das cove", PropertyManager.getInstance().getPassword());
 
         Assert.assertTrue(loginPage.isLoginFail());
     }
 
-    @Test()
+    @Test
     public void invalidLoginTest_EmptyUsername() {
-
-        baseHomePage = new BaseHomePage();
-        loginPage = new LoginPage();
+        validateLoginPage();
 
         loginPage.clickLogin();
 
         Assert.assertTrue(loginPage.isLoginFail());
+    }
+
+    @Test
+    public void validateRecoverPasswordPage() {
+        validateCreateAccountPage();
+
+        loginPage.clickRecoverPassword();
+
+        Assert.assertTrue(loginPage.isRecoverPasswordPage());
+    }
+
+    @Test
+    public void validateCreateAccountPage() {
+        validateLoginPage();
+
+        loginPage.clickCreateUser();
+
+        Assert.assertTrue(loginPage.isCreateAccountPage());
+    }
+
+    @Test
+    public void validateLoginPage() {
+        baseHomePage = new BaseHomePage();
+        loginPage = new LoginPage();
+
+        Assert.assertTrue(loginPage.isLoginPage());
     }
 
 }

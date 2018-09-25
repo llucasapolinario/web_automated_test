@@ -22,6 +22,8 @@ public class TaskTest extends BaseTest {
         Assert.assertTrue(viewTask.isCheckBoxSelected(1));
         Assert.assertTrue(viewTask.isCheckBoxSelected(2));
         Assert.assertTrue(viewTask.isCheckBoxSelected(3));
+        Assert.assertTrue(viewTask.isCheckBoxSelected(4));
+        Assert.assertTrue(viewTask.isCheckBoxSelected(5));
     }
 
     @Test

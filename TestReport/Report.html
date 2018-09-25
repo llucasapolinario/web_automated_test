@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Sep 24, 2018 10:43:57 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 25, 2018 07:36:09 AM</span>
 				</a>
 			</li>
 			<li>
@@ -128,7 +128,7 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -143,7 +143,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>15</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>44</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -163,19 +163,19 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>delete_oneTask</span>
-						<span class='test-time'>Sep 24, 2018 10:43:57 PM</span>
+						<span class='test-name'>invalidLoginTest_EmptyUsername</span>
+						<span class='test-time'>Sep 25, 2018 07:36:10 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 24, 2018 10:43:57 PM</span>
-	<span class='label end-time'>Sep 24, 2018 10:44:12 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+545ms</span>
+	<span class='label start-time'>Sep 25, 2018 07:36:10 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:36:21 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+504ms</span>
 </div>
 	<div class='test-attributes'>
 			<div class='author-list'>
-				<span class='author label white-text'>apoli</span>
+				<span class='author label white-text'>lucas.figueiredo</span>
 			</div>
 	</div>
 	<div class='test-steps'>
@@ -190,77 +190,426 @@
 			<tbody>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:43:58 PM</td>
+					<td class='timestamp'>7:36:11 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:14 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:19 AM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:21 AM</td>
+					<td class='step-details'>readTextSua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos. on By.xpath: //div[@id='main-container']/div/div/div/div/div[4]/p</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:21 AM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>invalidLoginTest_WrongPassword</span>
+						<span class='test-time'>Sep 25, 2018 07:36:38 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 25, 2018 07:36:38 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:36:44 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+135ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:39 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:39 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:40 AM</td>
 					<td class='step-details'>writeText administrator on By.id: username</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:43:59 PM</td>
+					<td class='timestamp'>7:36:41 AM</td>
 					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:43:59 PM</td>
+					<td class='timestamp'>7:36:42 AM</td>
+					<td class='step-details'>writeText administrator on By.id: password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:44 AM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:44 AM</td>
+					<td class='step-details'>readTextSua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos. on By.xpath: //div[@id='main-container']/div/div/div/div/div[4]/p</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:44 AM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>invalidLoginTest_WrongUsername</span>
+						<span class='test-time'>Sep 25, 2018 07:36:52 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 25, 2018 07:36:52 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:36:58 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+914ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:53 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:53 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:54 AM</td>
+					<td class='step-details'>writeText Jose das cove on By.id: username</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:55 AM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:56 AM</td>
 					<td class='step-details'>writeText lucas on By.id: password</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:02 PM</td>
+					<td class='timestamp'>7:36:57 AM</td>
 					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:02 PM</td>
+					<td class='timestamp'>7:36:58 AM</td>
+					<td class='step-details'>readTextSua conta pode estar desativada ou bloqueada ou o nome de usuário e a senha que você digitou não estão corretos. on By.xpath: //div[@id='main-container']/div/div/div/div/div[4]/p</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:36:58 AM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>validLoginTest</span>
+						<span class='test-time'>Sep 25, 2018 07:37:06 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 25, 2018 07:37:06 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:37:14 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+447ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:07 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:07 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:08 AM</td>
+					<td class='step-details'>writeText administrator on By.id: username</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:09 AM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:10 AM</td>
+					<td class='step-details'>writeText lucas on By.id: password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:13 AM</td>
+					<td class='step-details'>click on By.xpath: //input[@value='Entrar']</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:14 AM</td>
 					<td class='step-details'>wait for element By.xpath: //div[@id='navbar-container']//a[@href='/my_view_page.php']/span[@class='smaller-75']</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:04 PM</td>
-					<td class='step-details'>click on By.xpath: //a[@href='/view_all_bug_page.php']/i</td>
+					<td class='timestamp'>7:37:14 AM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>validateCreateAccountPage</span>
+						<span class='test-time'>Sep 25, 2018 07:37:21 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 25, 2018 07:37:21 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:37:24 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+90ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:22 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:04 PM</td>
-					<td class='step-details'>wait for element By.linkText: Imprimir Tarefas</td>
+					<td class='timestamp'>7:37:22 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:05 PM</td>
-					<td class='step-details'>wait for element By.linkText: Exportar para Arquivo CSV</td>
+					<td class='timestamp'>7:37:24 AM</td>
+					<td class='step-details'>click on By.linkText: criar uma nova conta</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:05 PM</td>
-					<td class='step-details'>wait for element By.linkText: Exportação para Excel</td>
+					<td class='timestamp'>7:37:24 AM</td>
+					<td class='step-details'>readTextCriar Conta on By.xpath: //div[@id='login-box']/div/div/h4</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:06 PM</td>
-					<td class='step-details'>click on By.xpath: //table[@id='buglist']/tbody/tr/td/div/label/span</td>
+					<td class='timestamp'>7:37:24 AM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>validateLoginPage</span>
+						<span class='test-time'>Sep 25, 2018 07:37:32 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 25, 2018 07:37:32 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:37:33 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 1s+129ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:33 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:07 PM</td>
-					<td class='step-details'>select spinner 'Apagar' on element By.name: action</td>
+					<td class='timestamp'>7:37:33 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:08 PM</td>
-					<td class='step-details'>click on By.xpath: //input[@value='OK']</td>
+					<td class='timestamp'>7:37:33 AM</td>
+					<td class='step-details'>Test passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>validateRecoverPasswordPage</span>
+						<span class='test-time'>Sep 25, 2018 07:37:41 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 25, 2018 07:37:41 AM</span>
+	<span class='label end-time'>Sep 25, 2018 07:37:46 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+441ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='author-list'>
+				<span class='author label white-text'>lucas.figueiredo</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:41 AM</td>
+					<td class='step-details'>wait for element By.xpath: //input[@value='Entrar']</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:08 PM</td>
-					<td class='step-details'>readText0000011 on By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Tarefas Selecionadas'])[1]/following::a[1]</td>
+					<td class='timestamp'>7:37:42 AM</td>
+					<td class='step-details'>readTextEntrar on By.xpath: //div[@id='login-box']/div/div/h4</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:09 PM</td>
-					<td class='step-details'>click on By.xpath: //input[@value='Apagar Tarefas']</td>
+					<td class='timestamp'>7:37:43 AM</td>
+					<td class='step-details'>click on By.linkText: criar uma nova conta</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:12 PM</td>
+					<td class='timestamp'>7:37:44 AM</td>
+					<td class='step-details'>readTextCriar Conta on By.xpath: //div[@id='login-box']/div/div/h4</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:46 AM</td>
+					<td class='step-details'>click on By.linkText: Perdeu a sua senha?</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:46 AM</td>
+					<td class='step-details'>readTextReajuste de Senha on By.xpath: //div[@id='login-box']/div/div/h4</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>7:37:46 AM</td>
 					<td class='step-details'>Test passed</td>
 				</tr>
 			</tbody>
@@ -320,14 +669,14 @@
 
                         <li class='author displayed active'>
                             <div class='author-heading'>
-                                <span class='author-name'>apoli</span>
+                                <span class='author-name'>lucas.figueiredo</span>
                                 <span class='author-status right'>
-                                        <span class='label pass'>1</span>
+                                        <span class='label pass'>7</span>
 						        </span>
                             </div>
                             <div class='author-content hide'>
                                 <div class='author-status-counts'>
-                                    <span class='label green accent-4 white-text'>Passed: 1</span>
+                                    <span class='label green accent-4 white-text'>Passed: 7</span>
                                     
                                     
                                 </div>
@@ -343,8 +692,38 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Sep 24, 2018 10:43:57 PM</td>
-                                                <td class='linked' test-id='1'>delete_oneTask</td>
+                                                <td>Sep 25, 2018 07:36:10 AM</td>
+                                                <td class='linked' test-id='1'>invalidLoginTest_EmptyUsername</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 25, 2018 07:36:38 AM</td>
+                                                <td class='linked' test-id='2'>invalidLoginTest_WrongPassword</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 25, 2018 07:36:52 AM</td>
+                                                <td class='linked' test-id='3'>invalidLoginTest_WrongUsername</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 25, 2018 07:37:06 AM</td>
+                                                <td class='linked' test-id='4'>validLoginTest</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 25, 2018 07:37:21 AM</td>
+                                                <td class='linked' test-id='5'>validateCreateAccountPage</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 25, 2018 07:37:32 AM</td>
+                                                <td class='linked' test-id='6'>validateLoginPage</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sep 25, 2018 07:37:41 AM</td>
+                                                <td class='linked' test-id='7'>validateRecoverPasswordPage</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                         </tbody>
@@ -372,31 +751,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>15</div>
+					<div class='panel-lead'>44</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 24, 2018 10:43:57 PM</div>
+					<div class='panel-lead'>Sep 25, 2018 07:36:09 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 24, 2018 10:44:12 PM</div>
+			 		<div class='panel-lead'>Sep 25, 2018 07:37:47 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 15s+456ms</div>
+					<div class='panel-lead'>0h 1m 38s+86ms</div>
 				</div>
 			</div>
 		</div>
@@ -409,7 +788,7 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
+				passParent: 7,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
@@ -417,7 +796,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 15,
+				passChild: 44,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
