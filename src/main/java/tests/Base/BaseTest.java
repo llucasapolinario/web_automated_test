@@ -13,13 +13,13 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
-        Driver.newInstance();
         new BaseElement().goToPage(PropertyManager.getInstance().getURL());
     }
 
     @AfterMethod
     public void tearDown() {
         Driver.getDriverInstance().close();
+        Driver.setDriverNull();
     }
 
 }

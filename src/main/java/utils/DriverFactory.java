@@ -2,55 +2,81 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class DriverFactory {
+class DriverFactory {
 
     private static OptionsManager optionsManager = new OptionsManager();
 
-    public static WebDriver setDriver(String browser) {
+    static WebDriver setDriver(String browser) {
 
         if (PropertyManager.getInstance().getIsTextExecutionLocal()) {
 
-            return new ChromeDriver();
+            switch (browser) {
+                case "firefox":
+                    return new FirefoxDriver();
+
+                case "opera":
+                    return new OperaDriver();
+
+                default:
+                    return new ChromeDriver();
+
+            }
 
         } else {
 
-            String hublink = PropertyManager.getInstance().getHubLink();
+            String hubLink = PropertyManager.getInstance().getHubLink();
 
-            if (browser.equals("firefox")) {
+            switch (browser) {
+                case "firefox": {
 
-                DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-                capabilities.setBrowserName("firefox1");
-                try {
-                    return new RemoteWebDriver(new URL(hublink), optionsManager.getFirefoxOptions());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
+                    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+                    capabilities.setBrowserName("firefox1");
+                    try {
+
+                        return new RemoteWebDriver(new URL(hubLink), optionsManager.getFirefoxOptions());
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
+                    break;
                 }
-            } else if (browser.equals("opera")) {
-                DesiredCapabilities capabilities = DesiredCapabilities.operaBlink();
-                capabilities.setBrowserName("opera1");
-                try {
-                    return new RemoteWebDriver(new URL(hublink), optionsManager.getOperaOptions());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
+                case "opera": {
+
+                    DesiredCapabilities capabilities = DesiredCapabilities.operaBlink();
+                    capabilities.setBrowserName("operablink");
+                    try {
+
+                        return new RemoteWebDriver(new URL(hubLink), optionsManager.getOperaOptions());
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
+                    break;
+                }
+                default: {
+
+                    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+                    capabilities.setBrowserName("chrome1");
+                    try {
+
+                        return new RemoteWebDriver(new URL(hubLink), optionsManager.getChromeOptions());
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    break;
                 }
             }
-            else {
-                DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-                capabilities.setBrowserName("chrome1");
-                try {
-                    return new RemoteWebDriver(new URL(hublink), optionsManager.getChromeOptions());
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                }
-            }
-
         }
         return null;
     }
