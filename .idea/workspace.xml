@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="create ExcelDataDriven class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeleniumGrid/create_node.bat" beforeDir="false" afterPath="$PROJECT_DIR$/SeleniumGrid/create_node.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SeleniumGrid/start_server.bat" beforeDir="false" afterPath="$PROJECT_DIR$/SeleniumGrid/start_server.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/PropertyManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/PropertyManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -161,31 +163,32 @@
           <entry key="project.open.time.33" value="2" />
           <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.58" value="2" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="bat" value="2" />
+          <entry key="bat" value="4" />
           <entry key="class" value="5" />
           <entry key="gitignore" value="1" />
-          <entry key="java" value="99" />
+          <entry key="java" value="103" />
           <entry key="json" value="2" />
-          <entry key="properties" value="9" />
+          <entry key="properties" value="10" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="99" />
+          <entry key="JAVA" value="103" />
           <entry key="JSON" value="2" />
-          <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Properties" value="9" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Properties" value="10" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
@@ -194,7 +197,7 @@
           <entry key="bat" value="30" />
           <entry key="class" value="1" />
           <entry key="gitignore" value="3" />
-          <entry key="java" value="6188" />
+          <entry key="java" value="6540" />
           <entry key="json" value="5" />
           <entry key="properties" value="62" />
           <entry key="txt" value="479" />
@@ -204,7 +207,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="6188" />
+          <entry key="JAVA" value="6540" />
           <entry key="JSON" value="5" />
           <entry key="PLAIN_TEXT" value="512" />
           <entry key="Properties" value="62" />
@@ -224,26 +227,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SeleniumGrid/start_server.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+            <state relative-caret-position="17">
+              <caret line="1" column="83" lean-forward="true" selection-start-line="1" selection-start-column="83" selection-end-line="1" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SeleniumGrid/create_node.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+            <state relative-caret-position="118">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -252,46 +246,55 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extent-config.xml">
+        <entry file="file://$PROJECT_DIR$/SeleniumGrid/create_node.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+            <state relative-caret-position="17">
+              <caret line="1" column="169" selection-start-line="1" selection-start-column="168" selection-end-line="1" selection-end-column="169" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/environment.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/PropertyManager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/DBFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1143">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="-272">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/DriverFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-812">
-              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+            <state relative-caret-position="135">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/OptionsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="168">
+              <caret line="43" column="62" lean-forward="true" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -346,9 +349,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pages/BasePages.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/test1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/Screenshot.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/CreateUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -391,12 +391,15 @@
         <option value="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Login/LoginPage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/SeleniumGrid/start_server.bat" />
         <option value="$PROJECT_DIR$/SeleniumGrid/NodeDeafultConfig.json" />
-        <option value="$PROJECT_DIR$/environment.properties" />
         <option value="$PROJECT_DIR$/src/main/java/utils/PropertyManager.java" />
-        <option value="$PROJECT_DIR$/SeleniumGrid/create_node.bat" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Driver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java" />
+        <option value="$PROJECT_DIR$/SeleniumGrid/create_node.bat" />
+        <option value="$PROJECT_DIR$/SeleniumGrid/start_server.bat" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/DriverFactory.java" />
+        <option value="$PROJECT_DIR$/environment.properties" />
       </list>
     </option>
   </component>
@@ -421,7 +424,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-163" />
     <option name="y" value="-908" />
     <option name="width" value="1616" />
@@ -435,7 +438,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -452,6 +454,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -493,30 +496,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -959,12 +945,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LoginTest_validateRecoverPasswordPage - 2018.09.25 at 07h 33m 15s.xml">
-      <configuration name="LoginTest.validateRecoverPasswordPage" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="LoginTest - 2018.09.25 at 07h 35m 32s.xml">
-      <configuration name="LoginTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="LoginTest - 2018.09.25 at 07h 37m 48s.xml">
       <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
@@ -989,6 +969,12 @@
     <history-entry file="tests - 2018.09.26 at 07h 45m 06s.xml">
       <configuration name="tests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="tests - 2018.09.26 at 13h 25m 53s.xml">
+      <configuration name="tests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="tests - 2018.09.26 at 13h 28m 34s.xml">
+      <configuration name="tests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1001,9 +987,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-163" y="-908" width="1616" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2622108" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26542416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1012,13 +997,13 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32845744" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" weight="0.46409574" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.46409574" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42419356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.7967742" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.20744681" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.20744681" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50064266" side_tool="true" weight="0.4055851" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32047874" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1112,14 +1097,6 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/MethodInvocationHelper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DBFactory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExtentReport/ExtentTestManager.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1178,9 +1155,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java" />
     <entry file="file://$PROJECT_DIR$/DefaultNodeWebDriver.json" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" />
     <entry file="file://$PROJECT_DIR$/docker-compose.yml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/DeleteProjectTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/HomePage.java" />
@@ -1327,9 +1302,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/extent-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/PropertyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-812">
+        <state relative-caret-position="85">
           <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
@@ -1337,40 +1326,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extent-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="60" lean-forward="true" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/PropertyManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1143">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SeleniumGrid/HubConfig.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeleniumGrid/start_server.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SeleniumGrid/create_node.bat">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SeleniumGrid/NodeDeafultConfig.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -1379,20 +1340,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/environment.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DBFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeleniumGrid/create_node.bat">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+          <caret line="1" column="169" selection-start-line="1" selection-start-column="168" selection-end-line="1" selection-end-column="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SeleniumGrid/start_server.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="83" lean-forward="true" selection-start-line="1" selection-start-column="83" selection-end-line="1" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/OptionsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="43" column="62" lean-forward="true" selection-start-line="43" selection-start-column="62" selection-end-line="43" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="37" column="78" selection-start-line="37" selection-start-column="78" selection-end-line="37" selection-end-column="78" />
+        <state relative-caret-position="118">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DriverFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>

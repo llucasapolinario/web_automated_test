@@ -1,9 +1,11 @@
 package utils;
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.opera.OperaOptions;
 
 public class OptionsManager {
 
@@ -33,4 +35,14 @@ public class OptionsManager {
         options.setCapability(FirefoxDriver.PROFILE, profile);
         return options;
     }
+
+    public Capabilities getOperaOptions() {
+        OperaOptions operaOptions = new OperaOptions();
+        operaOptions.setBinary("@C:\\Users\\lucas.figueiredo\\AppData\\Local\\Programs\\Opera");
+        operaOptions.addArguments("--start-maximized");
+        operaOptions.addArguments("--ignore-certificate-errors");
+        operaOptions.addArguments("--disable-popup-blocking");
+        return operaOptions;
+    }
+
 }

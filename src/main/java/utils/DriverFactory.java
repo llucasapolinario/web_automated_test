@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -11,35 +12,47 @@ import java.net.URL;
 public class DriverFactory {
 
     private static OptionsManager optionsManager = new OptionsManager();
-    private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    static synchronized void setDriver(String browser) {
-        if (browser.equals("firefox")) {
+    public static WebDriver setDriver(String browser) {
 
-            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-            capabilities.setBrowserName("firefox1");
-            try {
-                tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), optionsManager.getFirefoxOptions()));
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+        if (PropertyManager.getInstance().getIsTextExecutionLocal()) {
+
+            return new ChromeDriver();
+
+        } else {
+
+            String hublink = PropertyManager.getInstance().getHubLink();
+
+            if (browser.equals("firefox")) {
+
+                DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+                capabilities.setBrowserName("firefox1");
+                try {
+                    return new RemoteWebDriver(new URL(hublink), optionsManager.getFirefoxOptions());
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
+            } else if (browser.equals("opera")) {
+                DesiredCapabilities capabilities = DesiredCapabilities.operaBlink();
+                capabilities.setBrowserName("opera1");
+                try {
+                    return new RemoteWebDriver(new URL(hublink), optionsManager.getOperaOptions());
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             }
-        } else if (browser.equals("chrome")) {
-            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-            capabilities.setBrowserName("chrome1");
-            try {
-                tlDriver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), optionsManager.getChromeOptions()));
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
+            else {
+                DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+                capabilities.setBrowserName("chrome1");
+                try {
+                    return new RemoteWebDriver(new URL(hublink), optionsManager.getChromeOptions());
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                }
             }
+
         }
-    }
-
-    public static synchronized WebDriverWait getWait (WebDriver driver) {
-        return new WebDriverWait(driver,20);
-    }
-
-    static synchronized WebDriver getDriver() {
-        return tlDriver.get();
+        return null;
     }
 
 }
