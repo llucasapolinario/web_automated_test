@@ -1,0 +1,2 @@
+cd Cchromedriver 
+java -Dwebdriver.chrome.driver=chromedriver.exe -Dwebdriver.gecko.driver=geckodriver.exe -Dwebdriver.opera.driver=operadriver.exe -jar  selenium-server-standalone-3.14.0.jar -role node -nodeConfig NodeDefaultConfig.json

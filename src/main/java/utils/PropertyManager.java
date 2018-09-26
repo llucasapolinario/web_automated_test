@@ -20,6 +20,8 @@ public class PropertyManager {
     private static String hubLink;
     private static String username;
     private static String password;
+    private static String browserExecution;
+    private static boolean isTextExecutionLocal;
     private static Integer maxRetryCount;
 
     private static int TIME_OUT;
@@ -51,6 +53,8 @@ public class PropertyManager {
         TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
         TIME_OUT_BEFORE_ELEMENT = Integer.parseInt(prop.getProperty("timeout_before_event"));
         maxRetryCount = Integer.parseInt(prop.getProperty("maxRetryCount"));
+        browserExecution = prop.getProperty("browserExecution");
+        isTextExecutionLocal = Boolean.parseBoolean(prop.getProperty("isTestExecutionLocal"));
     }
 
     public String getURL() {
@@ -63,6 +67,14 @@ public class PropertyManager {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getBrowserExecution() {
+        return browserExecution;
+    }
+
+    public boolean getIsTextExecutionLocal(){
+        return isTextExecutionLocal;
     }
 
     public String getHubLink(){
@@ -80,4 +92,5 @@ public class PropertyManager {
     public static Integer getMaxRetryCount() {
         return maxRetryCount;
     }
+
 }
