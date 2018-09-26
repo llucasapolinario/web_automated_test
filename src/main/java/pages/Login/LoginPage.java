@@ -65,7 +65,7 @@ public class LoginPage extends BaseElement {
     }
 
     public void clickRecoverPassword() {
-        scrollTolement(By.linkText(LINK_RECOVER_PASSWORD_USER));
+        scrollToElement(By.linkText(LINK_RECOVER_PASSWORD_USER));
         click(By.linkText(LINK_RECOVER_PASSWORD_USER));
     }
 

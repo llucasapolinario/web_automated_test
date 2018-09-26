@@ -2,6 +2,7 @@ package tests.Task;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.Task.CreateTaskPage;
 import pages.Task.ViewTask;
 import tests.Base.BaseTest;
 import tests.Login.LoginTest;
