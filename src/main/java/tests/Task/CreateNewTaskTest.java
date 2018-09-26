@@ -12,7 +12,7 @@ public class CreateNewTaskTest extends BaseTest {
     private CreateTaskPage createTaskPage;
     private static final String category = "[Todos os Projetos] General";
 
-    @Test()
+    @Test
     public void createNewTask() {
         setupCreateNewTask();
         createTaskPage.selectCategory(category);
@@ -26,7 +26,7 @@ public class CreateNewTaskTest extends BaseTest {
         Assert.assertTrue(createTaskPage.isTaskCreated());
     }
 
-    @Test()
+    @Test
     public void createNewTask_withoutCategory() {
         setupCreateNewTask();
         createTaskPage.selectFrequency(CreateTaskPage.FREQUENCY_LABEL[2]);
@@ -39,10 +39,29 @@ public class CreateNewTaskTest extends BaseTest {
         Assert.assertTrue(createTaskPage.isCategoryNotSet());
     }
 
-    private void setupCreateNewTask() {
+    @Test
+    public void validate_CreateTaskPage(){
         new LoginTest().validLoginTest();
+        createTaskPage = new CreateTaskPage();
+        createTaskPage.clickCreateTask();
+
+        Assert.assertTrue(createTaskPage.isCreateTaskPage());
+    }
+
+    @Test
+    public void validate_CreateTaskPageByLink(){
+        new LoginTest().validLoginTest();
+        createTaskPage = new CreateTaskPage();
+        createTaskPage.clickInLinkCreateTask();
+
+        Assert.assertTrue(createTaskPage.isCreateTaskPage());
+    }
+
+    private void setupCreateNewTask() {
+        validate_CreateTaskPageByLink();
         ManagerProjectPage managerProjectPage = new ManagerProjectPage();
-        managerProjectPage.gotoManagerProjects();
+        managerProjectPage.clickManager();
+        managerProjectPage.clickManagerProjectsPage();
         String projectName1 = "Automação parte 1";
         if (!managerProjectPage.isNewProjectShowing(projectName1)) {
             managerProjectPage.clickNewProject();
@@ -55,7 +74,6 @@ public class CreateNewTaskTest extends BaseTest {
             Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
         }
 
-        createTaskPage = new CreateTaskPage();
         createTaskPage.clickCreateTask();
     }
 

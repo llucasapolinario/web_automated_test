@@ -104,7 +104,7 @@ public class BaseElement {
         return WaitUntil.elementExists(elementLocation);
     }
 
-    protected void scrollTolement(By elementLocation){
+    protected void scrollToElement(By elementLocation){
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
         ((JavascriptExecutor) Driver.getDriverInstance()).executeScript("arguments[0].scrollIntoView(true);", element);
         try {
@@ -113,5 +113,10 @@ public class BaseElement {
             e.printStackTrace();
         }
     }
+
+    protected void goBackPage(){
+        Driver.getDriverInstance().navigate().back();
+    }
+
 }
 

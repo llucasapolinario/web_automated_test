@@ -17,6 +17,7 @@ public class CreateTaskPage extends BaseHomePage {
     private static final String CREATE_TASK_SUCCESS_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::p[1]";
     private static final String CREATE_TASK_SUCCESS = "Operação realizada com sucesso.";
     private static final String CREATE_TASK_XPATH = "//input[@value='Criar Nova Tarefa']";
+    private static final String CREATE_TASK_PAGE_XPATH = "//form[@id='report_bug_form']/div/div/h4";
 
 
     public static final String[] FREQUENCY_LABEL = {"sempre", "às vezes", "aleatório", "não se tentou",
@@ -57,11 +58,11 @@ public class CreateTaskPage extends BaseHomePage {
     }
 
     public void clickCreateTask(){
-        click(By.xpath(CREATETASK_XPATH));
+        click(By.xpath(BaseHomePage.MENU_CREATE_TASK_XPATH));
     }
 
     public void clickInNewTask(){
-        scrollTolement(By.xpath(CREATE_TASK_XPATH));
+        scrollToElement(By.xpath(CREATE_TASK_XPATH));
         click(By.xpath(CREATE_TASK_XPATH));
     }
 
@@ -74,4 +75,7 @@ public class CreateTaskPage extends BaseHomePage {
         return CREATE_TASK_SUCCESS.equals(readText(By.xpath(CREATE_TASK_SUCCESS_XPATH)));
     }
 
+    public boolean isCreateTaskPage() {
+        return waitForElement(By.xpath(CREATE_TASK_PAGE_XPATH)).isDisplayed();
+    }
 }
