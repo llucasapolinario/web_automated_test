@@ -5,7 +5,7 @@ import pages.Base.BaseHomePage;
 
 public class ViewTask extends BaseHomePage {
 
-    private static final String SELECT_ALL_BUGS_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='dlogin'])[3]/following::span[1]";
+    private static final String SELECT_ALL_BUGS_XPATH = "//form[@id='bug_action']/div/div[2]/div[2]/div[2]/div/label/span";
     private static final String PRINT_TASK_LINK = "Imprimir Tarefas";
     private static final String EXPORT_CSV_LINK = "Exportar para Arquivo CSV";
     private static final String EXPORT_EXCEL_LINK = "Exportação para Excel";
@@ -13,6 +13,8 @@ public class ViewTask extends BaseHomePage {
     private static final String BTN_OK_XPATH = "//input[@value='OK']";
     private static final String BUG_NUM_LINK_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Tarefas Selecionadas'])[1]/following::a[1]";
     private static final String CONFIRM_DELETE_TASK_XPATH = "//input[@value='Apagar Tarefas']";
+    private static final String CONFIRM_DONE_TASK_XPATH = "//input[@value='Resolver Tarefas']";
+    private static final String CONFIRM_CLOSE_TASK_XPATH = "//input[@value='Fechar Tarefas']";
 
     private static final String NUM_BUG_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Última Atualização'])[1]/following::td[1]";
 
@@ -44,6 +46,19 @@ public class ViewTask extends BaseHomePage {
         return Integer.parseInt(readText(By.xpath("//table[@id='buglist']/tbody/tr[" + position + "]/td[4]/a")));
     }
 
+    public boolean isEmpityBug() {
+        return !elementExists(By.xpath("//table[@id='buglist']/tbody/tr/td[4]/a"));
+    }
+
+    public boolean isBugDone(int position) {
+        if (position == 1){
+            return waitForElement(By.xpath("//table[@id='buglist']/tbody/tr/td[9]/div/span")).getText().equals("resolvido");
+        }
+        else{
+            return waitForElement(By.xpath("//table[@id='buglist']/tbody/tr["+position+"]/td[9]/div/span")).getText().equals("resolvido");
+        }
+    }
+
     public void setSelectAllBugs() {
         scrollToElement(By.xpath(SELECT_ALL_BUGS_XPATH));
         click(By.xpath(SELECT_ALL_BUGS_XPATH));
@@ -72,7 +87,7 @@ public class ViewTask extends BaseHomePage {
         selectSpinnerElement(By.name(ACTION_NAME), action);
     }
 
-    public void clickOn(){
+    public void clickOnOK(){
         click(By.xpath(BTN_OK_XPATH));
     }
 
@@ -83,9 +98,16 @@ public class ViewTask extends BaseHomePage {
     public void clickConfirmDeleteTask() {
         click(By.xpath(CONFIRM_DELETE_TASK_XPATH));
     }
+    public void clickConfirmDoneTask() {
+        click(By.xpath(CONFIRM_DONE_TASK_XPATH));
+    }
 
     public boolean isTaskShowing(String numBug) {
         return elementExists(By.linkText(numBug));
+    }
+
+    public void clickConfirmCloseTask() {
+        click(By.xpath(CONFIRM_CLOSE_TASK_XPATH));
     }
 
 }
