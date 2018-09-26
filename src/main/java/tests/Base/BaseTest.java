@@ -1,6 +1,8 @@
 package tests.Base;
 
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import pages.Base.BaseElement;
 import utils.Driver;
 import utils.PropertyManager;
@@ -11,14 +13,13 @@ public class BaseTest {
 
     @BeforeMethod
     public void setup() {
-        Driver.newInstance().manage().window().maximize();
+        Driver.newInstance();
         new BaseElement().goToPage(PropertyManager.getInstance().getURL());
     }
 
     @AfterMethod
     public void tearDown() {
         Driver.getDriverInstance().close();
-        Driver.getDriverInstance().quit();
     }
 
 }
