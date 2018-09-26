@@ -67,4 +67,7 @@ public class BaseHomePage extends BaseElement {
         click(By.linkText(INVITE_USER_LINK));
     }
 
+    public void clickInLinkCreateTask(){
+        click(By.linkText(CREATE_TASK_LINK));
+    }
 }
