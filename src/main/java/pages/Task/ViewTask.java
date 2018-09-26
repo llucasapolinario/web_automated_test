@@ -45,7 +45,7 @@ public class ViewTask extends BaseHomePage {
     }
 
     public void setSelectAllBugs() {
-        scrollTolement(By.xpath(SELECT_ALL_BUGS_XPATH));
+        scrollToElement(By.xpath(SELECT_ALL_BUGS_XPATH));
         click(By.xpath(SELECT_ALL_BUGS_XPATH));
     }
 
@@ -68,7 +68,7 @@ public class ViewTask extends BaseHomePage {
     }
 
     public void action(String action) {
-        scrollTolement(By.name(ACTION_NAME));
+        scrollToElement(By.name(ACTION_NAME));
         selectSpinnerElement(By.name(ACTION_NAME), action);
     }
 

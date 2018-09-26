@@ -61,7 +61,7 @@ public class CreateTaskPage extends BaseHomePage {
     }
 
     public void clickInNewTask(){
-        scrollTolement(By.xpath(CREATE_TASK_XPATH));
+        scrollToElement(By.xpath(CREATE_TASK_XPATH));
         click(By.xpath(CREATE_TASK_XPATH));
     }
 

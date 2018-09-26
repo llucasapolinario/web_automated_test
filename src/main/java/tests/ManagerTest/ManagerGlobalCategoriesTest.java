@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import pages.Manager.ManagerGlobalCategoriesPage;
 import pages.Manager.ManagerProjectPage;
 import tests.Base.BaseTest;
-import tests.Login.LoginTest;
 
 public class ManagerGlobalCategoriesTest extends BaseTest {
 
@@ -13,6 +12,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
     private String Category_bug = "Bug";
     private String Category_feature = "Feature";
     private String Category_improvement = "Melhoria";
+    private String Category_general = "General";
 
     @Test
     public void createNewGlobalCategory() {
@@ -36,8 +36,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
 
     @Test
     public void createNewGlobalCategory_Edit() {
-        setupCreateCategory();
-        managerGlobalCategoriesPage.clickEdit(Category_bug);
+        validate_EditCategory();
 
         managerGlobalCategoriesPage.updateCategoryName(Category_feature);
         managerGlobalCategoriesPage.selectAssigned("administrator");
@@ -66,7 +65,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
     }
 
     @Test
-    public void createNewGlobalCategory_Delete() {
+    public void createNewGlobalCategory_DeleteInGlobalCategoryPage() {
         setupCreateCategory();
 
         managerGlobalCategoriesPage.clickDelete(Category_bug);
@@ -74,6 +73,90 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
 
         Assert.assertFalse(managerGlobalCategoriesPage.existCategory(Category_bug));
         deleteCategories();
+    }
+
+    @Test
+    public void createNewGlobalCategory_DeleteInEditCategoryPage() {
+        validate_EditCategory();
+
+        managerGlobalCategoriesPage.clickDeleteCategoryInEditPage();
+        managerGlobalCategoriesPage.clickConfirmDeleteCategory();
+
+        Assert.assertFalse(managerGlobalCategoriesPage.existCategory(Category_bug));
+        deleteCategories();
+    }
+
+    @Test
+    public void createNewGlobalCategory_validateDeletePage() {
+        validate_EditCategory();
+
+        managerGlobalCategoriesPage.clickDeleteCategoryInEditPage();
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isDeleteCategory());
+        deleteCategories();
+    }
+
+    @Test
+    public void createNewGlobalCategory_DeleteGeneralCategoryInGlobalCategoryPage() {
+        validate_ManagerGlobalCategoryPage();
+
+        managerGlobalCategoriesPage.clickDelete(Category_general);
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isNotDeletedGeneralCategory());
+    }
+
+    @Test
+    public void createNewGlobalCategory_DeleteGeneralCategoryInEditPage() {
+        validate_ManagerGlobalCategoryPage();
+        managerGlobalCategoriesPage.clickEdit(Category_general);
+        managerGlobalCategoriesPage.clickDeleteCategoryInEditPage();
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isNotDeletedGeneralCategory());
+    }
+
+    @Test
+    public void createNewGlobalCategory_CancelDeleteInEditPage() {
+        validate_EditCategory();
+
+        managerGlobalCategoriesPage.clickDeleteCategoryInEditPage();
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isDeleteCategory());
+
+        managerGlobalCategoriesPage.goBack();
+        managerGlobalCategoriesPage.goBack();
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isCategoryExist(Category_bug));
+        deleteCategories();
+    }
+
+    @Test
+    public void createNewGlobalCategory_CancelDeleteInGlobalCategoryPage() {
+        setupCreateCategory();
+
+        managerGlobalCategoriesPage.clickDelete(Category_bug);
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isDeleteCategory());
+
+        managerGlobalCategoriesPage.goBack();
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isCategoryExist(Category_bug));
+        deleteCategories();
+    }
+
+    @Test
+    public void validate_EditCategory(){
+        setupCreateCategory();
+        managerGlobalCategoriesPage.clickEdit(Category_bug);
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isEditGlobalCategoryPage());
+    }
+
+    @Test
+    public void validate_ManagerGlobalCategoryPage(){
+        new ManagerProjectTest().validateAccess_ManagerProjectPage();
+        managerGlobalCategoriesPage = new ManagerGlobalCategoriesPage();
+
+        Assert.assertTrue(managerGlobalCategoriesPage.isManagerGlobalCategoryPage());
     }
 
     private void setupCreateCategory() {
@@ -85,9 +168,7 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
     }
 
     private void setupManagerCategory() {
-        managerGlobalCategoriesPage = new ManagerGlobalCategoriesPage();
-
-        new LoginTest().validLoginTest();
+        validate_ManagerGlobalCategoryPage();
         ManagerProjectPage managerProjectPage = new ManagerProjectPage();
         managerProjectPage.clickManagerProjectsPage();
         String projectName1 = "Automação parte 1";
@@ -102,8 +183,6 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
             managerProjectPage.clickAddProject();
             Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
         }
-
-        managerGlobalCategoriesPage.gotoManagerGlobalCategoriesPage();
         deleteCategories();
     }
 
