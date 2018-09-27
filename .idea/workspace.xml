@@ -2,26 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="ManagerProjectTest is done">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ScreenShots/createNewTask.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/createNewTask.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TestReport/Report.html" beforeDir="false" afterPath="$PROJECT_DIR$/TestReport/Report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/DriverFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DriverFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/ExcelDataDriven.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/ExcelDataDriven.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/OptionsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/OptionsManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -122,7 +107,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="24" />
-          <entry key="java" value="17690" />
+          <entry key="java" value="17795" />
           <entry key="json" value="6" />
           <entry key="properties" value="292" />
           <entry key="txt" value="785" />
@@ -132,7 +117,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17690" />
+          <entry key="JAVA" value="17795" />
           <entry key="JSON" value="6" />
           <entry key="PLAIN_TEXT" value="809" />
           <entry key="Properties" value="292" />
@@ -151,7 +136,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="17" />
-          <entry key="java" value="253" />
+          <entry key="java" value="254" />
           <entry key="json" value="1" />
           <entry key="properties" value="13" />
           <entry key="xml" value="9" />
@@ -161,7 +146,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="17" />
-          <entry key="JAVA" value="253" />
+          <entry key="JAVA" value="254" />
           <entry key="JSON" value="1" />
           <entry key="Properties" value="13" />
           <entry key="XML" value="9" />
@@ -272,11 +257,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+            <state relative-caret-position="84">
+              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#validate_CreateTaskPageByLink#0;class#DataProviderWithExcel#0" />
@@ -290,19 +275,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="82" column="41" lean-forward="true" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+            <state relative-caret-position="84">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#1897#1898#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="115">
+              <caret line="84" selection-start-line="84" selection-end-line="84" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#goToPage#0;class#BaseElement#0" />
+                <element signature="method#click#0;class#BaseElement#0" />
+                <element signature="method#writeText#0;class#BaseElement#0" />
+                <element signature="method#readText#0;class#BaseElement#0" />
+                <element signature="method#selectCheckBox#0;class#BaseElement#0" />
+                <element signature="method#isCheckBoxSelected#0;class#BaseElement#0" />
+                <element signature="method#unSelectCheckBox#0;class#BaseElement#0" />
+                <element signature="method#waitForElement#0;class#BaseElement#0" />
+                <element signature="e#4037#4038#0" expanded="true" />
+                <element signature="e#4100#4101#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -408,8 +418,8 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DataProviderWithExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" />
       </list>
     </option>
   </component>
@@ -435,8 +445,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="209" />
-    <option name="y" value="132" />
+    <option name="x" value="1503" />
+    <option name="y" value="-216" />
     <option name="width" value="780" />
     <option name="height" value="745" />
   </component>
@@ -454,81 +464,6 @@
             <path>
               <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="extentReport" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pages" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Task" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="tests" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Base" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="utils" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="test1" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="web_automated_test" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -559,7 +494,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538014924914" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538016944908" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -1035,34 +970,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CreateNewTaskTest_DDT_createNewTask - 2018.09.26 at 23h 03m 51s.xml">
-      <configuration name="CreateNewTaskTest.DDT_createNewTask" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="CreateNewTaskTest_DDT_createNewTask - 2018.09.26 at 23h 07m 20s.xml">
-      <configuration name="CreateNewTaskTest.DDT_createNewTask" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DataProviderWithExcel - 2018.09.26 at 23h 12m 23s.xml">
-      <configuration name="DataProviderWithExcel" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DataProviderWithExcel - 2018.09.26 at 23h 17m 04s.xml">
-      <configuration name="DataProviderWithExcel" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DataProviderWithExcel - 2018.09.26 at 23h 17m 35s.xml">
-      <configuration name="DataProviderWithExcel" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DataProviderWithExcel - 2018.09.26 at 23h 18m 11s.xml">
-      <configuration name="DataProviderWithExcel" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 18m 50s.xml">
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 33m 44s.xml">
       <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 19m 23s.xml">
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 34m 53s.xml">
       <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 20m 33s.xml">
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 36m 31s.xml">
       <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 20m 57s.xml">
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 38m 03s.xml">
+      <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 40m 24s.xml">
+      <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 47m 43s.xml">
+      <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 48m 06s.xml">
+      <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 48m 24s.xml">
+      <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 49m 20s.xml">
+      <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="DataProviderWithExcel_createNewTask - 2018.09.26 at 23h 51m 11s.xml">
       <configuration name="DataProviderWithExcel.createNewTask" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1076,10 +1011,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-206" width="1040" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19894099" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26836735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1088,7 +1023,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32741934" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.71935487" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.5145161" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42419356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1311,27 +1246,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#goToPage#0;class#BaseElement#0" />
-            <element signature="method#click#0;class#BaseElement#0" />
-            <element signature="method#writeText#0;class#BaseElement#0" />
-            <element signature="method#readText#0;class#BaseElement#0" />
-            <element signature="method#selectCheckBox#0;class#BaseElement#0" />
-            <element signature="method#isCheckBoxSelected#0;class#BaseElement#0" />
-            <element signature="method#unSelectCheckBox#0;class#BaseElement#0" />
-            <element signature="method#selectSpinnerElement#0;class#BaseElement#0" />
-            <element signature="method#waitForElement#0;class#BaseElement#0" />
-            <element signature="e#4100#4101#0" expanded="true" />
-            <element signature="method#scrollTolement#0;class#BaseElement#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
@@ -1496,13 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="82" column="41" lean-forward="true" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -1567,25 +1474,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="115">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#goToPage#0;class#BaseElement#0" />
+            <element signature="method#click#0;class#BaseElement#0" />
+            <element signature="method#writeText#0;class#BaseElement#0" />
+            <element signature="method#readText#0;class#BaseElement#0" />
+            <element signature="method#selectCheckBox#0;class#BaseElement#0" />
+            <element signature="method#isCheckBoxSelected#0;class#BaseElement#0" />
+            <element signature="method#unSelectCheckBox#0;class#BaseElement#0" />
+            <element signature="method#waitForElement#0;class#BaseElement#0" />
+            <element signature="e#4037#4038#0" expanded="true" />
+            <element signature="e#4100#4101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#1897#1898#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="38" column="78" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+        <state relative-caret-position="84">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#validate_CreateTaskPageByLink#0;class#DataProviderWithExcel#0" />
             <element signature="method#createNewGlobalCategory#0;class#DataProviderWithExcel#0" />
             <element signature="method#createProject#0;class#DataProviderWithExcel#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,138 +1,81 @@
 package utils;
 
 import java.io.FileInputStream;
-
 import java.io.FileNotFoundException;
-
 import java.io.FileOutputStream;
-
 import java.io.IOException;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
-
 import org.apache.poi.xssf.usermodel.XSSFRow;
-
 import org.apache.poi.xssf.usermodel.XSSFSheet;
-
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
     private static XSSFSheet ExcelWSheet;
-
     private static XSSFWorkbook ExcelWBook;
-
     private static XSSFCell Cell;
-
     private static XSSFRow Row;
 
-    //This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
-
-    public static void setExcelFile(String Path,String SheetName) throws Exception {
-
+    public static void setExcelFile(String Path, String SheetName) throws Exception {
         try {
-
             FileInputStream ExcelFile = new FileInputStream(Path);
-
             ExcelWBook = new XSSFWorkbook(ExcelFile);
-
             ExcelWSheet = ExcelWBook.getSheet(SheetName);
-
-        } catch (Exception e){
-
+        } catch (Exception e) {
             throw (e);
-
         }
-
     }
 
-    public static Object[][] getTableArray(String FilePath, String SheetName, int iTestCaseRow)    throws Exception
-
-    {
+    public static Object[][] getTableArray(String FilePath, String SheetName, int iTestCaseRow) throws Exception {
 
         String[][] tabArray = null;
-
-        try{
-
+        try {
             FileInputStream ExcelFile = new FileInputStream(FilePath);
-
-            // Access the required test data sheet
-
             ExcelWBook = new XSSFWorkbook(ExcelFile);
-
             ExcelWSheet = ExcelWBook.getSheet(SheetName);
-
             int startCol = 1;
+            int ci = 0, cj = 0;
+            int totalRows = 4;
+            int totalCols = 5;
+            tabArray = new String[totalRows][totalCols];
 
-            int ci=0,cj=0;
-
-            int totalRows = 1;
-
-            int totalCols = 2;
-
-            tabArray=new String[totalRows][totalCols];
-
-            for (int j=startCol;j<=totalCols;j++, cj++)
-
-            {
-
-                tabArray[ci][cj]=getCellData(iTestCaseRow,j);
-
+            for (int j = startCol; j <= totalCols; j++, cj++) {
+                System.out.println(iTestCaseRow);
+                tabArray[ci][cj] = getCellData(iTestCaseRow, j);
                 System.out.println(tabArray[ci][cj]);
-
             }
 
-        }
-
-        catch (FileNotFoundException e)
-
-        {
-
+        } catch (FileNotFoundException e) {
             System.out.println("Could not read the Excel sheet");
-
             e.printStackTrace();
-
-        }
-
-        catch (IOException e)
-
-        {
-
+        } catch (IOException e) {
             System.out.println("Could not read the Excel sheet");
-
             e.printStackTrace();
-
         }
 
-        return(tabArray);
+        return (tabArray);
 
     }
 
     //This method is to read the test data from the Excel cell, in this we are passing parameters as Row num and Col num
 
-    public static String getCellData(int RowNum, int ColNum) throws Exception{
-
-        try{
-
+    public static String getCellData(int RowNum, int ColNum) throws Exception {
+        try {
             Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-
             String CellData = Cell.getStringCellValue();
-
             return CellData;
-
-        }catch (Exception e){
-
-            return"";
-
+        } catch (Exception e) {
+            return "";
         }
 
     }
 
-    public static String getTestCaseName(String sTestCase)throws Exception{
+    public static String getTestCaseName(String sTestCase) throws Exception {
 
         String value = sTestCase;
 
-        try{
+        try {
 
             int posi = value.indexOf("@");
 
@@ -144,7 +87,7 @@ public class ExcelUtils {
 
             return value;
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
             throw (e);
 
@@ -152,43 +95,31 @@ public class ExcelUtils {
 
     }
 
-    public static int getRowContains(String sTestCaseName, int colNum) throws Exception{
-
+    public static int getRowContains(String sTestCaseName, int colNum) throws Exception {
         int i;
-
         try {
-
             int rowCount = ExcelUtils.getRowUsed();
-
-            for ( i=0 ; i<rowCount; i++){
-
-                if  (ExcelUtils.getCellData(i,colNum).equalsIgnoreCase(sTestCaseName)){
-
+            for (i = 0; i < rowCount; i++) {
+                if (ExcelUtils.getCellData(i, colNum).equalsIgnoreCase(sTestCaseName)) {
                     break;
-
                 }
-
             }
-
             return i;
-
-        }catch (Exception e){
-
-            throw(e);
-
+        } catch (Exception e) {
+            throw (e);
         }
 
     }
 
     public static int getRowUsed() throws Exception {
 
-        try{
+        try {
 
             int RowCount = ExcelWSheet.getLastRowNum();
 
             return RowCount;
 
-        }catch (Exception e){
+        } catch (Exception e) {
 
             System.out.println(e.getMessage());
 

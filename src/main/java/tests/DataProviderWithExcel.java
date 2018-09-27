@@ -35,7 +35,8 @@ public class DataProviderWithExcel extends BaseTest {
 
         ExcelUtils.setExcelFile(testDataExcelPath,"Planilha1");
         String sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
-        int iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,1);
+//        int iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,1);
+        int iTestCaseRow = 3;
         return ExcelUtils.getTableArray(testDataExcelPath,"Planilha1",iTestCaseRow);
 
     }
