@@ -1,23 +1,14 @@
 package tests;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import pages.Base.BaseElement;
 import pages.Manager.ManagerGlobalCategoriesPage;
 import pages.Manager.ManagerProjectPage;
 import pages.Task.CreateTaskPage;
 import tests.Base.BaseTest;
 import tests.Login.LoginTest;
-import utils.Driver;
 import utils.ExcelDataDriven;
-import utils.ExcelUtils;
-import utils.PropertyManager;
-
-import static utils.Constants.FS;
-import static utils.Constants.USER_DIR;
 
 
 public class DataProviderWithExcel extends BaseTest {
@@ -27,19 +18,10 @@ public class DataProviderWithExcel extends BaseTest {
 
     @DataProvider
     public Object[][] Authentication() throws Exception {
-//        ExcelDataDriven.setExcelFileSheet(bugList, "Planilha1");
-//        int iTestCaseRow = ExcelDataDriven.getRowContains(sTestCaseName, 0);
-//        return ExcelDataDriven.getTableArray(iTestCaseRow);
-
-        String testDataExcelPath = System.getProperty(USER_DIR) + FS + "src" + FS + "main" + FS + "resources" + FS+bugList+".xlsx";
-
-        ExcelUtils.setExcelFile(testDataExcelPath,"Planilha1");
-        String sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
-//        int iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,1);
-        int iTestCaseRow = 3;
-        return ExcelUtils.getTableArray(testDataExcelPath,"Planilha1",iTestCaseRow);
-
+        ExcelDataDriven.setExcelFileSheet(bugList, "Planilha1");
+        return ExcelDataDriven.getTableArray();
     }
+
 
     @Test(dataProvider = "Authentication")
     public void createNewTask(String Category, String Frequency, String Severity, String Priority, String Summary, String Description) {
@@ -53,7 +35,7 @@ public class DataProviderWithExcel extends BaseTest {
         createTaskPage.selectPriority(Priority);
         createTaskPage.setSummary(Summary);
         createTaskPage.setDescription(Description);
-
+        createTaskPage.clickInNewTask();
         Assert.assertTrue(createTaskPage.isTaskCreated());
     }
 

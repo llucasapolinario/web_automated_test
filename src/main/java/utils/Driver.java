@@ -10,9 +10,8 @@ public class Driver {
     private static WebDriver driver;
 
     private static WebDriver newInstance() {
-        System.out.println("newInstance");
-        synchronized (LOCK) {
 
+        synchronized (LOCK) {
             driver = DriverFactory.setDriver(PropertyManager.getInstance().getBrowserExecution());
         }
 
@@ -21,6 +20,7 @@ public class Driver {
 
 
     public static WebDriver getDriverInstance() {
+
         if (driver == null) {
             driver = newInstance();
         }

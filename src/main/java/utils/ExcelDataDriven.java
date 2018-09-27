@@ -132,23 +132,30 @@ public class ExcelDataDriven {
             value = value.substring(0, posi);
             posi = value.lastIndexOf(".");
             value = value.substring(posi + 1);
+            System.out.println("value"+value);
             return value;
         } catch (Exception e) {
             throw (e);
         }
     }
 
-    public static Object[][] getTableArray(int iTestCaseRow) throws Exception {
-        String[][] tabArray = null;
+    public static Object[][] getTableArray() throws Exception {
         int startCol = 1;
-        int ci = 0, cj = 0;
-        int totalRows = 1;
-        int totalCols = 2;
-        tabArray = new String[totalRows][totalCols];
-        for (int j = startCol; j <= totalCols; j++, cj++) {
-            tabArray[ci][cj] = getCellData(iTestCaseRow, j);
-            System.out.println(tabArray[ci][cj]);
-        }
-        return (tabArray);
+        int ci = 0, cj;
+        int totalRows = 4;
+        int totalCols = 6;
+        int iTestCaseRow = 1;
+        String[][] tabArray = new String[totalRows][totalCols];
+        do {
+            cj = 0;
+            for (int j = startCol; j <= totalCols; j++, cj++) {
+                tabArray[ci][cj] = getCellData(iTestCaseRow, j);
+                System.out.println(tabArray[ci][cj]);
+            }
+            iTestCaseRow++;
+            ci++;
+        }while (iTestCaseRow<=totalRows);
+        return tabArray;
     }
+
 }
