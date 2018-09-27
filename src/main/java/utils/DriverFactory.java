@@ -20,13 +20,19 @@ class DriverFactory {
 
             switch (browser) {
                 case "firefox":
-                    return new FirefoxDriver();
+                    FirefoxDriver firefoxDriver = new FirefoxDriver();
+                    firefoxDriver.manage().window().maximize();
+                    return firefoxDriver;
 
                 case "opera":
-                    return new OperaDriver();
+                    OperaDriver operaDriver = new OperaDriver();
+                    operaDriver.manage().window().maximize();
+                    return operaDriver;
 
                 default:
-                    return new ChromeDriver();
+                    ChromeDriver chromeDriver = new ChromeDriver();
+                    chromeDriver.manage().window().maximize();
+                    return chromeDriver;
 
             }
 

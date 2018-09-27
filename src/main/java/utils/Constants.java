@@ -7,8 +7,8 @@ public abstract class Constants {
     public static final Object LOCK = new Object();
 
     // FOLDER
-    static final String USER_DIR = "user.dir";
-    private static final String FS = File.separator;
+    public static final String USER_DIR = "user.dir";
+    public static final String FS = File.separator;
 
     static final String SCREEN_SHOT_FOLDER =
             System.getProperty(USER_DIR) + FS + "ScreenShots" + FS;
