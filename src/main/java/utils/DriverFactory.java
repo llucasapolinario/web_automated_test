@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -25,6 +26,10 @@ class DriverFactory {
                     firefoxDriver.manage().window().maximize();
                     return firefoxDriver;
 
+                case "edge":
+                    EdgeDriver edgeDriver = new EdgeDriver();
+                    edgeDriver.manage().window().maximize();
+                    return edgeDriver;
                 default:
                     ChromeDriver chromeDriver = new ChromeDriver();
                     chromeDriver.manage().window().maximize();
@@ -51,8 +56,7 @@ class DriverFactory {
                     DesiredCapabilities capabilities = DesiredCapabilities.edge();
                     capabilities.setBrowserName("MicrosoftEdge");
                     capabilities.setPlatform(getCurrentPlatform());
-                    capabilities.setVersion("6.17134");
-//                    capabilities.setCapability("acceptSslCerts", "true");
+                    capabilities.setCapability("acceptSslCerts", "true");
                     try {
                         return new RemoteWebDriver(new URL(hubLink), capabilities);
 
@@ -62,19 +66,7 @@ class DriverFactory {
 
                     break;
                 }
-                case "opera": {
 
-                    DesiredCapabilities capabilities = DesiredCapabilities.operaBlink();
-                    capabilities.setBrowserName("operablink");
-                    try {
-                        return new RemoteWebDriver(new URL(hubLink), optionsManager.getOperaOptions());
-
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    }
-
-                    break;
-                }
                 default: {
                     try {
                         return new RemoteWebDriver(new URL(hubLink), optionsManager.getChromeOptions());

@@ -1,13 +1,9 @@
 package utils;
 
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.opera.OperaOptions;
-
-import static utils.Constants.operapath;
 
 
 class OptionsManager {
@@ -29,14 +25,6 @@ class OptionsManager {
         profile.setPreference("network.proxy.type", 0);
         options.setCapability(FirefoxDriver.PROFILE, profile);
         return options;
-    }
-
-    Capabilities getOperaOptions() {
-        System.out.println("getOperaOptions");
-        OperaOptions operaOptions = new OperaOptions();
-        operaOptions.setBinary("@"+operapath);
-        operaOptions.addArguments("--start-maximized");
-        return operaOptions;
     }
 
 }
