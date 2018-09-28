@@ -69,15 +69,15 @@ public class PropertyManager {
         return password;
     }
 
-    public String getBrowserExecution() {
+    String getBrowserExecution() {
         return browserExecution;
     }
 
-    public boolean getIsTextExecutionLocal(){
+    boolean getIsTextExecutionLocal(){
         return isTextExecutionLocal;
     }
 
-    public String getHubLink(){
+    String getHubLink(){
         return hubLink;
     }
 

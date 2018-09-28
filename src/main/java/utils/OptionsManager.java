@@ -7,10 +7,13 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.opera.OperaOptions;
 
+import static utils.Constants.operapath;
+
 
 class OptionsManager {
 
     ChromeOptions getChromeOptions() {
+        System.out.println("getChromeOptions");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
         options.addArguments("--ignore-certificate-errors");
@@ -19,6 +22,7 @@ class OptionsManager {
     }
 
     FirefoxOptions getFirefoxOptions() {
+        System.out.println("getFirefoxOptions");
         FirefoxOptions options = new FirefoxOptions();
         FirefoxProfile profile = new FirefoxProfile();
         profile.setAssumeUntrustedCertificateIssuer(false);
@@ -28,8 +32,9 @@ class OptionsManager {
     }
 
     Capabilities getOperaOptions() {
+        System.out.println("getOperaOptions");
         OperaOptions operaOptions = new OperaOptions();
-        operaOptions.setBinary("@C:\\Users\\apoli\\AppData\\Local\\Programs\\Opera\\launcher.exe");
+        operaOptions.setBinary("@"+operapath);
         operaOptions.addArguments("--start-maximized");
         return operaOptions;
     }

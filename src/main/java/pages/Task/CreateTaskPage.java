@@ -1,6 +1,5 @@
 package pages.Task;
 
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.openqa.selenium.By;
 import pages.Base.BaseHomePage;
 
@@ -80,14 +79,4 @@ public class CreateTaskPage extends BaseHomePage {
         return waitForElement(By.xpath(CREATE_TASK_PAGE_XPATH)).isDisplayed();
     }
 
-    public void setBugByDDT(XSSFRow row){
-        System.out.println(row.toString());
-        selectCategory(row.getCell(0).toString());
-        selectFrequency(row.getCell(1).toString());
-        selectSeverity(row.getCell(2).toString());
-        selectPriority(row.getCell(3).toString());
-        setSummary(row.getCell(4).toString());
-        setDescription(row.getCell(5).toString());
-        clickInNewTask();
-    }
 }

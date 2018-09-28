@@ -52,19 +52,7 @@ public abstract class Utils {
         File testDirectory = new File(path);
 
         if (!testDirectory.exists()) {
-
-            if (testDirectory.mkdir()) {
-
-                System.out.println("Directory: " + path + " is created!");
-
-            } else {
-
-                System.out.println("Failed to create directory: " + path);
-            }
-
-        } else {
-
-            System.out.println("Directory already exists: " + path);
+            testDirectory.mkdir();
         }
 
     }
@@ -76,7 +64,7 @@ public abstract class Utils {
 
         if (openSys.contains("win")) {
 
-            platform = Platform.WINDOWS;
+            platform = Platform.WIN10;
 
         } else if (openSys.contains("nix") || openSys.contains("nux") || openSys.contains("aix")) {
 
@@ -89,4 +77,5 @@ public abstract class Utils {
 
         return platform;
     }
+
 }

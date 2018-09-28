@@ -1,8 +1,6 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
-
-
 import static utils.Constants.LOCK;
 
 public class Driver {

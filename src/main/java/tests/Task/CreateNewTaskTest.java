@@ -1,12 +1,14 @@
 package tests.Task;
 
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.Manager.ManagerGlobalCategoriesPage;
 import pages.Task.CreateTaskPage;
 import pages.Manager.ManagerProjectPage;
 import tests.Base.BaseTest;
 import tests.Login.LoginTest;
+import utils.ExcelDataDriven;
 
 
 public class CreateNewTaskTest extends BaseTest {
@@ -14,7 +16,32 @@ public class CreateNewTaskTest extends BaseTest {
     private CreateTaskPage createTaskPage;
     private static final String category = "[Todos os Projetos] General";
 
-    @Test()
+
+    @DataProvider
+    public Object[][] Authentication() throws Exception {
+        String bugList = "bugList";
+        ExcelDataDriven.setExcelFileSheet(bugList, "Planilha1");
+        return ExcelDataDriven.getTableArray();
+    }
+
+
+    @Test(dataProvider = "Authentication")
+    public void createNewTask_DDT(String Category, String Frequency, String Severity, String Priority, String Summary, String Description) {
+        validate_CreateTaskPageByLink();
+        createProject();
+        createNewGlobalCategory();
+        createTaskPage.clickCreateTask();
+        createTaskPage.selectCategory(Category);
+        createTaskPage.selectFrequency(Frequency);
+        createTaskPage.selectSeverity(Severity);
+        createTaskPage.selectPriority(Priority);
+        createTaskPage.setSummary(Summary);
+        createTaskPage.setDescription(Description);
+        createTaskPage.clickInNewTask();
+        Assert.assertTrue(createTaskPage.isTaskCreated());
+    }
+
+    @Test
     public void createNewTask() {
         setupCreateNewTask();
         createTaskPage.selectCategory(category);
@@ -59,14 +86,14 @@ public class CreateNewTaskTest extends BaseTest {
         Assert.assertTrue(createTaskPage.isCreateTaskPage());
     }
 
-    public void setupCreateNewTask() {
+    private void setupCreateNewTask() {
         validate_CreateTaskPageByLink();
         createProject();
         createNewGlobalCategory();
         createTaskPage.clickCreateTask();
     }
 
-    public void createNewGlobalCategory() {
+    private void createNewGlobalCategory() {
         String Category_bug = "Bug";
 
         ManagerGlobalCategoriesPage managerGlobalCategoriesPage = new ManagerGlobalCategoriesPage();
@@ -74,7 +101,7 @@ public class CreateNewTaskTest extends BaseTest {
         managerGlobalCategoriesPage.clickAddCategory();
     }
 
-    public void createProject() {
+    private void createProject() {
         ManagerProjectPage managerProjectPage = new ManagerProjectPage();
         managerProjectPage.clickManager();
         managerProjectPage.clickManagerProjectsPage();

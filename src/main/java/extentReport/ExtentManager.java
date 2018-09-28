@@ -6,6 +6,8 @@ import tests.Base.BaseTest;
 import utils.Constants;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Locale;
 
 import static utils.Constants.*;
 import static utils.Utils.createPath;
@@ -36,7 +38,11 @@ public class ExtentManager extends BaseTest {
     }
 
     private static ExtentHtmlReporter getHtmlReporter() {
-        ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(new File(fileName));
+        SimpleDateFormat sdf = new SimpleDateFormat("_dd_MM_yyyy_HH.mm.ss", Locale.ENGLISH);
+        fileName +=  sdf.format(System.currentTimeMillis()) + ".html";
+
+        ExtentHtmlReporter htmlReporter =
+                new ExtentHtmlReporter(new File(fileName));
 
         htmlReporter.loadXMLConfig(Constants.ExtentConfigPath);
         htmlReporter.setAppendExisting(false);

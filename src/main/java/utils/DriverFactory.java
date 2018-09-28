@@ -3,12 +3,13 @@ package utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static utils.Utils.getCurrentPlatform;
 
 class DriverFactory {
 
@@ -24,16 +25,10 @@ class DriverFactory {
                     firefoxDriver.manage().window().maximize();
                     return firefoxDriver;
 
-                case "opera":
-                    OperaDriver operaDriver = new OperaDriver();
-                    operaDriver.manage().window().maximize();
-                    return operaDriver;
-
                 default:
                     ChromeDriver chromeDriver = new ChromeDriver();
                     chromeDriver.manage().window().maximize();
                     return chromeDriver;
-
             }
 
         } else {
@@ -42,12 +37,24 @@ class DriverFactory {
 
             switch (browser) {
                 case "firefox": {
-
-                    DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-                    capabilities.setBrowserName("firefox1");
                     try {
-
                         return new RemoteWebDriver(new URL(hubLink), optionsManager.getFirefoxOptions());
+
+                    } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+
+                    break;
+                }
+                case "edge": {
+
+                    DesiredCapabilities capabilities = DesiredCapabilities.edge();
+                    capabilities.setBrowserName("MicrosoftEdge");
+                    capabilities.setPlatform(getCurrentPlatform());
+                    capabilities.setVersion("6.17134");
+//                    capabilities.setCapability("acceptSslCerts", "true");
+                    try {
+                        return new RemoteWebDriver(new URL(hubLink), capabilities);
 
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -60,7 +67,6 @@ class DriverFactory {
                     DesiredCapabilities capabilities = DesiredCapabilities.operaBlink();
                     capabilities.setBrowserName("operablink");
                     try {
-
                         return new RemoteWebDriver(new URL(hubLink), optionsManager.getOperaOptions());
 
                     } catch (MalformedURLException e) {
@@ -70,11 +76,7 @@ class DriverFactory {
                     break;
                 }
                 default: {
-
-                    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-                    capabilities.setBrowserName("chrome1");
                     try {
-
                         return new RemoteWebDriver(new URL(hubLink), optionsManager.getChromeOptions());
 
                     } catch (MalformedURLException e) {
@@ -82,8 +84,11 @@ class DriverFactory {
                     }
                     break;
                 }
+
             }
+
         }
+
         return null;
     }
 
