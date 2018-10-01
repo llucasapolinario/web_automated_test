@@ -26,7 +26,7 @@ public class BaseElement {
 
         String screenshotName = "click on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected void writeText(By elementLocation, String text) {
@@ -36,7 +36,7 @@ public class BaseElement {
 
         String screenshotName = "writeText "+ text +" on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected String readText(By elementLocation) {
@@ -44,7 +44,7 @@ public class BaseElement {
 
         String screenshotName = "readText"+ element.getText() +" on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
 
         return element.getText();
     }
@@ -58,7 +58,7 @@ public class BaseElement {
 
         String screenshotName = "select checkbox " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected boolean isCheckBoxSelected(By elementLocation) throws ElementClickInterceptedException {
@@ -75,7 +75,7 @@ public class BaseElement {
 
         String screenshotName = "unselect checkbox " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected void selectSpinnerElement(By elementLocation, String value) {
@@ -87,7 +87,7 @@ public class BaseElement {
 
         String screenshotName = "select spinner '"+ value +"' on element " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected WebElement waitForElement(By elementLocation){
@@ -95,7 +95,7 @@ public class BaseElement {
 
         String screenshotName = "wait for element "+ elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
-        TestListener.getTestCenario().log(Status.PASS, screenshotName);
+        TestListener.getTestScenario().log(Status.PASS, screenshotName);
 
         return element;
     }

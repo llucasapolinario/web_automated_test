@@ -17,11 +17,11 @@ public class TestListener extends BaseTest implements ITestListener {
 
     private final String getCurrentlyLoggedInUser = System.getProperty("user.name");
 
-    public static ExtentTest getTestCenario(){
+    public static ExtentTest getTestScenario(){
         return test.get();
     }
 
-    private static String getTestMethodName(ITestResult iTestResult) {
+    public static String getTestMethodName(ITestResult iTestResult) {
         return iTestResult.getMethod().getConstructorOrMethod().getName();
     }
 
@@ -54,7 +54,6 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public synchronized void onTestFailure(ITestResult iTestResult) {
-        System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
         test.get().fail(iTestResult.getThrowable());
 
         try {
@@ -66,13 +65,11 @@ public class TestListener extends BaseTest implements ITestListener {
 
     @Override
     public synchronized void onTestSkipped(ITestResult iTestResult) {
-        System.out.println("I am in onTestSkipped method " + getTestMethodName(iTestResult) + " skipped");
         test.get().skip(iTestResult.getThrowable());
     }
 
     @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-        System.out.println("Test failed but it is in defined success ratio " + getTestMethodName(iTestResult));
     }
 
 }

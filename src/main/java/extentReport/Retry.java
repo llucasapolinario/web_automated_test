@@ -20,7 +20,7 @@ public class Retry implements IRetryAnalyzer, IAnnotationTransformer {
         if (!result.isSuccess()) {
             if (retryCount < maxRetryCount) {
                 retryCount++;
-                TestListener.getTestCenario().log(Status.FAIL, "Retrying test "
+                TestListener.getTestScenario().log(Status.FAIL, "Retrying test "
                         + result.getName()
                         + " with status "
                         + getResultStatusName(result.getStatus())

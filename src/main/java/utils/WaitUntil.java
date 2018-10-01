@@ -22,7 +22,7 @@ public abstract class WaitUntil {
             return new WebDriverWait(Driver.getDriverInstance(), TIMEOUT).until(webDriver -> Exists(elementLocation));
 
         } catch (InterruptedException e) {
-            TestListener.getTestCenario().log(Status.FAIL, elementLocation.toString() + "  not found");
+            TestListener.getTestScenario().log(Status.FAIL, elementLocation.toString() + "  not found");
             return null;
         }
 

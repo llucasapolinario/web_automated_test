@@ -5,24 +5,21 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.Platform;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 import static utils.Constants.FS;
 import static utils.Constants.USER_DIR;
-import static utils.Utils.getCurrentPlatform;
 
 //TODO
 public class ExcelDataDriven {
 
     private static final String testDataExcelFileName = null;
-    public static String testDataExcelPath = null;
-    public static int rowNumber;
-    public static int columnNumber;
+    private static String testDataExcelPath = null;
+    private static int rowNumber;
+    private static int columnNumber;
     private static XSSFWorkbook excelWBook;
     private static XSSFSheet excelWSheet;
     private static XSSFCell cell;
@@ -61,7 +58,7 @@ public class ExcelDataDriven {
         }
     }
 
-    public static String getCellData(int RowNum, int ColNum) {
+    private static String getCellData(int RowNum, int ColNum) {
         cell = excelWSheet.getRow(RowNum).getCell(ColNum);
         DataFormatter formatter = new DataFormatter();
         return formatter.formatCellValue(cell);
@@ -93,10 +90,9 @@ public class ExcelDataDriven {
         }
     }
 
-    public static int getRowUsed() throws Exception {
+    private static int getRowUsed() throws Exception {
         try {
-            int RowCount = excelWSheet.getLastRowNum();
-            return RowCount;
+            return excelWSheet.getLastRowNum();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             throw (e);
@@ -133,29 +129,29 @@ public class ExcelDataDriven {
             value = value.substring(0, posi);
             posi = value.lastIndexOf(".");
             value = value.substring(posi + 1);
-            System.out.println("value"+value);
+            System.out.println("value" + value);
             return value;
         } catch (Exception e) {
             throw (e);
         }
     }
 
-    public static Object[][] getTableArray() throws Exception {
+    public static Object[][] getTableArray() {
         int startCol = 1;
         int ci = 0, cj;
-        int totalRows = 4;
-        int totalCols = 6;
+        rowNumber = 4;
+        columnNumber = 6;
         int iTestCaseRow = 1;
-        String[][] tabArray = new String[totalRows][totalCols];
+        String[][] tabArray = new String[rowNumber][columnNumber];
         do {
             cj = 0;
-            for (int j = startCol; j <= totalCols; j++, cj++) {
+            for (int j = startCol; j <= columnNumber; j++, cj++) {
                 tabArray[ci][cj] = getCellData(iTestCaseRow, j);
                 System.out.println(tabArray[ci][cj]);
             }
             iTestCaseRow++;
             ci++;
-        }while (iTestCaseRow<=totalRows);
+        } while (iTestCaseRow <= rowNumber);
         return tabArray;
     }
 

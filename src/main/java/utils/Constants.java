@@ -15,9 +15,5 @@ public abstract class Constants {
 
     private static String REPORT_FILE_NAME = "Report";
     public static String REPORT_FILE_LOC = PATH_REPORT + REPORT_FILE_NAME;
-    public static String operapath
-//            = "C:"+ FS +"Users"+ FS +"apoli"+ FS +"AppData"+ FS +"Local"+ FS +"Programs"+ FS +"Opera"+ FS +"launcher.exe";
-            = "C:\\Users\\apoli\\Documents\\Opera\\launcher.exe";
-
 
 }
