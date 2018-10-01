@@ -27,12 +27,10 @@ public class ExtentManager extends BaseTest {
     }
 
     private static ExtentReports createInstance() {
-        System.out.println("file report = " + fileName);
         createPath(PATH_REPORT);
 
-        ExtentHtmlReporter htmlReporter = getHtmlReporter();
         ExtentReports extentLocal = new ExtentReports();
-        extentLocal.attachReporter(htmlReporter);
+        extentLocal.attachReporter(getHtmlReporter());
 
         return extentLocal;
     }
