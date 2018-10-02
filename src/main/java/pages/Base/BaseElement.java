@@ -21,6 +21,7 @@ public class BaseElement {
 
     protected void click(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+
         assert element != null;
         element.click();
 
@@ -31,10 +32,12 @@ public class BaseElement {
 
     protected void writeText(By elementLocation, String text) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+
+        assert element != null;
         element.clear();
         element.sendKeys(text);
 
-        String screenshotName = "writeText "+ text +" on " + elementLocation.toString();
+        String screenshotName = "writeText " + text + " on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
@@ -42,7 +45,8 @@ public class BaseElement {
     protected String readText(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
-        String screenshotName = "readText"+ element.getText() +" on " + elementLocation.toString();
+        assert element != null;
+        String screenshotName = "readText" + element.getText() + " on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
 
@@ -52,6 +56,7 @@ public class BaseElement {
     protected void selectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
+        assert element != null;
         if (element.isSelected()) {
             element.click();
         }
@@ -69,6 +74,7 @@ public class BaseElement {
     protected void unSelectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
+        assert element != null;
         if (!element.isSelected()) {
             element.click();
         }
@@ -81,30 +87,30 @@ public class BaseElement {
     protected void selectSpinnerElement(By elementLocation, String value) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
+        assert element != null;
         element.click();
         new Select(element).selectByVisibleText(value);
 
-
-        String screenshotName = "select spinner '"+ value +"' on element " + elementLocation.toString();
+        String screenshotName = "select spinner '" + value + "' on element " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
-    protected WebElement waitForElement(By elementLocation){
+    protected WebElement waitForElement(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
 
-        String screenshotName = "wait for element "+ elementLocation.toString();
+        String screenshotName = "wait for element " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
 
         return element;
     }
 
-    protected boolean elementExists(By elementLocation){
+    protected boolean elementExists(By elementLocation) {
         return WaitUntil.elementExists(elementLocation);
     }
 
-    protected void scrollToElement(By elementLocation){
+    protected void scrollToElement(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
         ((JavascriptExecutor) Driver.getDriverInstance()).executeScript("arguments[0].scrollIntoView(true);", element);
         try {
@@ -114,7 +120,7 @@ public class BaseElement {
         }
     }
 
-    protected void goBackPage(){
+    protected void goBackPage() {
         Driver.getDriverInstance().navigate().back();
     }
 
