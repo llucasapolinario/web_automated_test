@@ -70,4 +70,5 @@ public class BaseHomePage extends BaseElement {
     public void clickInLinkCreateTask(){
         click(By.linkText(CREATE_TASK_LINK));
     }
+
 }

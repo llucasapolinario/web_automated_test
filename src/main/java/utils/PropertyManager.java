@@ -12,9 +12,7 @@ public class PropertyManager {
 
     private static PropertyManager instance;
 
-    private static String propertyFilePath = System.getProperty(USER_DIR)
-            + File.separator
-            + "environment.properties";
+    private static String propertyFilePath = System.getProperty(USER_DIR) + File.separator + "environment.properties";
 
     private static String url;
     private static String hubLink;
@@ -47,7 +45,7 @@ public class PropertyManager {
         }
 
         url = prop.getProperty("url");
-        hubLink =prop.getProperty("hubLink");
+        hubLink = prop.getProperty("hubLink");
         username = prop.getProperty("username");
         password = prop.getProperty("password");
         TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
@@ -73,11 +71,11 @@ public class PropertyManager {
         return browserExecution;
     }
 
-    boolean getIsTextExecutionLocal(){
+    boolean getIsTextExecutionLocal() {
         return isTextExecutionLocal;
     }
 
-    String getHubLink(){
+    String getHubLink() {
         return hubLink;
     }
 

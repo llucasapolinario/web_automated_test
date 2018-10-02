@@ -63,7 +63,7 @@ public class TaskTest extends BaseTest {
         viewTask.action(ACTION[4]);
         viewTask.clickOnOK();
         viewTask.clickConfirmDeleteTask();
-        Assert.assertTrue(viewTask.isEmpityBug());
+        Assert.assertTrue(viewTask.isEmptyBug());
     }
 
     @Test //06

@@ -18,7 +18,7 @@ public class CreateNewTaskTest extends BaseTest {
 
 
     @DataProvider
-    public Object[][] Authentication() throws Exception {
+    public Object[][] Authentication() {
         String bugList = "bugList";
         ExcelDataDriven.setExcelFileSheet(bugList, "Planilha1");
         return ExcelDataDriven.getTableArray();

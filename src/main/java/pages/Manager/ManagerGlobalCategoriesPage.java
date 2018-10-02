@@ -12,7 +12,7 @@ public class ManagerGlobalCategoriesPage extends ManagerPage {
     private static final String CONFIRM_DELETE_CATEGORY_XPATH  = "//input[@value='Apagar Categoria']";
     private static final String GLOBAL_CATEGORY_PAGE_XPATH  = "//div[@id='categories']/div/div/h4";
     private static final String EDIT_CATEGORY_PAGE_XPATH  = "//form[@id='manage-proj-category-update-form']/div/div/h4";
-    private static final String DELE_CATEGORY_IN_EDIT_PAGE_XPATH  = "//input[@value='Apagar Categoria']";
+    private static final String DELETE_CATEGORY_IN_EDIT_PAGE_XPATH = "//input[@value='Apagar Categoria']";
 
     private static final String ERROR_1500  = "APPLICATION ERROR #1500";
     private static final String ERROR_1504  = "APPLICATION ERROR #1504";
@@ -50,7 +50,7 @@ public class ManagerGlobalCategoriesPage extends ManagerPage {
     }
 
     public void clickDeleteCategoryInEditPage() {
-        click(By.xpath(DELE_CATEGORY_IN_EDIT_PAGE_XPATH));
+        click(By.xpath(DELETE_CATEGORY_IN_EDIT_PAGE_XPATH));
     }
 
     public void clickUpdateCategory(){

@@ -46,7 +46,7 @@ public class ViewTask extends BaseHomePage {
         return Integer.parseInt(readText(By.xpath("//table[@id='buglist']/tbody/tr[" + position + "]/td[4]/a")));
     }
 
-    public boolean isEmpityBug() {
+    public boolean isEmptyBug() {
         return !elementExists(By.xpath("//table[@id='buglist']/tbody/tr/td[4]/a"));
     }
 
@@ -98,6 +98,7 @@ public class ViewTask extends BaseHomePage {
     public void clickConfirmDeleteTask() {
         click(By.xpath(CONFIRM_DELETE_TASK_XPATH));
     }
+
     public void clickConfirmDoneTask() {
         click(By.xpath(CONFIRM_DONE_TASK_XPATH));
     }

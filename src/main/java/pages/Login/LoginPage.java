@@ -7,7 +7,6 @@ import pages.Base.BaseElement;
 public class LoginPage extends BaseElement {
 
     private static final String EDIT_TEXT_USERNAME_ID = "username";
-    private static final String LOGIN_BOX_XPATH = "//div[@id='login-box']/div/div/h4";
     private static final String EMAIL_ID = "email-field";
     private static final String BTN_SEND_RECOVER_XPATH = "//input[@value='Enviar']";
     private static final String EDIT_TEXT_PASSWORD_ID = "password";
@@ -17,7 +16,7 @@ public class LoginPage extends BaseElement {
     private static final String LINK_RECOVER_PASSWORD_USER = "Perdeu a sua senha?";
     private static final String ERROR_CODE_RECOVER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Toggle user menu'])[1]/following::p[1]";
     private static final String ERROR_MESSAGE_RECOVER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Toggle user menu'])[1]/following::p[2]";
-//
+
 //    private static final String LOGIN_BOX_TEXT = "Entrar";
     private static final String RECOVER_PASSWORD_TEXT_XPATH = "//form[@id='lost-password-form']/fieldset";
     private static final String CREATE_ACCOUNT_BTN_XPATH = "//input[@value='Criar Conta']";
@@ -30,7 +29,6 @@ public class LoginPage extends BaseElement {
 
     public boolean isLoginPage() {
         return waitForElement(By.xpath(BTN_LOGIN_XPATH)).isDisplayed();
-//                && LOGIN_BOX_TEXT.equals(readText(By.xpath(LOGIN_BOX_XPATH)));
     }
 
     public void login(String username, String password) {
