@@ -1,5 +1,6 @@
 package utils;
 
+import extentReport.TestListener;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
@@ -13,6 +14,7 @@ import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 
+import static utils.Constants.FS;
 import static utils.Constants.SCREEN_SHOT_FOLDER;
 
 
@@ -22,7 +24,7 @@ public abstract class Utils {
 
         File pageImageFile = null;
         try {
-            pageImageFile = new File(SCREEN_SHOT_FOLDER + label + ".png");
+            pageImageFile = new File(SCREEN_SHOT_FOLDER + new TestListener().getMethodName() + FS + label + ".png");
 
             File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, pageImageFile);

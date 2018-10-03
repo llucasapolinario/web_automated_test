@@ -21,32 +21,29 @@ public class BaseElement {
 
     protected void click(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "click on " + element.getAttribute("value");
 
-        assert element != null;
         element.click();
 
-        String screenshotName = "click on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected void writeText(By elementLocation, String text) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "writeText " + text + " on " + element.getTagName();
 
-        assert element != null;
         element.clear();
         element.sendKeys(text);
 
-        String screenshotName = "writeText " + text + " on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected String readText(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "readText " + element.getText() + " on " + element.getText();
 
-        assert element != null;
-        String screenshotName = "readText" + element.getText() + " on " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
 
@@ -55,13 +52,13 @@ public class BaseElement {
 
     protected void selectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "select checkbox " + element.getText();
 
         assert element != null;
         if (element.isSelected()) {
             element.click();
         }
 
-        String screenshotName = "select checkbox " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
@@ -73,33 +70,33 @@ public class BaseElement {
 
     protected void unSelectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "unselect checkbox " + element.getText();
 
         assert element != null;
         if (!element.isSelected()) {
             element.click();
         }
 
-        String screenshotName = "unselect checkbox " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected void selectSpinnerElement(By elementLocation, String value) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "select spinner '" + value + "' on element " + element.getText();
 
         assert element != null;
         element.click();
         new Select(element).selectByVisibleText(value);
 
-        String screenshotName = "select spinner '" + value + "' on element " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
     }
 
     protected WebElement waitForElement(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        String screenshotName = "wait for element " + element.getAttribute("value");
 
-        String screenshotName = "wait for element " + elementLocation.toString();
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
         TestListener.getTestScenario().log(Status.PASS, screenshotName);
 

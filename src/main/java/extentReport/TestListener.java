@@ -13,6 +13,7 @@ import java.io.IOException;
 
 public class TestListener extends BaseTest implements ITestListener {
 
+
     private static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
     private final String getCurrentlyLoggedInUser = System.getProperty("user.name");
@@ -21,10 +22,9 @@ public class TestListener extends BaseTest implements ITestListener {
         return test.get();
     }
 
-    public static String getTestMethodName(ITestResult iTestResult) {
-        return iTestResult.getMethod().getConstructorOrMethod().getName();
+    public String getMethodName(){
+        return test.get().getModel().getName();
     }
-
 
      @Override
     public synchronized void onStart(ITestContext iTestContext) {
@@ -45,6 +45,7 @@ public class TestListener extends BaseTest implements ITestListener {
         );
 
         test.get().assignAuthor(getCurrentlyLoggedInUser);
+
     }
 
     @Override
