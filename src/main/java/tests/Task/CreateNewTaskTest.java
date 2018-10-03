@@ -5,8 +5,8 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.Manager.ManagerGlobalCategoriesPage;
-import pages.Task.CreateTaskPage;
 import pages.Manager.ManagerProjectPage;
+import pages.Task.CreateTaskPage;
 import tests.Base.BaseTest;
 import tests.Login.LoginTest;
 import utils.ExcelDataDriven;
@@ -31,7 +31,6 @@ public class CreateNewTaskTest extends BaseTest {
         createProject();
         createNewGlobalCategory();
         createTaskPage.clickCreateTask();
-        System.out.println("gg  "+ row.getCell(1));
         createTaskPage.selectCategory(row.getCell(1).toString());
         createTaskPage.selectFrequency(row.getCell(2).toString());
         createTaskPage.selectSeverity(row.getCell(3).toString());
