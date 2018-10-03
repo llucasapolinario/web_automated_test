@@ -1,5 +1,6 @@
 package tests.Task;
 
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -16,27 +17,27 @@ public class CreateNewTaskTest extends BaseTest {
     private CreateTaskPage createTaskPage;
     private static final String category = "[Todos os Projetos] General";
 
-
     @DataProvider
-    public Object[][] Authentication() {
+    public Object[] BugList() {
         String bugList = "bugList";
         ExcelDataDriven.setExcelFileSheet(bugList, "Planilha1");
-        return ExcelDataDriven.getTableArray();
+        ExcelDataDriven.setRowNumber(4);
+        return ExcelDataDriven.getTableRow();
     }
 
-
-    @Test(dataProvider = "Authentication")
-    public void createNewTask_DDT(String Category, String Frequency, String Severity, String Priority, String Summary, String Description) {
+    @Test(dataProvider = "BugList")
+    public void createNewTask_DDT(XSSFRow row) {
         validate_CreateTaskPageByLink();
         createProject();
         createNewGlobalCategory();
         createTaskPage.clickCreateTask();
-        createTaskPage.selectCategory(Category);
-        createTaskPage.selectFrequency(Frequency);
-        createTaskPage.selectSeverity(Severity);
-        createTaskPage.selectPriority(Priority);
-        createTaskPage.setSummary(Summary);
-        createTaskPage.setDescription(Description);
+        System.out.println("gg  "+ row.getCell(1));
+        createTaskPage.selectCategory(row.getCell(1).toString());
+        createTaskPage.selectFrequency(row.getCell(2).toString());
+        createTaskPage.selectSeverity(row.getCell(3).toString());
+        createTaskPage.selectPriority(row.getCell(4).toString());
+        createTaskPage.setSummary(row.getCell(5).toString());
+        createTaskPage.setDescription(row.getCell(6).toString());
         createTaskPage.clickInNewTask();
         Assert.assertTrue(createTaskPage.isTaskCreated());
     }

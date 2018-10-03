@@ -21,7 +21,7 @@ public class TaskTest extends BaseTest {
         Assert.assertTrue(viewTask.isCheckBoxSelected(1));
     }
 
-    @Test //o2
+    @Test
     public void closeOneTask() {
         setupTaskTest();
         String bug = String.valueOf(viewTask.getNumBug(1));
@@ -33,7 +33,7 @@ public class TaskTest extends BaseTest {
         Assert.assertFalse(viewTask.isTaskShowing(bug));
     }
 
-    @Test //o3
+    @Test
     public void doneOneTask() {
         setupTaskTest();
 
@@ -45,7 +45,7 @@ public class TaskTest extends BaseTest {
         Assert.assertTrue(viewTask.isBugDone(1));
     }
 
-    @Test //o4
+    @Test
     public void deleteOneTask() {
         setupTaskTest();
         String bug = String.valueOf(viewTask.getNumBug(1));
@@ -56,7 +56,7 @@ public class TaskTest extends BaseTest {
         Assert.assertFalse(viewTask.isTaskShowing(bug));
     }
 
-    @Test //o5
+    @Test
     public void deleteAllTask() {
         setupTaskTest();
         viewTask.setSelectAllBugs();
@@ -66,7 +66,7 @@ public class TaskTest extends BaseTest {
         Assert.assertTrue(viewTask.isEmptyBug());
     }
 
-    @Test //06
+    @Test
     public void validatePageViewTask() {
         new LoginTest().validLoginTest();
         viewTask = new ViewTask();

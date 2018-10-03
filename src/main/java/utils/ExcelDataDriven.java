@@ -13,7 +13,7 @@ import java.io.IOException;
 import static utils.Constants.FS;
 import static utils.Constants.USER_DIR;
 
-//TODO
+
 public class ExcelDataDriven {
 
     private static final String testDataExcelFileName = null;
@@ -64,7 +64,7 @@ public class ExcelDataDriven {
         return formatter.formatCellValue(cell);
     }
 
-    public static XSSFRow getRowData(int RowNum) {
+    private static XSSFRow getRowData(int RowNum) {
         try {
             row = excelWSheet.getRow(RowNum);
             return row;
@@ -152,6 +152,17 @@ public class ExcelDataDriven {
             iTestCaseRow++;
             ci++;
         } while (iTestCaseRow <= rowNumber);
+        return tabArray;
+    }
+
+    public static Object[] getTableRow() {
+        int ci = 1;
+        XSSFRow[] tabArray = new XSSFRow[rowNumber];
+
+        for (int j = 0; j < rowNumber; j++, ci++) {
+            tabArray[j] = getRowData(ci);
+        }
+
         return tabArray;
     }
 
