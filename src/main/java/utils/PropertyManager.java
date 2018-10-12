@@ -22,6 +22,11 @@ public class PropertyManager {
     private static boolean isTextExecutionLocal;
     private static Integer maxRetryCount;
 
+    private static String databaseServer;
+    private static String databaseName;
+    private static String dbUser;
+    private static String dbPassword;
+
     private static int TIME_OUT;
     private static int TIME_OUT_BEFORE_ELEMENT;
 
@@ -35,24 +40,8 @@ public class PropertyManager {
         return instance;
     }
 
-    private void loadData() {
-        Properties prop = new Properties();
-
-        try {
-            prop.load(new FileInputStream(propertyFilePath));
-        } catch (IOException e) {
-            System.out.println("Configuration properties file cannot be found");
-        }
-
-        url = prop.getProperty("url");
-        hubLink = prop.getProperty("hubLink");
-        username = prop.getProperty("username");
-        password = prop.getProperty("password");
-        TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
-        TIME_OUT_BEFORE_ELEMENT = Integer.parseInt(prop.getProperty("timeout_before_event"));
-        maxRetryCount = Integer.parseInt(prop.getProperty("maxRetryCount"));
-        browserExecution = prop.getProperty("browserExecution");
-        isTextExecutionLocal = Boolean.parseBoolean(prop.getProperty("isTestExecutionLocal"));
+    static String getDatabaseServer() {
+        return databaseServer;
     }
 
     public String getURL() {
@@ -89,6 +78,43 @@ public class PropertyManager {
 
     public static Integer getMaxRetryCount() {
         return maxRetryCount;
+    }
+
+    static String getDatabaseName() {
+        return databaseName;
+    }
+
+    static String getDbUser() {
+        return dbUser;
+    }
+
+    static String getDbPassword() {
+        return dbPassword;
+    }
+
+    private void loadData() {
+        Properties prop = new Properties();
+
+        try {
+            prop.load(new FileInputStream(propertyFilePath));
+        } catch (IOException e) {
+            System.out.println("Configuration properties file cannot be found");
+        }
+
+        url = prop.getProperty("url");
+        hubLink = prop.getProperty("hubLink");
+        username = prop.getProperty("username");
+        password = prop.getProperty("password");
+        TIME_OUT = Integer.parseInt(prop.getProperty("timeout"));
+        TIME_OUT_BEFORE_ELEMENT = Integer.parseInt(prop.getProperty("timeout_before_event"));
+        maxRetryCount = Integer.parseInt(prop.getProperty("maxRetryCount"));
+        browserExecution = prop.getProperty("browserExecution");
+        isTextExecutionLocal = Boolean.parseBoolean(prop.getProperty("isTestExecutionLocal"));
+
+        databaseServer = prop.getProperty("DatabaseServer");
+        databaseName = prop.getProperty("DatabaseName");
+        dbUser = prop.getProperty("DBUser");
+        dbPassword = prop.getProperty("DBPassword");
     }
 
 }
