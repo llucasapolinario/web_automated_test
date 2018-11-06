@@ -1,0 +1,25 @@
+\\install db and mantis
+
+docker-compose.exe up -d
+
+\\configurar portas
+abrir o virtual box, config porta dos hospedeiros
+docker-machine ip
+docker 
+
+\\ virtualbox
+docker 80
+mariadb 3306
+seleniumhub 4446
+ssh 17318
+
+--
+mantis 8989
+
+primeiro acesso do configuração do docker
+done
+
+
+config de acesso no projeto java
+
+sucesso!

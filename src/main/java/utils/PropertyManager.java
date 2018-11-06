@@ -40,10 +40,6 @@ public class PropertyManager {
         return instance;
     }
 
-    static String getDatabaseServer() {
-        return databaseServer;
-    }
-
     public String getURL() {
         return url;
     }
@@ -80,15 +76,19 @@ public class PropertyManager {
         return maxRetryCount;
     }
 
-    static String getDatabaseName() {
+    String getDatabaseServer() {
+        return databaseServer;
+    }
+
+    String getDatabaseName() {
         return databaseName;
     }
 
-    static String getDbUser() {
+    String getDbUser() {
         return dbUser;
     }
 
-    static String getDbPassword() {
+    String getDbPassword() {
         return dbPassword;
     }
 
