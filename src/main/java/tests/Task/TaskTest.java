@@ -77,7 +77,7 @@ public class TaskTest extends BaseTest {
     private void setupTaskTest() {
         new CreateNewTaskTest().createNewTask();
 
-        String category = "[Todos os Projetos] General";
+        String category = "[Todos os Projetos] Bug";
         CreateTaskPage createTaskPage = new CreateTaskPage();
 
         createTaskPage.clickInLinkCreateTask();

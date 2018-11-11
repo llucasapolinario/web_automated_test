@@ -58,7 +58,8 @@ public class CreateTaskPage extends BaseHomePage {
     }
 
     public void clickCreateTask(){
-        click(By.xpath(BaseHomePage.MENU_CREATE_TASK_XPATH));
+        System.out.println("a - "+BaseHomePage.MENU_CREATE_TASK_LINK);
+        click(By.linkText(BaseHomePage.MENU_CREATE_TASK_LINK));
     }
 
     public void clickInNewTask(){

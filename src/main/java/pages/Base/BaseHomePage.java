@@ -7,7 +7,8 @@ public class BaseHomePage extends BaseElement {
     protected static final String MANTIS_BD_XPATH = "//div[@id='navbar-container']//a[@href='/my_view_page.php']/span[@class='smaller-75']";
     protected static final String MENU_OVERVIEW_XPATH = "//a[@href='/my_view_page.php']/i";
     protected static final String MENU_VIEW_ALL_TASK_XPATH = "//a[@href='/view_all_bug_page.php']/i";
-    protected static final String MENU_CREATE_TASK_XPATH = "//a[@href='/bug_report_page.php']/i";
+    protected static final String MENU_CREATE_TASK_LINK = "Criar Tarefa";
+
     protected static final String MENU_CHANGELOG_XPATH = "//a[@href='/changelog_page.php']";
     protected static final String MENU_PLANNING_XPATH = "//a[@href='/roadmap_page.php']";
     protected static final String MENU_SUMMARY_XPATH = "//a[@href='/summary_page.php']";
@@ -40,7 +41,7 @@ public class BaseHomePage extends BaseElement {
     }
 
     public void clickCreateTask(){
-        click(By.xpath(MENU_CREATE_TASK_XPATH));
+        click(By.linkText(MENU_CREATE_TASK_LINK));
     }
 
     public void clickChangelogPage() {
