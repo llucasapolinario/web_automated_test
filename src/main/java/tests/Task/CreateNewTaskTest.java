@@ -15,7 +15,7 @@ import utils.ExcelDataDriven;
 public class CreateNewTaskTest extends BaseTest {
 
     private CreateTaskPage createTaskPage;
-    private static final String category = "[Todos os Projetos] General";
+    private static final String category = "[Todos os Projetos] Bug";
 
     @DataProvider
     public Object[] BugList() {
@@ -82,12 +82,12 @@ public class CreateNewTaskTest extends BaseTest {
         new LoginTest().validLoginTest();
         createTaskPage = new CreateTaskPage();
         createTaskPage.clickInLinkCreateTask();
-
         Assert.assertTrue(createTaskPage.isCreateTaskPage());
     }
 
     private void setupCreateNewTask() {
-        validate_CreateTaskPageByLink();
+        new LoginTest().validLoginTest();
+        createTaskPage = new CreateTaskPage();
         createProject();
         createNewGlobalCategory();
         createTaskPage.clickCreateTask();
@@ -106,6 +106,7 @@ public class CreateNewTaskTest extends BaseTest {
         managerProjectPage.clickManager();
         managerProjectPage.clickManagerProjectsPage();
         String projectName1 = "Automação parte 1";
+
         if (!managerProjectPage.isNewProjectShowing(projectName1)) {
             managerProjectPage.clickNewProject();
             managerProjectPage.setProjectName(projectName1);
@@ -116,6 +117,7 @@ public class CreateNewTaskTest extends BaseTest {
             managerProjectPage.clickAddProject();
             Assert.assertTrue(managerProjectPage.isNewProjectShowing(projectName1));
         }
+
     }
 
 }
