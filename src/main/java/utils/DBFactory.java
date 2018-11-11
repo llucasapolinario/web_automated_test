@@ -1,6 +1,9 @@
 package utils;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 public class DBFactory {
@@ -34,32 +37,35 @@ public class DBFactory {
         return connection;
     }
 
-    public String DBRunQuery(String query) throws SQLException {
+    public void DBRunQuery(String query) throws SQLException {
         Statement stmt;
-        ResultSet resultSet;
 
         stmt = getDBConnection().createStatement();
         int a = stmt.executeUpdate(query);
-        resultSet = stmt.getResultSet();
 
         System.out.println("result = "+a);
-        System.out.println("result = "+resultSet);
-        System.out.println("result = "+stmt.toString());
-        while (resultSet.next()) {
-            System.out.println(
-                    resultSet.getString(1) + "  "
-                            + resultSet.getString(2) + "  "
-                            + resultSet.getString(3) + "  "
-                            + resultSet.getString(4) + "  "
-                            + resultSet.getString(5));
-        }
 
-        try {
-            resultSet.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        ResultSet resultSet;
+        //        resultSet = stmt.getResultSet();
+//        System.out.println("result = "+resultSet);
+//        System.out.println("result = "+stmt.toString());
+//        System.out.println("result = "+stmt.toString());
+//        while (resultSet.next()) {
+//            System.out.println(
+//                    resultSet.getString(1) + "  "
+//                            + resultSet.getString(2) + "  "
+//                            + resultSet.getString(3) + "  "
+//                            + resultSet.getString(4) + "  "
+//                            + resultSet.getString(5));
+//        }
+//
+//        try {
+//            resultSet.close();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return resultSet.toString();
 
         try {
             stmt.close();
@@ -67,8 +73,6 @@ public class DBFactory {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return resultSet.toString();
 
     }
 
