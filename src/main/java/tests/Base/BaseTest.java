@@ -19,16 +19,18 @@ public class BaseTest {
     public void cleanDB() throws SQLException {
         DBFactory dbFactory = new DBFactory();
 
-        String returnSql;
-        returnSql = dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_tag_table");
-        System.out.println(returnSql);
-        returnSql = dbFactory.DBRunQuery("TRUNCATE TABLE mantis_project_table");
-        System.out.println(returnSql);
-
+        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_text_table");
+        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_project_table");
+        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_category_table");
+        dbFactory.DBRunQuery("INSERT INTO mantis_category_table (id, project_id, user_id, name, status) " +
+                "VALUES (1, 0, 0, \"General\", 0);");
     }
 
     @BeforeMethod
-    public void setup() {
+    public void setup() throws SQLException {
+        DBFactory dbFactory = new DBFactory();
+        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_table");
+        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_history_table");
         new BaseElement().goToPage(PropertyManager.getInstance().getURL());
     }
 
