@@ -17,7 +17,8 @@ public class ManagerGlobalCategoriesTest extends BaseTest {
     @Test
     public void createNewGlobalCategory() {
         setupManagerCategory();
-        managerGlobalCategoriesPage.setCategoryName(Category_bug);
+
+        managerGlobalCategoriesPage.setCategoryName(Category_feature);
         managerGlobalCategoriesPage.clickAddCategory();
 
         Assert.assertFalse(managerGlobalCategoriesPage.isCategoryNameUsing());
