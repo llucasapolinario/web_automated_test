@@ -22,6 +22,7 @@ public class CreateNewTaskTest extends BaseTest {
         String bugList = "bugList";
         ExcelDataDriven.setExcelFileSheet(bugList, "Planilha1");
         ExcelDataDriven.setRowNumber(4);
+
         return ExcelDataDriven.getTableRow();
     }
 
@@ -30,6 +31,7 @@ public class CreateNewTaskTest extends BaseTest {
         validate_CreateTaskPageByLink();
         createProject();
         createNewGlobalCategory();
+
         createTaskPage.clickCreateTask();
         createTaskPage.selectCategory(row.getCell(1).toString());
         createTaskPage.selectFrequency(row.getCell(2).toString());
@@ -38,12 +40,14 @@ public class CreateNewTaskTest extends BaseTest {
         createTaskPage.setSummary(row.getCell(5).toString());
         createTaskPage.setDescription(row.getCell(6).toString());
         createTaskPage.clickInNewTask();
+
         Assert.assertTrue(createTaskPage.isTaskCreated());
     }
 
     @Test
     public void createNewTask() {
         setupCreateNewTask();
+
         createTaskPage.selectCategory(category);
         createTaskPage.selectFrequency(CreateTaskPage.FREQUENCY_LABEL[2]);
         createTaskPage.selectSeverity(CreateTaskPage.SEVERITY_LABEL[2]);
@@ -58,6 +62,7 @@ public class CreateNewTaskTest extends BaseTest {
     @Test
     public void createNewTask_withoutCategory() {
         setupCreateNewTask();
+
         createTaskPage.selectFrequency(CreateTaskPage.FREQUENCY_LABEL[2]);
         createTaskPage.selectSeverity(CreateTaskPage.SEVERITY_LABEL[2]);
         createTaskPage.selectPriority(CreateTaskPage.PRIORITY_LABEL[2]);
@@ -72,6 +77,7 @@ public class CreateNewTaskTest extends BaseTest {
     public void validate_CreateTaskPage() {
         new LoginTest().validLoginTest();
         createTaskPage = new CreateTaskPage();
+
         createTaskPage.clickCreateTask();
 
         Assert.assertTrue(createTaskPage.isCreateTaskPage());
@@ -81,7 +87,9 @@ public class CreateNewTaskTest extends BaseTest {
     public void validate_CreateTaskPageByLink() {
         new LoginTest().validLoginTest();
         createTaskPage = new CreateTaskPage();
+
         createTaskPage.clickInLinkCreateTask();
+
         Assert.assertTrue(createTaskPage.isCreateTaskPage());
     }
 
@@ -90,6 +98,7 @@ public class CreateNewTaskTest extends BaseTest {
         createTaskPage = new CreateTaskPage();
         createProject();
         createNewGlobalCategory();
+
         createTaskPage.clickCreateTask();
     }
 
