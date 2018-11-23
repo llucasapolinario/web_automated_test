@@ -14,7 +14,6 @@ public class ManagerProjectPage extends ManagerPage {
     private static final String EXTENDS_GLOBAL_CATEGORY_CSS = ".lbl";
     private static final String PROJECT_DESCRIPTION_ID = "project-description";
 
-    private static final String CLICK_TO_MANAGE_PROJECT_ID = "manage-project-create-form";
     private static final String BTN_NEW_PROJECT_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Gerenciar Configuração'])[1]/following::button[1]";
     private static final String EDIT_PROJECT_PAGE_XPATH = "//form[@id='manage-proj-update-form']/div/div/h4";
 
@@ -23,11 +22,8 @@ public class ManagerProjectPage extends ManagerPage {
     private static final String ERROR_701 = "APPLICATION ERROR #701";
     private static final String PRIVATE = "privado";
     private static final String PUBLIC = "público";
-    private static final String DEVELOPMENT = "desenvolvimento";
     private static final String RELEASE = "release";
-    private static final String STABLE = "estável";
-    private static final String OBSOLETE = "obsoleto";
-    private static final String SET_PROJECTNAME = "Preencha este campo.";
+
 
     public void setProjectName(String projectName) {
         writeText(By.id(EDIT_TEXT_PROJECT_NAME_ID), projectName);
@@ -45,20 +41,8 @@ public class ManagerProjectPage extends ManagerPage {
         unSelectCheckBox(By.cssSelector(EXTENDS_GLOBAL_CATEGORY_CSS));
     }
 
-    public void setStateDevelopment() {
-        selectSpinnerElement(By.id(STATE_ID), DEVELOPMENT);
-    }
-
     public void setStateRelease() {
         selectSpinnerElement(By.id(STATE_ID), RELEASE);
-    }
-
-    public void setStateStable() {
-        selectSpinnerElement(By.id(STATE_ID), STABLE);
-    }
-
-    public void setStateObsolete() {
-        selectSpinnerElement(By.id(STATE_ID), OBSOLETE);
     }
 
     public void setProjectPrivate() {
