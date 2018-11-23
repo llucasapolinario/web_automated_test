@@ -14,15 +14,12 @@ public class ManagerUserPage extends ManagerPage {
     private static final String CHECKBOX_ABLE_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Habilitado'])[1]/following::span[1]";
     private static final String CHECKBOX_PROTECTED_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::span[1]";
     private static final String CREATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
-    private static final String UPDATE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Protegido'])[1]/following::input[2]";
     private static final String CONFIRM_DELETE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='administrador'])[1]/following::input[5]";
     private static final String DELETE_USER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Notificar o usuário dessa mudança'])[1]/following::input[6]";
 
     private static final String CREATE_USER_PAGE_XPATH = "//form[@id='manage-user-create-form']/div/div/h4";
     private static final String EDIT_USER_PAGE_XPATH = "//form[@id='edit-user-form']/div/div/h4";
 
-    private static final String ERROR_805 = "APPLICATION ERROR #805";
-    private static final String ERROR_805_MESSAGE = "";
     private static final String ERROR_800 = "APPLICATION ERROR #800";
     private static final String ERROR_800_MESSAGE = "Este nome de usuário já está sendo usado. Por favor, volte e selecione um outro.";
     private static final String ERROR_1200 = "APPLICATION ERROR #1200";
@@ -60,16 +57,8 @@ public class ManagerUserPage extends ManagerPage {
         selectCheckBox(By.xpath(CHECKBOX_ABLE_XPATH));
     }
 
-    public void setEnable() {
-        unSelectCheckBox(By.xpath(CHECKBOX_ABLE_XPATH));
-    }
-
     public void setProtected() {
         selectCheckBox(By.xpath(CHECKBOX_PROTECTED_XPATH));
-    }
-
-    public void setUnprotected() {
-        unSelectCheckBox(By.xpath(CHECKBOX_PROTECTED_XPATH));
     }
 
     public void clickCreateUser() {
