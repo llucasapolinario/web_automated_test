@@ -11,14 +11,13 @@ public class ViewTask extends BaseHomePage {
     private static final String EXPORT_EXCEL_LINK = "Exportação para Excel";
     private static final String ACTION_NAME = "action";
     private static final String BTN_OK_XPATH = "//input[@value='OK']";
-    private static final String BUG_NUM_LINK_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Tarefas Selecionadas'])[1]/following::a[1]";
     private static final String CONFIRM_DELETE_TASK_XPATH = "//input[@value='Apagar Tarefas']";
     private static final String CONFIRM_DONE_TASK_XPATH = "//input[@value='Resolver Tarefas']";
     private static final String CONFIRM_CLOSE_TASK_XPATH = "//input[@value='Fechar Tarefas']";
 
-    private static final String NUM_BUG_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Última Atualização'])[1]/following::td[1]";
 
     public void selectBug(int position) {
+
         if (position == 1) {
             click(By.xpath("//table[@id='buglist']/tbody/tr/td/div/label/span"));
         } else {
@@ -26,20 +25,13 @@ public class ViewTask extends BaseHomePage {
         }
     }
 
-    public void unselectBug(int position) {
-        unSelectCheckBox(By.xpath("//table[@id='buglist']/tbody/tr[" + position + "]/td/div/label/span"));
-    }
-
     public boolean isCheckBoxSelected(int position) {
+
         if (position == 1) {
             return isCheckBoxSelected(By.xpath("//table[@id='buglist']/tbody/tr/td/div/label/span"));
         } else {
             return isCheckBoxSelected(By.xpath("//table[@id='buglist']/tbody/tr[" + position + "]/td/div/label/span"));
         }
-    }
-
-    public void editBug(int position) {
-        click(By.xpath("//table[@id='buglist']/tbody/tr[" + position + "]/td[2]/a/i"));
     }
 
     public int getNumBug(int position) {
@@ -51,6 +43,7 @@ public class ViewTask extends BaseHomePage {
     }
 
     public boolean isBugDone(int position) {
+
         if (position == 1){
             return waitForElement(By.xpath("//table[@id='buglist']/tbody/tr/td[9]/div/span")).getText().equals("resolvido");
         }
@@ -64,22 +57,10 @@ public class ViewTask extends BaseHomePage {
         click(By.xpath(SELECT_ALL_BUGS_XPATH));
     }
 
-    public void gotoViewTaskPage() {
-        clickTask();
-    }
-
     public boolean isInViewTakPage() {
         return waitForElement(By.linkText(PRINT_TASK_LINK)).isDisplayed()
                 && waitForElement(By.linkText(EXPORT_CSV_LINK)).isDisplayed()
                 && waitForElement(By.linkText(EXPORT_EXCEL_LINK)).isDisplayed();
-    }
-
-    public void clickInLinkText(String text){
-        click(By.linkText(text));
-    }
-
-    public String getBugNum() {
-        return readText(By.xpath(NUM_BUG_XPATH));
     }
 
     public void action(String action) {
@@ -89,10 +70,6 @@ public class ViewTask extends BaseHomePage {
 
     public void clickOnOK(){
         click(By.xpath(BTN_OK_XPATH));
-    }
-
-    public String getBugLink() {
-        return readText(By.xpath(BUG_NUM_LINK_XPATH));
     }
 
     public void clickConfirmDeleteTask() {
