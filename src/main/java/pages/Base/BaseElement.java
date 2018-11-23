@@ -14,13 +14,13 @@ import utils.WaitUntil;
 public class BaseElement {
 
     public void goToPage(String page) {
-
         Driver.getDriverInstance().get(page);
         Driver.getDriverInstance().navigate().to(page);
     }
 
     protected void click(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "click on " + element.getAttribute("value");
 
         element.click();
@@ -31,6 +31,7 @@ public class BaseElement {
 
     protected void writeText(By elementLocation, String text) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "writeText " + text + " on " + element.getTagName();
 
         element.clear();
@@ -42,6 +43,7 @@ public class BaseElement {
 
     protected String readText(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "readText " + element.getText() + " on " + element.getText();
 
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
@@ -52,9 +54,9 @@ public class BaseElement {
 
     protected void selectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "select checkbox " + element.getText();
 
-        assert element != null;
         if (element.isSelected()) {
             element.click();
         }
@@ -70,9 +72,9 @@ public class BaseElement {
 
     protected void unSelectCheckBox(By elementLocation) throws ElementClickInterceptedException {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "unselect checkbox " + element.getText();
 
-        assert element != null;
         if (!element.isSelected()) {
             element.click();
         }
@@ -83,9 +85,9 @@ public class BaseElement {
 
     protected void selectSpinnerElement(By elementLocation, String value) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "select spinner '" + value + "' on element " + element.getText();
 
-        assert element != null;
         element.click();
         new Select(element).selectByVisibleText(value);
 
@@ -95,6 +97,7 @@ public class BaseElement {
 
     protected WebElement waitForElement(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
+        assert element != null;
         String screenshotName = "wait for element " + element.getAttribute("value");
 
         Utils.screenShotPage(Driver.getDriverInstance(), screenshotName);
@@ -110,11 +113,13 @@ public class BaseElement {
     protected void scrollToElement(By elementLocation) {
         WebElement element = WaitUntil.elementToBeClickable(elementLocation);
         ((JavascriptExecutor) Driver.getDriverInstance()).executeScript("arguments[0].scrollIntoView(true);", element);
+
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 
     protected void goBackPage() {
