@@ -18,6 +18,7 @@ public class TaskTest extends BaseTest {
         setupTaskTest();
 
         viewTask.selectBug(1);
+
         Assert.assertTrue(viewTask.isCheckBoxSelected(1));
     }
 
@@ -25,11 +26,12 @@ public class TaskTest extends BaseTest {
     public void closeOneTask() {
         setupTaskTest();
         String bug = String.valueOf(viewTask.getNumBug(1));
+
         viewTask.selectBug(1);
         viewTask.action(ACTION[3]);
         viewTask.clickOnOK();
-
         viewTask.clickConfirmCloseTask();
+
         Assert.assertFalse(viewTask.isTaskShowing(bug));
     }
 
@@ -40,8 +42,8 @@ public class TaskTest extends BaseTest {
         viewTask.selectBug(1);
         viewTask.action(ACTION[5]);
         viewTask.clickOnOK();
-
         viewTask.clickConfirmDoneTask();
+
         Assert.assertTrue(viewTask.isBugDone(1));
     }
 
@@ -49,20 +51,24 @@ public class TaskTest extends BaseTest {
     public void deleteOneTask() {
         setupTaskTest();
         String bug = String.valueOf(viewTask.getNumBug(1));
+
         viewTask.selectBug(1);
         viewTask.action(ACTION[4]);
         viewTask.clickOnOK();
         viewTask.clickConfirmDeleteTask();
+
         Assert.assertFalse(viewTask.isTaskShowing(bug));
     }
 
     @Test
     public void deleteAllTask() {
         setupTaskTest();
+
         viewTask.setSelectAllBugs();
         viewTask.action(ACTION[4]);
         viewTask.clickOnOK();
         viewTask.clickConfirmDeleteTask();
+
         Assert.assertTrue(viewTask.isEmptyBug());
     }
 
@@ -70,7 +76,9 @@ public class TaskTest extends BaseTest {
     public void validatePageViewTask() {
         new LoginTest().validLoginTest();
         viewTask = new ViewTask();
+
         viewTask.clickTask();
+
         Assert.assertTrue(viewTask.isInViewTakPage());
     }
 
