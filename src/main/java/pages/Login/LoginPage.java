@@ -17,7 +17,6 @@ public class LoginPage extends BaseElement {
     private static final String ERROR_CODE_RECOVER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Toggle user menu'])[1]/following::p[1]";
     private static final String ERROR_MESSAGE_RECOVER_XPATH = "(.//*[normalize-space(text()) and normalize-space(.)='Toggle user menu'])[1]/following::p[2]";
 
-//    private static final String LOGIN_BOX_TEXT = "Entrar";
     private static final String RECOVER_PASSWORD_TEXT_XPATH = "//form[@id='lost-password-form']/fieldset";
     private static final String CREATE_ACCOUNT_BTN_XPATH = "//input[@value='Criar Conta']";
     private static final String ERROR_1903_CODE = "APPLICATION ERROR #1903";
