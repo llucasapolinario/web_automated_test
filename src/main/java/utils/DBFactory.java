@@ -21,7 +21,9 @@ public class DBFactory {
 
         try {
             Class.forName(DRIVER);
-            connection = DriverManager.getConnection(connectionString, "root", "root");
+            connection = DriverManager.getConnection(connectionString,
+                                                    PropertyManager.getInstance().getDbUser(),
+                                                    PropertyManager.getInstance().getDbPassword());
             connection.createStatement();
 
         } catch (SQLException | ClassNotFoundException e) {

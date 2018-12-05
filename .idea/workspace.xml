@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="">
+    <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="clean CreateNewTask">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/validLoginTest/click on Entrar.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/validLoginTest/click on Entrar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/validLoginTest/wait for element Entrar.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/validLoginTest/wait for element Entrar.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/validLoginTest/wait for element null.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/validLoginTest/wait for element null.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/validLoginTest/writeText administrator on input.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/validLoginTest/writeText administrator on input.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ScreenShots/validLoginTest/writeText lucas on input.png" beforeDir="false" afterPath="$PROJECT_DIR$/ScreenShots/validLoginTest/writeText lucas on input.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DBFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DBFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Login/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Login/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerGlobalCategoriesPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerGlobalCategoriesPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/ViewTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Task/ViewTask.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerGlobalCategoriesTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerGlobalCategoriesTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/TaskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Task/TaskTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/utils/DBFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DBFactory.class" afterDir="false" />
@@ -256,52 +256,59 @@
     <session id="806184261">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.20" value="1" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.14" value="2" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.20" value="2" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="528" />
-          <entry key="properties" value="17" />
-          <entry key="txt" value="192" />
+          <entry key="java" value="769" />
+          <entry key="properties" value="35" />
+          <entry key="txt" value="311" />
           <entry key="xml" value="45" />
+          <entry key="yml" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="528" />
-          <entry key="PLAIN_TEXT" value="192" />
-          <entry key="Properties" value="17" />
+          <entry key="JAVA" value="769" />
+          <entry key="PLAIN_TEXT" value="311" />
+          <entry key="Properties" value="35" />
           <entry key="XML" value="45" />
+          <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="19" />
+          <entry key="java" value="64" />
           <entry key="properties" value="2" />
           <entry key="template" value="1" />
           <entry key="txt" value="2" />
           <entry key="xml" value="1" />
-          <entry key="yml" value="1" />
+          <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="19" />
+          <entry key="JAVA" value="64" />
           <entry key="PLAIN_TEXT" value="3" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="1" />
-          <entry key="YAML" value="1" />
+          <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -314,8 +321,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/utils/DBFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="595">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -323,11 +330,77 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/environment.properties">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/DriverFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="9" />
+            <state relative-caret-position="850">
+              <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/OptionsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/Driver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#595#596#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/TestListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#1414#1415#0" expanded="true" />
+                <element signature="e#1460#1461#0" expanded="true" />
+                <element signature="e#1914#1915#0" expanded="true" />
+                <element signature="e#1973#1974#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/tests/Login/LoginTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1547">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
             </state>
           </provider>
         </entry>
@@ -369,7 +442,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/NewProjectPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/EditProjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/NewProjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/BasePage.java" />
@@ -385,9 +457,6 @@
         <option value="$PROJECT_DIR$/src/main/java/tests/Task/EditTaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExcelUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DataProviderWithExcel.java" />
@@ -399,27 +468,31 @@
         <option value="$PROJECT_DIR$/SeleniumGrid/drivers/NodeDefaultConfig.json" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/Login/LoginTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Login/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java" />
         <option value="$PROJECT_DIR$/src/main/java/extentReport/ExtentManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/extentReport/TestListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java" />
         <option value="$PROJECT_DIR$/config db acess.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DriverFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/PropertyManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/environment.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Login/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DBFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" />
+        <option value="$PROJECT_DIR$/environment.properties" />
       </list>
     </option>
   </component>
@@ -435,10 +508,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="17" />
-    <option name="y" value="47" />
-    <option name="width" value="934" />
-    <option name="height" value="636" />
+    <option name="x" value="-7" />
+    <option name="width" value="697" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -448,17 +520,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="test1" type="58d84e3e:PackageViewProjectNode" />
-              <item name="web_automated_test" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -490,68 +551,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="extentReport" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="Task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test1" type="b2602c69:ProjectViewProjectNode" />
@@ -562,36 +562,16 @@
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
             <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="ManagerTest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="Task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_automated_test" type="462c0819:PsiDirectoryNode" />
-              <item name="TestReport" type="462c0819:PsiDirectoryNode" />
+              <item name="test1" type="58d84e3e:PackageViewProjectNode" />
+              <item name="web_automated_test" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -625,7 +605,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541940050273" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543619064567" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -659,19 +639,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.tests">
-    <configuration name="CreateNewTaskTest.createNewTask" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginTest">
+    <configuration name="LoginTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="web_automated_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.Task.*" />
+          <option name="PATTERN" value="tests.Login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests.Task" />
-      <option name="MAIN_CLASS_NAME" value="tests.Task.CreateNewTaskTest" />
-      <option name="METHOD_NAME" value="createNewTask" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="tests.Login" />
+      <option name="MAIN_CLASS_NAME" value="tests.Login.LoginTest" />
       <properties />
       <listeners />
       <method v="2">
@@ -745,19 +723,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.CreateNewTaskTest.createNewTask" />
       <item itemvalue="TestNG.tests" />
       <item itemvalue="TestNG.TaskTest" />
       <item itemvalue="TestNG.ManagerGlobalCategoriesTest.createNewGlobalCategory" />
       <item itemvalue="TestNG.ManagerGlobalCategoriesTest" />
+      <item itemvalue="TestNG.LoginTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LoginTest" />
         <item itemvalue="TestNG.tests" />
-        <item itemvalue="TestNG.ManagerGlobalCategoriesTest" />
         <item itemvalue="TestNG.ManagerGlobalCategoriesTest.createNewGlobalCategory" />
+        <item itemvalue="TestNG.ManagerGlobalCategoriesTest" />
         <item itemvalue="TestNG.TaskTest" />
-        <item itemvalue="TestNG.CreateNewTaskTest.createNewTask" />
       </list>
     </recent_temporary>
   </component>
@@ -774,83 +752,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532702082534</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fix loginPage">
-      <created>1533996393944</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1533996393945</updated>
-    </task>
-    <task id="LOCAL-00010" summary="fix and creat a waint">
-      <created>1533996699056</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1533996699056</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add create user link">
-      <created>1533999208492</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1533999208492</updated>
-    </task>
-    <task id="LOCAL-00012" summary="create page object">
-      <created>1533999634397</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1533999634397</updated>
-    </task>
-    <task id="LOCAL-00013" summary="clean and done">
-      <created>1534001074460</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1534001074460</updated>
-    </task>
-    <task id="LOCAL-00014" summary="create">
-      <created>1534001145147</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1534001145147</updated>
-    </task>
-    <task id="LOCAL-00015" summary="clean">
-      <created>1534090975068</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1534090975068</updated>
-    </task>
-    <task id="LOCAL-00016" summary="create">
-      <created>1534094214279</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1534094214279</updated>
-    </task>
-    <task id="LOCAL-00017" summary=" clean">
-      <created>1534094369453</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1534094369453</updated>
-    </task>
-    <task id="LOCAL-00018" summary="add a getPlatform method">
-      <created>1534176252838</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1534176252838</updated>
-    </task>
-    <task id="LOCAL-00019" summary="clean Constants class">
-      <created>1534176281000</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1534176281000</updated>
     </task>
     <task id="LOCAL-00020" summary="create ExcelDataDriven class">
       <created>1534176325823</created>
@@ -1118,39 +1019,116 @@
       <option name="project" value="LOCAL" />
       <updated>1541939433681</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="clean BaseElement">
+      <created>1543012787290</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1543012787291</updated>
+    </task>
+    <task id="LOCAL-00059" summary="remove unused">
+      <created>1543012885038</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1543012885038</updated>
+    </task>
+    <task id="LOCAL-00060" summary="remove unused, and clean LoginPage">
+      <created>1543012975201</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1543012975202</updated>
+    </task>
+    <task id="LOCAL-00061" summary="remove unused, and clean ManagerGlobalCategoriesPage">
+      <created>1543013205523</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013205524</updated>
+    </task>
+    <task id="LOCAL-00062" summary="remove unused, and clean ManagerProjectPage">
+      <created>1543013321344</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013321344</updated>
+    </task>
+    <task id="LOCAL-00063" summary="remove unused, and clean ManagerUserPage">
+      <created>1543013337408</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013337408</updated>
+    </task>
+    <task id="LOCAL-00064" summary="remove unused, and clean CreateTaskPage">
+      <created>1543013427470</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013427470</updated>
+    </task>
+    <task id="LOCAL-00065" summary="remove unused, and clean ViewTask">
+      <created>1543013502327</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013502328</updated>
+    </task>
+    <task id="LOCAL-00066" summary="clean ManagerProjectTest">
+      <created>1543013593586</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013593588</updated>
+    </task>
+    <task id="LOCAL-00067" summary="clean CreateNewTask">
+      <created>1543013675630</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013675630</updated>
+    </task>
+    <task id="LOCAL-00068" summary="clean TaskTest">
+      <created>1543013747406</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1543013747406</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ManagerGlobalCategoriesTest_createNewGlobalCategory - 2018.11.10 at 22h 32m 40s.xml">
-      <configuration name="ManagerGlobalCategoriesTest.createNewGlobalCategory" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.11.30 at 20h 17m 24s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest - 2018.11.10 at 22h 39m 56s.xml">
-      <configuration name="ManagerGlobalCategoriesTest" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.11.30 at 20h 18m 33s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest - 2018.11.10 at 22h 51m 16s.xml">
-      <configuration name="ManagerGlobalCategoriesTest" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.11.30 at 20h 18m 47s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest - 2018.11.10 at 23h 07m 29s.xml">
-      <configuration name="ManagerGlobalCategoriesTest" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.11.30 at 20h 28m 30s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest - 2018.11.10 at 23h 08m 02s.xml">
-      <configuration name="ManagerGlobalCategoriesTest" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.11.30 at 20h 34m 37s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="ManagerGlobalCategoriesTest - 2018.11.10 at 23h 09m 05s.xml">
-      <configuration name="ManagerGlobalCategoriesTest" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.12.01 at 19h 43m 33s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2018.11.11 at 09h 16m 44s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.12.01 at 19h 47m 49s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2018.11.11 at 09h 20m 15s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.12.01 at 19h 50m 25s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2018.11.11 at 09h 34m 23s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.12.01 at 19h 51m 31s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="tests - 2018.11.11 at 10h 19m 16s.xml">
-      <configuration name="tests" configurationId="TestNG" />
+    <history-entry file="LoginTest - 2018.12.01 at 19h 53m 05s.xml">
+      <configuration name="LoginTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1164,8 +1142,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967742" visible="true" weight="0.2193646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967742" visible="true" weight="0.2708018" />
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.20272315" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1174,13 +1153,13 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32580644" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.4080645" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.41290322" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42419356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.7967742" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3548387" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29193547" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32580644" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31451613" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1245,17 +1224,6 @@
       <path value="$PROJECT_DIR$/exemplo" />
       <path value="$PROJECT_DIR$/exemplo/SeleniumWebDriver.Basic" />
     </ignored-roots>
-    <MESSAGE value="create testes for new project page" />
-    <MESSAGE value="clean Basetest" />
-    <MESSAGE value="change timeout value" />
-    <MESSAGE value="refactor after extent report" />
-    <MESSAGE value="refactor extentManager" />
-    <MESSAGE value="create Retry class for extentReport" />
-    <MESSAGE value="personalize test listener" />
-    <MESSAGE value="refactor and clean, make createPath method" />
-    <MESSAGE value="retry birllll" />
-    <MESSAGE value="retry birll" />
-    <MESSAGE value="remove retry" />
     <MESSAGE value="ManagerProjectTest is done" />
     <MESSAGE value="add TIME_OUT_BEFORE_ELEMENT" />
     <MESSAGE value="add WaitUntil" />
@@ -1270,7 +1238,18 @@
     <MESSAGE value="fix bug test" />
     <MESSAGE value="db connection done" />
     <MESSAGE value="clean DBFactory" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean DBFactory" />
+    <MESSAGE value="clean BaseElement" />
+    <MESSAGE value="remove unused" />
+    <MESSAGE value="remove unused, and clean LoginPage" />
+    <MESSAGE value="remove unused, and clean ManagerGlobalCategoriesPage" />
+    <MESSAGE value="remove unused, and clean ManagerProjectPage" />
+    <MESSAGE value="remove unused, and clean ManagerUserPage" />
+    <MESSAGE value="remove unused, and clean CreateTaskPage" />
+    <MESSAGE value="remove unused, and clean ViewTask" />
+    <MESSAGE value="clean ManagerProjectTest" />
+    <MESSAGE value="clean CreateNewTask" />
+    <MESSAGE value="clean TaskTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean TaskTest" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1286,27 +1265,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/InvokedMethodListener.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tests/DataProviderWithExcel.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="24" column="55" lean-forward="true" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-465">
-          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-499">
-          <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml/3.17/poi-ooxml-3.17.jar!/org/apache/poi/xssf/usermodel/XSSFSheet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -1314,66 +1272,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0-beta1/testng-7.0.0-beta1.jar!/org/testng/IRetryAnalyzer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/ExtentManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/TestListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Login/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1388,13 +1290,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="83" lean-forward="true" selection-start-line="1" selection-start-column="83" selection-end-line="1" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -1415,24 +1310,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/OptionsManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="50" lean-forward="true" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/lang/Integer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/Retry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1452,9 +1333,6 @@
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mariadb.jar!/org/mariadb/jdbc/Driver.java" />
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mariadb.jar!/Version.java.template" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_171/src.zip!/java/sql/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1477,18 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/PropertyManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getInstance#0;class#PropertyManager#0" />
-            <element signature="method#loadData#0;class#PropertyManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -1496,121 +1362,228 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DriverFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/ExtentManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="238">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/WaitUntil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/Retry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="18" column="47" lean-forward="true" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Login/LoginTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-516">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="method#createNewTask_DDT#0;class#CreateNewTaskTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#1851#1852#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+        <state relative-caret-position="221">
+          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseElement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="88" column="24" lean-forward="true" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4083#4084#0" expanded="true" />
-            <element signature="e#4146#4147#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Base/BaseHomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Login/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerUserPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="81" column="70" lean-forward="true" selection-start-line="81" selection-start-column="70" selection-end-line="81" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="83" lean-forward="true" selection-start-line="17" selection-start-column="83" selection-end-line="17" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerProjectPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#3200#3201#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/CreateTaskPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="57" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Task/ViewTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerProjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="54" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerUserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2125">
+          <caret line="129" column="5" lean-forward="true" selection-start-line="129" selection-start-column="5" selection-end-line="129" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/CreateNewTaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="115" column="54" lean-forward="true" selection-start-line="115" selection-start-column="54" selection-end-line="115" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Task/TaskTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="51" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/WaitUntil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/PropertyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pages/Manager/ManagerGlobalCategoriesPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/ManagerTest/ManagerGlobalCategoriesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ExcelDataDriven.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environment.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/DBFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="595">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/environment.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/DriverFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="9" />
+        <state relative-caret-position="850">
+          <caret line="57" column="87" selection-start-line="57" selection-start-column="87" selection-end-line="57" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/OptionsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/extentReport/TestListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1414#1415#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#1914#1915#0" expanded="true" />
+            <element signature="e#1973#1974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tests/Login/LoginTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
         </state>
       </provider>
     </entry>
