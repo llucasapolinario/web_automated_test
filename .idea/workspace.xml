@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="clean CreateNewTask">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/extentReport/ExtentManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/extentReport/Retry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/extentReport/TestListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Login/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerGlobalCategoriesPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/ViewTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Login/LoginTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerGlobalCategoriesTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerUserTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/TaskTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/DBFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Driver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/DriverFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/ExcelDataDriven.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/OptionsManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/PropertyManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/WaitUntil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -290,7 +262,7 @@
           <entry key="java" value="769" />
           <entry key="properties" value="38" />
           <entry key="txt" value="311" />
-          <entry key="xml" value="79" />
+          <entry key="xml" value="89" />
           <entry key="yml" value="82" />
         </counts>
       </usages-collector>
@@ -299,7 +271,7 @@
           <entry key="JAVA" value="769" />
           <entry key="PLAIN_TEXT" value="311" />
           <entry key="Properties" value="38" />
-          <entry key="XML" value="79" />
+          <entry key="XML" value="89" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -400,8 +372,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+            <state relative-caret-position="102">
+              <caret line="108" column="47" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -410,7 +382,7 @@
         <entry file="file://$PROJECT_DIR$/TestNG.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -1147,7 +1119,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967742" visible="true" weight="0.27912253" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967742" visible="true" weight="0.27912253" />
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.20272315" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1162,7 +1134,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32903227" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.7967742" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29193547" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29193547" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.32580644" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.31451613" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1579,14 +1551,14 @@
     <entry file="file://$PROJECT_DIR$/TestNG.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
+        <state relative-caret-position="102">
+          <caret line="108" column="47" selection-start-line="108" selection-start-column="47" selection-end-line="108" selection-end-column="47" />
         </state>
       </provider>
     </entry>
