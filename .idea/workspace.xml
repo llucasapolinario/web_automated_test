@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="clean CreateNewTask">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.properties" beforeDir="false" afterPath="$PROJECT_DIR$/environment.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/DBFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/DBFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Base/BaseElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Base/BaseHomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Login/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Login/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerGlobalCategoriesPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerGlobalCategoriesPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerProjectPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Manager/ManagerUserPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Task/CreateTaskPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pages/Task/ViewTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/Task/ViewTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Base/BaseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/ManagerTest/ManagerProjectTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Task/CreateNewTaskTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tests/Task/TaskTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tests/Task/TaskTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/DBFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/DBFactory.class" afterDir="false" />
-    </list>
+    <list default="true" id="67e91298-da64-4631-9f23-788c3670398f" name="Default Changelist" comment="clean CreateNewTask" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -277,7 +257,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="769" />
-          <entry key="properties" value="35" />
+          <entry key="properties" value="38" />
           <entry key="txt" value="311" />
           <entry key="xml" value="45" />
           <entry key="yml" value="82" />
@@ -287,7 +267,7 @@
         <counts>
           <entry key="JAVA" value="769" />
           <entry key="PLAIN_TEXT" value="311" />
-          <entry key="Properties" value="35" />
+          <entry key="Properties" value="38" />
           <entry key="XML" value="45" />
           <entry key="YAML" value="82" />
         </counts>
@@ -296,7 +276,7 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="java" value="64" />
-          <entry key="properties" value="2" />
+          <entry key="properties" value="3" />
           <entry key="template" value="1" />
           <entry key="txt" value="2" />
           <entry key="xml" value="2" />
@@ -308,7 +288,7 @@
           <entry key="CLASS" value="1" />
           <entry key="JAVA" value="64" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Properties" value="2" />
+          <entry key="Properties" value="3" />
           <entry key="XML" value="2" />
           <entry key="YAML" value="2" />
         </counts>
@@ -389,11 +369,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/environment.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1581">
-              <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="118" column="39" lean-forward="true" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -502,8 +491,8 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/OptionsManager.java" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/src/main/java/tests/Base/BaseTest.java" />
-        <option value="$PROJECT_DIR$/environment.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/environment.properties" />
       </list>
     </option>
   </component>
@@ -1128,6 +1117,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967742" visible="true" weight="0.27458397" />
       <window_info id="Structure" order="1" sideWeight="0.5016129" side_tool="true" weight="0.20272315" />
@@ -1487,13 +1477,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/environment.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/DBFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1565,10 +1548,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/environment.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="27" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+        <state relative-caret-position="306">
+          <caret line="118" column="39" lean-forward="true" selection-start-line="118" selection-start-column="39" selection-end-line="118" selection-end-column="39" />
         </state>
       </provider>
     </entry>
