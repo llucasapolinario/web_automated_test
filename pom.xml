@@ -95,11 +95,11 @@
             <scope>compile</scope>
         </dependency>
         
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector</artifactId>
-            <version>5.1.47</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.mysql</groupId>-->
+            <!--<artifactId>mysql-connector</artifactId>-->
+            <!--<version>5.1.47</version>-->
+        <!--</dependency>-->
 
     </dependencies>
 
