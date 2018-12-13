@@ -13,7 +13,6 @@
         <selenium.version>3.11.0</selenium.version>
         <testng.version>6.14.3</testng.version>
         <extent.version>3.1.5</extent.version>
-        <suiteXmlFile>TestNG.xml</suiteXmlFile>
     </properties>
 
     <build>
@@ -34,7 +33,6 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>TestNG.xml</suiteXmlFile>
-                        <skipTests>true</skipTests>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
