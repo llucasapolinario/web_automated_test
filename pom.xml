@@ -6,13 +6,14 @@
 
     <groupId>base2.javawebdriver</groupId>
     <artifactId>web_automated_test</artifactId>
-    <version>2.0</version>
+    <version>1.0</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selenium.version>3.11.0</selenium.version>
         <testng.version>6.14.3</testng.version>
         <extent.version>3.1.5</extent.version>
+        <suiteXmlFile>TestNG.xml</suiteXmlFile>
     </properties>
 
     <build>
@@ -32,7 +33,7 @@
                 <version>2.22.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
