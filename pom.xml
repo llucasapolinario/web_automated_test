@@ -33,7 +33,7 @@
                 <version>2.22.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                        <suiteXmlFile>TestNG.xml</suiteXmlFile>
                         <skipTests>true</skipTests>
                     </suiteXmlFiles>
                 </configuration>
