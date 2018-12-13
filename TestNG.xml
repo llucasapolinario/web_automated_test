@@ -7,8 +7,7 @@
 
     <test name="Regression" enabled="true">
         <classes>
-            <class name="tests.Login.LoginTest">
-            </class>
+            <class name="tests.Login.LoginTest"/>
         </classes>
     </test>
 </suite>
