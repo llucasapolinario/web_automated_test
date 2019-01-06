@@ -10,8 +10,7 @@ public class DBFactory {
 
     private static Connection getDBConnection() {
 
-//        String DRIVER = "org.gjt.mm.mysql.Driver";
-        String DRIVER = "com.mysql.jdbc.Driver";
+        String DRIVER = "org.gjt.mm.mysql.Driver";
 
         String connectionString =
                 "jdbc:mysql://"
