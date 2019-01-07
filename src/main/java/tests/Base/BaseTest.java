@@ -17,13 +17,13 @@ public class BaseTest {
 
     @BeforeSuite
     public void cleanDB() throws SQLException {
-        DBFactory dbFactory = new DBFactory();
-
-        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_text_table");
-        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_project_table");
-        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_category_table");
-        dbFactory.DBRunQuery("INSERT INTO mantis_category_table (id, project_id, user_id, name, status) " +
-                "VALUES (1, 0, 0, \"General\", 0);");
+//        DBFactory dbFactory = new DBFactory();
+//
+//        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_text_table");
+//        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_project_table");
+//        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_category_table");
+//        dbFactory.DBRunQuery("INSERT INTO mantis_category_table (id, project_id, user_id, name, status) " +
+//                "VALUES (1, 0, 0, \"General\", 0);");
         System.out.println("db");
 
     }
