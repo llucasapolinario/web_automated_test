@@ -24,17 +24,17 @@ public class BaseTest {
 //        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_category_table");
 //        dbFactory.DBRunQuery("INSERT INTO mantis_category_table (id, project_id, user_id, name, status) " +
 //                "VALUES (1, 0, 0, \"General\", 0);");
-        System.out.println("db");
+//        System.out.println("db");
 
     }
 
     @BeforeMethod
     public void setup() throws SQLException {
         System.out.println("setup");
-
-        DBFactory dbFactory = new DBFactory();
-        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_table");
-        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_history_table");
+//
+//        DBFactory dbFactory = new DBFactory();
+//        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_table");
+//        dbFactory.DBRunQuery("TRUNCATE TABLE mantis_bug_history_table");
         System.out.println("and setp");
         new BaseElement().goToPage(PropertyManager.getInstance().getURL());
     }
